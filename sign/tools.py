@@ -7,12 +7,12 @@ def mysql_query(sql):
     passwd = readconfig("MYSQL_PASSWORD".lower())
     db = readconfig("MYSQL_DBNAME".lower())
     port = int(readconfig("MYSQL_PORT".lower()))
-    try :
-        conn = MySQLdb.connect(host = host ,user = username,passwd = passwd ,db=db, port = port ,charset = "utf8")
+    try:
+	 conn = MySQLdb.connect(host = host ,user = username,passwd = passwd ,db=db, port = port ,charset = "utf8")
     except Exception , e :
         return e
     cursor = conn.cursor()
-    try :
+    try:
         data = []
         cursor.execute(sql)
         li = cursor.fetchall()
@@ -21,7 +21,7 @@ def mysql_query(sql):
         return data
     except Exception , e :
         return e
-    finally :
+    finally:
         cursor.close()
         conn.close()
 
@@ -35,3 +35,14 @@ def readconfig(key):
             return  kvs[key]
         else :
             return False
+def signup_user(username):
+    sql = "select username from sign_user where username = '{uname}';".format(uname = username)
+    result = mysql_query(sql)
+    if len(result) > 0 :
+	return False 
+    else :
+	return True
+if __name__ == '__main__' :
+    p =  signup_user("test")
+    print p
+

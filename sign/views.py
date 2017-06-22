@@ -9,7 +9,8 @@ from .forms import RegisterForm
 
 def register(request):
     if request.method == 'POST' :
-	form = RegisterForm(request.POST)
+	username  = request.POST.get('username')
+	password = request.POST.get('password')
 	if form.is_valid():
 	    form.save()
 	    return redirect('/login/index/')
