@@ -80,7 +80,7 @@ DATABASES = {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 	'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'test',  
+        'NAME': 'test1',  
         'USER': 'root',  
         'PASSWORD': 'test1324',  
         'HOST': '127.0.0.1',  
@@ -139,3 +139,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'sign.User'
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
+DJANGO_SETTINGS_MODULE="mysite.settings"

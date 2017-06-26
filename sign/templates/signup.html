@@ -35,17 +35,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 
 <div class="top-buttons-agileinfo">
-<a href="login.html">登录</a><a href="signup.html" class="active">注册</a>
+<a href="/tool/login/login.html">登录</a><a href="signup.html" class="active">注册</a>
 </div>
 <h1>生活不止诗和远方，还有此处的注册</h1>
 <div class="main-agileits">
 <!--form-stars-here-->
 		<div class="form-w3-agile">
 			<h2 class="sub-agileits-w3layouts">注册</h2>
-			<form action="/login/register/" method="POST">
-					<input type="text" name="Username" placeholder="用户名" required="" />
-					<input type="password" name="Password" placeholder="密码" required="" />
-					<input type="password" name="Password" placeholder="确认密码" required="" />
+			<form action="/tool/register/" method="POST">
+					<input type="text" name="username" placeholder="用户名" required="" />
+					<input type="password" name="password" placeholder="密码" required="" />
+					<input type="password" name="pwdagain" placeholder="确认密码" required="" />
+					<p><span style="color:red">{{errormsg}}</span></p>
 				<div class="submit-w3l">
 					<input type="submit" value="点击注册">
 				</div>

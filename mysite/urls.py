@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^oauth2/queryYqbBalance/',views.hello),
     url(r'^hello/$',views.hh),
-    url(r'^login/',include('sign.urls')),
+    url(r'^tool/',include('sign.urls')),
 ]
