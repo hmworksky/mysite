@@ -52,15 +52,24 @@ def signup_judge(username):
     sql = "select username from sign_login where username = '{uname}';".format(uname = username)
     result = mysql_operation(sql)
     #判断用户名是否在结果集中
-    if len(result)> 0 :
-	return False 
-    else :
-	return True
+    return False if len(result)>0 else True
+
 #注册
 def signup(username,password):
     sql = "insert into sign_login (username,password) values('{uname}','{pwd}');".format(uname = username , pwd = password)
     result = mysql_operation(sql)
     return result #此处返回插入行数
-#if __name__ == '__main__' :
-#    p = signup_judge("test3")
-#    print p
+def login_judge(username,password):
+    sql = "select username from sign_login where username = '{uname}' and password = '{pwd}';".format(uname = username , pwd = password)
+    result = mysql_operation(sql)
+    return True if len(result)>0 else False
+def resetpwd(username,password):
+    sql = "update  sign_login set password = '{pwd}' where username = '{uname}';".format(uname = username , pwd = password)
+    result = mysql_operation(sql)
+    return result
+if __name__ == '__main__' :
+    p = resetpwd("test22","111")
+    if p :
+	print 1
+    else :
+	print 2
