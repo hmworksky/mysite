@@ -67,6 +67,12 @@ def resetpwd(username,password):
     sql = "update  sign_login set password = '{pwd}' where username = '{uname}';".format(uname = username , pwd = password)
     result = mysql_operation(sql)
     return result
+
+def interface_re(url,data,methodtype):
+    sql = "insert into  sign_interfaceinfo ;".format(uname = username , pwd = password)
+    result = mysql_operation(sql)
+    return result
+
 if __name__ == '__main__' :
     p = resetpwd("test22","111")
     if p :

@@ -5,6 +5,7 @@ from django.shortcuts import render,redirect,render_to_response
 from .forms import RegisterForm
 from tools import *
 import os
+from models import *
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
 
@@ -53,6 +54,18 @@ def resetlogin(request):
             return render_to_response('reset.html',{'errormsg':'请输入相同密码'})
     return render_to_response('reset.html')	
 
+def interface_return(request):
+    if request.method == 'POST' : 
+        url_info = request.POST.get('url_info')
+        commit_type = request.POST.get('commit_type')
+        return_value = request.POST.get('return_value')
+	username = request.session.get('username')
+	status =interface_re(url_info,commit_type,return_value,username)	
+	if status :
+	    return render_to_response()		    
+
+
 def index(request):
     username = request.session.get('username')
-    return HttpResponse("welcome {uname}".format(uname=username))
+    p = InterfaceInfo.objects.all()
+    return HttpResponse("welcome {uname}".format(uname=p))
