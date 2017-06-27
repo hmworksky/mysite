@@ -6,13 +6,17 @@ from django.contrib.auth.models import AbstractUser
 
 
 # Create your models here.
-class User(AbstractUser):
-    nick_name = models.CharField(max_length = 50,blank = True)
-    class Meta(AbstractUser.Meta):
-	pass
+class Login(models.Model):
+    nick_name = models.CharField(max_length = 50, default = '0',  blank = True)
+    username = models.CharField(max_length = 50, unique = True ,blank = True)
+    password = models.CharField(max_length = 50,blank = True)
+    def __unicode__(self):
+	return self.username
+	
 class InterfaceInfo(models.Model):
-    url_info = models.CharField(max_length = 500)
+    url_info = models.URLField(max_length = 200 ,unique = True ,null = True)
     commit_type =  models.CharField(max_length = 50)
     return_value =  models.CharField(max_length = 2500)
-    def __str__(self):
+    user = models.ForeignKey(Login)
+    def __unicode__(self):
 	return self.url_info

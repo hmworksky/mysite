@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 from django.http import Http404,HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response
-from .forms import RegisterForm
 from tools import *
 import os
 from models import *
@@ -60,12 +59,9 @@ def interface_return(request):
         commit_type = request.POST.get('commit_type')
         return_value = request.POST.get('return_value')
 	username = request.session.get('username')
-	status =interface_re(url_info,commit_type,return_value,username)	
-	if status :
-	    return render_to_response()		    
-
+	
 
 def index(request):
     username = request.session.get('username')
-    p = InterfaceInfo.objects.all()
+    p = Login.objects.get(username = 'test22')
     return HttpResponse("welcome {uname}".format(uname=p))
