@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Django login</title>
+</head>
+<body>
+<form method = "post" action = "/tool/interface/create/">
+<input type = "text" name = "url_name">接口名字<br>
+<input type = "text" name = "return_value">返回参数<br>
+<button type = "submit" value = "ok">登录</button>
+{% csrf_token %}
+
+</form>
+</body>
+
+</html>

@@ -15,8 +15,18 @@ class Login(models.Model):
 	
 class InterfaceInfo(models.Model):
     url_info = models.URLField(max_length = 200 ,unique = True ,null = True)
-    commit_type =  models.CharField(max_length = 50)
+    status  =  models.IntegerField()
     return_value =  models.CharField(max_length = 2500)
     user = models.ForeignKey(Login)
     def __unicode__(self):
 	return self.url_info
+class HttpSend(models.Model):
+    send_url = models.URLField(max_length = 200 ,unique = True ,null = True)
+    status  =  models.IntegerField()
+    data =  models.CharField(max_length = 2500)
+    headers =  models.CharField(max_length = 2500)
+    cookie =  models.CharField(max_length = 2500)
+    send_type = models.CharField(max_length = 50)
+    user = models.ForeignKey(Login)
+    def __unicode__(self):
+        return self.send_url

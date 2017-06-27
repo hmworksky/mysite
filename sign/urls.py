@@ -6,4 +6,6 @@ urlpatterns = [
     url(r'index',views.index,name='index'),
     url(r'login',views.login,name = 'login'),
     url(r'reset',views.resetlogin,name = 'resetlogin'),
+    url(r'interface/create/',views.interface_create,name = 'interface_create'),
+    url(r'interface/return/',views.interface_return,name = 'interface_return'),
 ]
