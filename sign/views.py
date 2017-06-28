@@ -76,7 +76,7 @@ def interface_list(request):
     user_id = getuserid(username)
     if user_id : 
         http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values_list("url_info","return_value","status"))
-	return render_to_response('admin/interface_list.html',{'http_list':http_list})
+	return render_to_response('interface/interface_list.html',{'http_list':http_list})
 
 def interface_return(request):
     if request.method == 'POST' or request.method == 'GET':

@@ -38,22 +38,24 @@
 								<th>请求地址</th>
 								<th>返回值</th>
 								<th>状态</th>
+								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
 						{% for value in http_list %}
-							{% for i in  len(value) %}
 							<tr>
 								<td><input type="checkbox"></td>
-								<td>value[i]</td>
-								<td style="text-align:center;"><i class="layui-icon" style="color:red;">ဇ</i></td>
+								{% for table in  value  %}
+
+								<td>{{table}}</td>
+								{% endfor %}
+							<!--	<td style="text-align:center;"><i class="layui-icon" style="color:red;">ဇ</i></td> -->
 								<td>
 									<a href="/detail-6" target="_blank">预览</a>
 									<a href="/manage/article_edit_6">编辑</a>
 									<a href="javascript:;" data-id="6" data-opt="del">删除</a>
 								</td>
 							</tr>
-								{% endfor %}
 							{% endfor %}
 						</tbody>
 					</table>
