@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import MySQLdb
 from ConfigParser import ConfigParser
+from models import *
 
 def mysql_operation(sql):
     host = readconfig("MYSQL_HOST".lower())
@@ -72,10 +73,10 @@ def interface_re(url,data,methodtype):
     sql = "insert into  sign_interfaceinfo ;".format(uname = username , pwd = password)
     result = mysql_operation(sql)
     return result
+def getuserid(username):
+    try :
+        user_id = Login.objects.values("id").get(username = username)["id"]
+	return user_id
+    except Exception , e :
+	return False
 
-if __name__ == '__main__' :
-    p = resetpwd("test22","111")
-    if p :
-	print 1
-    else :
-	print 2

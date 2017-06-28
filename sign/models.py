@@ -19,7 +19,7 @@ class InterfaceInfo(models.Model):
     return_value =  models.CharField(max_length = 2500)
     user = models.ForeignKey(Login)
     def __unicode__(self):
-	return self.url_info
+	return self.url_info,status,return_value
 class HttpSend(models.Model):
     send_url = models.URLField(max_length = 200 ,unique = True ,null = True)
     status  =  models.IntegerField()
@@ -30,3 +30,8 @@ class HttpSend(models.Model):
     user = models.ForeignKey(Login)
     def __unicode__(self):
         return self.send_url
+class Person(models.Model):
+    name = models.CharField(max_length=30)
+    age = models.IntegerField()
+    def __unicode__(self):
+	return u'%s %s'%(name,age)

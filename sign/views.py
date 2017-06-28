@@ -54,6 +54,7 @@ def resetlogin(request):
         else :
             return render_to_response('reset.html',{'errormsg':'请输入相同密码'})
     return render_to_response('reset.html')	
+
 def interface_create(request):
     if request.method == 'POST' : 
         interface_name = request.POST.get('url_name')
@@ -65,10 +66,18 @@ def interface_create(request):
 	url_info = "http://"+ host  + "/tool/interface/return/" + username + "/" + interface_name
 	try :
             InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id)
+	    return redirect('/tool/interface/list/')
 	except  Exception , e:
-	    return HttpResponse("接口已存在")
-        return HttpResponse("生成接口地址为:{url},返回值为:{re}".format(url=url_info,re=return_value))
+	    return HttpResponse(e)
     return render_to_response('interface_create.html')	
+
+def interface_list(request):
+    username = request.session['username']
+    user_id = getuserid(username)
+    if user_id : 
+        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values_list("url_info","return_value","status"))
+	return render_to_response('admin/interface_list.html',{'http_list':http_list})
+
 def interface_return(request):
     if request.method == 'POST' or request.method == 'GET':
 	host = request.get_host()
@@ -82,10 +91,12 @@ def interface_return(request):
 	    else :
 		return HttpResponse(data)
     return HttpResponse('result')
+
 def index(request):
     host = request.get_host()
     path = request.path
     username = request.session.get('username')
-    url_info = "http://"+ host  + path + username + "/"  
-    p = Login.objects.values("id").get(username = 'test22')["id"]
+    #url_info = "http://"+ host  + path + username + "/"  
+    p = Person.objects.filter(name = 'test2').values_list()
+    p = list(p)
     return HttpResponse("welcome {uname}".format(uname=p))

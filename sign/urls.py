@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'reset',views.resetlogin,name = 'resetlogin'),
     url(r'interface/create/',views.interface_create,name = 'interface_create'),
     url(r'interface/return/',views.interface_return,name = 'interface_return'),
+    url(r'interface/list/',views.interface_list,name = 'interface_list'),
 ]
