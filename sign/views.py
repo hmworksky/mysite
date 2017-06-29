@@ -34,7 +34,7 @@ def login(request):
         password = request.POST.get('password')
         if login_judge(username,password):
 		request.session['username'] = username
-                return redirect('/tool/index/')
+                return redirect('/tool/interface/create/')
         else :
             return render_to_response('login.html',{'errormsg':'用户名密码错误'})
     return render_to_response('login.html')
@@ -58,7 +58,6 @@ def resetlogin(request):
 def interface_create(request):
     if request.method == 'POST' : 
         interface_name = request.POST.get('url_name')
-        commit_type = request.POST.get('commit_type')
         return_value = request.POST.get('return_value')
         username = request.session.get('username')
         user_id = Login.objects.values("id").get(username = username)["id"]
@@ -69,13 +68,13 @@ def interface_create(request):
 	    return redirect('/tool/interface/list/')
 	except  Exception , e:
 	    return HttpResponse(e)
-    return render_to_response('interface_create.html')	
+    return render_to_response('admin/interface_create.html')	
 
 def interface_list(request):
     username = request.session['username']
     user_id = getuserid(username)
     if user_id : 
-        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values_list("url_info","return_value","status"))
+        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("url_info","return_value","status"))
 	return render_to_response('interface/interface_list.html',{'http_list':http_list})
 
 def interface_return(request):
@@ -97,6 +96,9 @@ def index(request):
     path = request.path
     username = request.session.get('username')
     #url_info = "http://"+ host  + path + username + "/"  
-    p = Person.objects.filter(name = 'test2').values_list()
+    p = Person.objects.filter(name = 'test2').values("age","name")
     p = list(p)
-    return HttpResponse("welcome {uname}".format(uname=p))
+    username = request.session['username']
+    user_id = getuserid(username)
+    http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("url_info","return_value","status"))	
+    return HttpResponse("welcome {uname}".format(uname=http_list))

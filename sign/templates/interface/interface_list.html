@@ -45,12 +45,16 @@
 						{% for value in http_list %}
 							<tr>
 								<td><input type="checkbox"></td>
-								{% for table in  value  %}
-
-								<td>{{table}}</td>
-								{% endfor %}
+								<td>{{value.url_info}}</td>
+								<td>{{value.return_value}}</td>
+								<td>{{value.status}}</td>
 							<!--	<td style="text-align:center;"><i class="layui-icon" style="color:red;">ဇ</i></td> -->
 								<td>
+								{% if value.status == 1 %}
+									<a href="/detail-6" target="_blank">禁用</a>
+								{% else  %}
+									<a href="/detail-6" target="_blank">启用</a>
+								{% endif %}
 									<a href="/detail-6" target="_blank">预览</a>
 									<a href="/manage/article_edit_6">编辑</a>
 									<a href="javascript:;" data-id="6" data-opt="del">删除</a>
