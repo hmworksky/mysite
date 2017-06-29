@@ -10,6 +10,8 @@ class Login(models.Model):
     nick_name = models.CharField(max_length = 50, default = '0',  blank = True)
     username = models.CharField(max_length = 50, unique = True ,blank = True)
     password = models.CharField(max_length = 50,blank = True)
+    email = models.EmailField(max_length = 50 , null = True)
+    phone = models.IntegerField(max_length = 50 , null = True)
     def __unicode__(self):
 	return self.username
 	
