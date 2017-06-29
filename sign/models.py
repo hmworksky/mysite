@@ -14,7 +14,7 @@ class Login(models.Model):
 	return self.username
 	
 class InterfaceInfo(models.Model):
-    url_info = models.URLField(max_length = 200 ,unique = True ,null = True)
+    url_info = models.URLField(max_length = 200 ,unique = True)
     status  =  models.IntegerField()
     return_value =  models.CharField(max_length = 2500)
     user = models.ForeignKey(Login)
