@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from mysite import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^oauth2/queryYqbBalance/',views.hello),
-    url(r'^hello/$',views.hh),
     url(r'^tool/',include('sign.urls')),
+    url(r'^http/',include('http_tool.urls'))
 ]
