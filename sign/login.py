@@ -1,8 +1,10 @@
+# -*- coding:utf-8 -*-
 from django.http import Http404,HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response
 from django.http.response import JsonResponse
-from tools import *
+from tool1 import *
 import os
+from models import *
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
 
@@ -13,8 +15,8 @@ def register(request):
         password = request.POST.get('password')
         pwdagain = request.POST.get('pwdagain')
         if password == pwdagain :
-            if signup_judge(username = username):
-                if signup(username,password) :
+            if Login.objects.filter(username = username):
+                if Login.objects.get_or_create(username=username,password=password) :
                     request.session['username']=username
                     return redirect('/tool/index/')
                 else:
@@ -29,7 +31,7 @@ def login(request):
     if request.method == 'POST' :
         username  = request.POST.get('username')
         password = request.POST.get('password')
-        if login_judge(username,password):
+        if Login.objects.filter(username = username,password=password):
             request.session['username'] = username
             return redirect('/tool/interface/create/')
         else :
