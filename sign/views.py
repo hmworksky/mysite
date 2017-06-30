@@ -56,11 +56,11 @@ def resetlogin(request):
     return render_to_response('reset.html')	
 
 def interface_create(request):
+    username = request.session.get('username')
+    user_id = getuserid(username)
     if request.method == 'POST' : 
         interface_name = request.POST.get('url_name')
         return_value = request.POST.get('return_value')
-        username = request.session.get('username')
-        user_id = Login.objects.values("id").get(username = username)["id"]
 	host = request.get_host()
 	url_info = "http://"+ host  + "/tool/interface/return/" + username + "/" + interface_name
 	try :
@@ -68,14 +68,14 @@ def interface_create(request):
 	    return redirect('/tool/interface/list/')
 	except  Exception , e:
 	    return HttpResponse(e)
-    return render_to_response('admin/interface_create.html')	
+    return render_to_response('interface/interface_create.html',{'username':username})	
 
 def interface_list(request):
     username = request.session['username']
     user_id = getuserid(username)
     if user_id : 
         http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("url_info","return_value","status"))
-	return render_to_response('interface/interface_list.html',{'http_list':http_list})
+	return render_to_response('interface/interface_list.html',{'http_list':http_list,'username':username})
 
 def interface_return(request):
     if request.method == 'POST' or request.method == 'GET':

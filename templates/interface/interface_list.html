@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} <title>Table</title> {% endblock %}
+{% block title %} Table {% endblock %}
 {% block content1 %}
 		{% load static %}
 		<link rel="stylesheet" href="{%static 'sign/new_admin/plugins/layui/css/layui.css'%}" media="all" />
@@ -11,7 +11,7 @@
 		<div class="admin-main">
 
 			<blockquote class="layui-elem-quote">
-				<a href="javascript:;" class="layui-btn layui-btn-small" id="add">
+				<a href="/tool/interface/create/" class="layui-btn layui-btn-small" id="add">
 					<i class="layui-icon">&#xe608;</i> 添加信息
 				</a>
 				<a href="#" class="layui-btn layui-btn-small" id="import">
