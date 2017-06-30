@@ -32,8 +32,8 @@
 							<tr>
 								<th><input type="checkbox" id="selected-all"></th>
 								<th>请求地址</th>
-								<th>超时时间</th>
 								<th>返回值</th>
+								<th>延迟时间</th>
 								<th>状态</th>
 								<th>操作</th>
 							</tr>
@@ -43,8 +43,16 @@
 							<tr>
 								<td><input type="checkbox"></td>
 								<td>{{value.url_info}}</td>
+								<style type="text/css">
+								.product-buyer-name {
+								max-width: 110px;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+										}
+								</style>
+								<td class = "product-buyer-name">{{value.return_value}}</td>
 								<td>{{value.timeout}}</td>
-								<td>{{value.return_value}}</td>
 								<td>{{value.status}}</td>
 							<td>
 								

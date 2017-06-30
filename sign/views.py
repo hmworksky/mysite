@@ -62,6 +62,8 @@ def interface_create(request):
         interface_name = request.POST.get('url_name')
         return_value = request.POST.get('return_value')
         timeout = request.POST.get('timeout')
+	if timeout == None :
+	    timeout = 0
 	host = request.get_host()
 	url_info = "http://"+ host  + "/tool/interface/return/" + username + "/" + interface_name
 	try :
