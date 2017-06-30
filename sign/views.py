@@ -84,14 +84,14 @@ def interface_return(request):
 	path = request.path
 	url = "http://" + host + path
     if InterfaceInfo.objects.filter(url_info = url):
-	    data = InterfaceInfo.objects.values("return_value").get(url_info=url)["return_value"]
+	data = InterfaceInfo.objects.values("return_value").get(url_info=url)["return_value"]
         timeout = InterfaceInfo.objects.values("timeout").get(url_info=url)["timeout"]
         time.sleep(timeout)
-	    if data.startswith("{"):
-		data = eval(data)
-	        return JsonResponse(data) 
-	    else :
-		    return HttpResponse(data)
+	if data.startswith("{"):
+	    data = eval(data)
+	    return JsonResponse(data) 
+	else :
+	    return HttpResponse(data)
     return HttpResponse('result')
 
 def index(request):
