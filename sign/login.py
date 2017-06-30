@@ -44,8 +44,8 @@ def resetlogin(request):
         password = request.POST.get('password')
         pwdagain = request.POST.get('pwdagain')
         if password == pwdagain :
-            if signup_judge(username = username) is False:
-                resetpwd(username,password)
+            if Login.objects.filter(username = username) is False:#判断用户名是否存在
+                Login.objects.get(username = username ).update(password = password)
                 request.session['username']=username
                 return redirect('/tool/index/')
             else :
