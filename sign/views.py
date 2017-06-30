@@ -7,10 +7,10 @@ from tools import *
 import os
 from models import *
 import json
+import time
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
-
-
 # Create your views here.
+
 
 def register(request):
     if request.method == 'POST' :
@@ -61,10 +61,11 @@ def interface_create(request):
     if request.method == 'POST' : 
         interface_name = request.POST.get('url_name')
         return_value = request.POST.get('return_value')
+        timeout = request.POST.get('timeout')
 	host = request.get_host()
 	url_info = "http://"+ host  + "/tool/interface/return/" + username + "/" + interface_name
 	try :
-            InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id)
+            InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id,timeout=timeout)
 	    return redirect('/tool/interface/list/')
 	except  Exception , e:
 	    return HttpResponse(e)
@@ -82,13 +83,15 @@ def interface_return(request):
 	host = request.get_host()
 	path = request.path
 	url = "http://" + host + path
-        if InterfaceInfo.objects.filter(url_info = url):
+    if InterfaceInfo.objects.filter(url_info = url):
 	    data = InterfaceInfo.objects.values("return_value").get(url_info=url)["return_value"]
+        timeout = InterfaceInfo.objects.values("timeout").get(url_info=url)["timeout"]
+        time.sleep(timeout)
 	    if data.startswith("{"):
 		data = eval(data)
 	        return JsonResponse(data) 
 	    else :
-		return HttpResponse(data)
+		    return HttpResponse(data)
     return HttpResponse('result')
 
 def index(request):
