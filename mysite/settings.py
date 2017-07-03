@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'mysite',
     'sign',
     'http_tool',
+    'interface_control',
+    'public_tool',
+    'home',
 ]
 
 MIDDLEWARE = [

@@ -11,7 +11,7 @@
 		<div class="admin-main">
 
 			<blockquote class="layui-elem-quote">
-				<a href="/tool/interface/create/" class="layui-btn layui-btn-small" id="add">
+				<a href="/interface/create/" class="layui-btn layui-btn-small" id="add">
 					<i class="layui-icon">&#xe608;</i> 添加信息
 				</a>
 				<a href="#" class="layui-btn layui-btn-small" id="import">
@@ -53,14 +53,16 @@
 								</style>
 								<td class = "product-buyer-name">{{value.return_value}}</td>
 								<td>{{value.timeout}}</td>
-								<td>{{value.status}}</td>
+
 							<td>
 								
 								{% if value.status == 1 %}
-									<a href="/detail-6" target="_blank" class="layui-btn layui-btn-danger layui-btn-mini">禁用</a>
+                                    <a href="/detail-6" target="_blank" class="layui-btn layui-btn-mini">启用</a>
 								{% else  %}
-									<a href="/detail-6" target="_blank" class="layui-btn layui-btn-mini">启用</a>
+									<a href="/detail-6" target="_blank" class="layui-btn layui-btn-danger layui-btn-mini">禁用</a>
 								{% endif %}
+                            </td>
+                            <td>
 									<a href="/detail-6" target="_blank"  class="layui-btn layui-btn-normal layui-btn-mini" >预览</a>
 									<a href="/manage/article_edit_6" class="layui-btn layui-btn-mini">编辑</a>
 									<a href="javascript:;" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
@@ -77,7 +79,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="{% static 'plugins/layui/layui.js'%}"></script>
 		<script>
 			layui.config({
 				base: 'plugins/layui/modules/'

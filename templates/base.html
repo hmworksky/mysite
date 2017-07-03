@@ -64,14 +64,14 @@
 									</a>
 								</dd>
 								<dd>
-									<a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
+									<a href="login/login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
 								</dd>
 							</dl>
 						</li>
 					</ul>
 					<ul class="layui-nav admin-header-item-mobile">
 						<li class="layui-nav-item">
-							<a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
+							<a href="login/login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
 						</li>
 					</ul>
 				</div>
@@ -84,68 +84,76 @@
 				<li class="layui-nav-item ">
 				
 					<a href="javascript:;">
-					<i class="fa fa-cubes" aria-hidden="true" data-icon="fa-cubes"></i>
-					<cite>项目管理</cite>
-					<span class="layui-nav-more"></span>
+					    <i class="fa fa-cubes" aria-hidden="true" data-icon="fa-cubes"></i>
+					    <cite>项目管理</cite>
+					    <span class="layui-nav-more"></span>
 					</a>
 					
 					<dl class="layui-nav-child">
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_list.html">
-					<i class="layui-icon" data-icon=""></i>
-					<cite>项目进度</cite>
-					</a>
+					        <a href="javascript:;" data-url="interface/interface_list.html">
+					        <i class="layui-icon" data-icon=""></i>
+					        <cite>项目进度</cite>
+					        </a>
 						</dd>
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_create.html">
-					<i class="layui-icon" data-icon=""></i>
-					<cite>项目配置</cite>
-					</a>
+					        <a href="javascript:;" data-url="interface/interface_create.html">
+					        <i class="layui-icon" data-icon=""></i>
+					        <cite>项目配置</cite>
+					        </a>
 						</dd>
 					</dl>
 				</li>
 				<!-- 环境配置 -->
-								<li class="layui-nav-item ">
+                    <li class="layui-nav-item ">
 				
-					<a href="javascript:;">
-					<i class="fa fa-cubes" aria-hidden="true" data-icon="fa-cubes"></i>
-					<cite>环境配置</cite>
-					<span class="layui-nav-more"></span>
-					</a>
+					    <a href="javascript:;">
+					        <i class="fa fa-cubes" aria-hidden="true" data-icon="fa-cubes"></i>
+					        <cite>环境配置</cite>
+					        <span class="layui-nav-more"></span>
+					    </a>
 					
 					<dl class="layui-nav-child">
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_list.html">
-					<i class="layui-icon" data-icon=""></i>
-					<cite>游戏配置</cite>
-					</a>
+					        <a href="javascript:;" data-url="interface/interface_list.html">
+					            <i class="layui-icon" data-icon=""></i>
+					            <cite>游戏配置</cite>
+					        </a>
 						</dd>
 						
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_list.html">
-					<i class="layui-icon" data-icon=""></i>
-					<cite>磁盘状态</cite>
-					</a>
+					        <a href="javascript:;" data-url="interface/interface_list.html">
+					            <i class="layui-icon" data-icon=""></i>
+					            <cite>磁盘状态</cite>
+					        </a>
 						</dd>						
 						
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_create.html">
-					<i class="layui-icon" data-icon=""></i>
-					<cite>环境分支</cite>
-					</a>
+					        <a href="javascript:;" data-url="interface/interface_create.html">
+					        <i class="layui-icon" data-icon=""></i>
+					        <cite>环境分支</cite>
+					        </a>
 						</dd>
 
 						<dd>
-                                         <a href="javascript:;" data-url="interface/interface_create.html">
-                                         <i class="layui-icon" data-icon=""></i>
-                                         <cite>资产配置</cite>
-                                         </a>
-                                                 </dd>
-												<dd>
-					<a href="javascript:;" data-url="interface/interface_create.html">
-					<i class="layui-icon" data-icon=""></i>
-					<cite>其它</cite>
-					</a>
+                            <a href="javascript:;" data-url="interface/interface_create.html">
+                                <i class="layui-icon" data-icon=""></i>
+                                <cite>资产配置</cite>
+                            </a>
+                        </dd>
+
+                        <dd>
+					        <a href="javascript:;" data-url="interface/interface_create.html">
+					            <i class="layui-icon" data-icon=""></i>
+					            <cite>接口配置</cite>
+					        </a>
+						</dd>
+
+                        <dd>
+					        <a href="javascript:;" data-url="interface/interface_create.html">
+					            <i class="layui-icon" data-icon=""></i>
+					            <cite>其它</cite>
+					        </a>
 						</dd>
 					</dl>
 				</li>
@@ -160,13 +168,13 @@
 					
 					<dl class="layui-nav-child">
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_list.html">
+					<a href="/http/get/list/" data-url="http_tool/get_list.html">
 					<i class="layui-icon" data-icon=""></i>
 					<cite>GET请求</cite>
 					</a>
 						</dd>
 						<dd>
-					<a href="javascript:;" data-url="interface/interface_create.html">
+					<a href="/http/post/list/" data-url="http_tool/post_list.html">
 					<i class="layui-icon" data-icon=""></i>
 					<cite>POST请求</cite>
 					</a>
@@ -199,7 +207,7 @@
                                                   </dd>
 
 					 <dd>
-                                            <a href="/tool/interface/list/" data-url="interface/interface_list.html">
+                                            <a href="/interface/list/" data-url="interface/interface_list.html">
                                             <i class="layui-icon" data-icon=""></i>
                                             <cite>服务器返回</cite>
 					    </a>
