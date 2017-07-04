@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{%block title%} 自定义接口 {% endblock %}
+{%block title%} POST配置 {% endblock %}
 {% block content %}
 		<div style="margin: 15px;">
 			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-				<legend>生成自定义接口</legend>
+				<legend>HTTP-POST请求配置</legend>
 			</fieldset>
 
 			<form class="layui-form" action="/http/post/create/" method="POST">
@@ -11,21 +11,44 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">请求URL</label>
 					<div class="layui-input-block">
-						<input type="text" name="url_name" lay-verify="title" autocomplete="off" placeholder="请输入一个url地址 ps:英文" class="layui-input">
+						<input type="text"  name="post_url" lay-verify="title" autocomplete="off" placeholder="请输入一个url地址" class="layui-input">
 					</div>
 				</div>
 
 				<div class="layui-form-item">
-					<label class="layui-form-label">超时时间</label>
+					<label class="layui-form-label">选择项</label>
 					<div class="layui-input-block">
-						<input type="text" name="timeout" lay-verify="title" autocomplete="off" placeholder="请输入一个数字 ps:单位秒" class="layui-input">
+						<input id = "btn1" type="checkbox" name="likewrite" onclick="btn()" title="并发数" checked="">
+						<input id = "btn2" type="checkbox" name="like[read]" onclick="btn()" title="请求头" >
+						<input id = "btn3" type="checkbox" name="like[game]"  onclick="btn()" title="请求cookie">
 					</div>
 				</div>
 
-				<div class="layui-form-item layui-form-text">
-					<label class="layui-form-label">返回值</label>
+				<div id ="div1" class="layui-form-item">
+					<label class="layui-form-label">并发数</label>
 					<div class="layui-input-block">
-						<textarea  name = "return_value"  placeholder="请输入内容" class="layui-textarea"></textarea>
+						<input type="text" name="post_thread" lay-verify="title" autocomplete="off" placeholder="请输入一个数字" class="layui-input">
+					</div>
+				</div>
+
+				<div id ="div2" class="layui-form-item layui-form-text">
+					<label class="layui-form-label">请求头信息</label>
+					<div class="layui-input-block">
+						<textarea  name = "post_head"  placeholder="请输入内容" class="layui-textarea"></textarea>
+					</div>
+				</div>
+
+                <div id ="div3" class="layui-form-item layui-form-text">
+					<label class="layui-form-label">请求cookie</label>
+					<div class="layui-input-block">
+						<textarea  name = "post_cookie"  placeholder="请输入内容" class="layui-textarea"></textarea>
+					</div>
+				</div>
+
+                <div id ="div3" class="layui-form-item layui-form-text">
+					<label class="layui-form-label">请求data</label>
+					<div class="layui-input-block">
+						<textarea  name = "post_data"  placeholder="请输入内容" class="layui-textarea"></textarea>
 					</div>
 				</div>
 

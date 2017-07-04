@@ -31,18 +31,19 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox" id="selected-all"></th>
-								<th>请求地址</th>
-								<th>并发数</th>
-								<th>请求头</th>
+								<th>接口地址</th>
+
+								<th>请求data</th>
+                                <th>请求header</th>
 								<th>请求cookie</th>
+                                <th>并发数</th>
 								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
-						{% for value in http_list %}
+						{% for value in post_list %}
 							<tr>
 								<td><input type="checkbox"></td>
-								<td>{{value.url_info}}</td>
 								<style type="text/css">
 								.product-buyer-name {
 								max-width: 110px;
@@ -51,19 +52,23 @@
 								white-space: nowrap;
 										}
 								</style>
-								<td class = "product-buyer-name">{{value.return_value}}</td>
-								<td>{{value.timeout}}</td>
-								<td>{{value.status}}</td>
+								<td class = "product-buyer-name">{{value.send_url}}</td>
+								<td class = "product-buyer-name">{{value.data}}</td>
+
+                                <td class = "product-buyer-name">{{value.header}}</td>
+                                <td class = "product-buyer-name">{{value.cookie}}</td>
+                                <td>{{value.thread_num}}</td>
 							<td>
-								
+			<!--
 								{% if value.status == 1 %}
 									<a href="/detail-6" target="_blank" class="layui-btn layui-btn-danger layui-btn-mini">禁用</a>
 								{% else  %}
 									<a href="/detail-6" target="_blank" class="layui-btn layui-btn-mini">启用</a>
 								{% endif %}
-									<a href="/detail-6" target="_blank"  class="layui-btn layui-btn-normal layui-btn-mini" >预览</a>
-									<a href="/manage/article_edit_6" class="layui-btn layui-btn-mini">编辑</a>
-									<a href="javascript:;" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
+			-->
+									<a href="/http/post/detail/{{value.id}}/" target="_blank"  class="layui-btn layui-btn-normal layui-btn-mini" >预览</a>
+									<a href="/http/post/edit/{{value.id}}/" class="layui-btn layui-btn-mini">编辑</a>
+									<a href="/http/post/delete/{{value.id}}/" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
 								</td>
 							</tr>
 							{% endfor %}

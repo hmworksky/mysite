@@ -3,9 +3,7 @@ from django.shortcuts import  render_to_response,redirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from .models import HttpSend
 from public_tool import user
-def get_list(request):
-    username = request.session['username']
-    return render_to_response('http_tool/get_list.html', {'username': username})
+
 
 
 def get_create(request):
@@ -26,8 +24,6 @@ def get_create(request):
             #此处需要添加日志
             #插入失败，刷新页面
             return HttpResponse(e)
-            #return render_to_response('http_tool/get_create.html', {'username': "33"})
-
     return render_to_response('http_tool/get_create.html',{'username':username})
 
 
@@ -35,5 +31,17 @@ def get_list(request):
     username = request.session['username']
     user_id = user.getuserid(username)
     if user_id :
-        get_list = list(HttpSend.objects.filter(user_id = user_id,send_type = "GET").values("send_url","thread_num","headers","cookie","status"))
+        get_list = list(HttpSend.objects.filter(user_id = user_id,send_type = "GET").values("send_url","thread_num","headers","cookie","status","id"))
         return render_to_response('http_tool/get_list.html',{'get_list':get_list,'username':username})
+
+
+def get_edit(request,id):
+    return render_to_response('http_tool/get_list.html', {'username': id})
+
+def get_detail(request,id):
+    return render_to_response('http_tool/get_list.html',{'username':id})
+
+def get_delete(request,id):
+    HttpSend.objects.filter(id=id).delete()
+    return get_list(request)
+

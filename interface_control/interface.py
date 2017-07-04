@@ -36,7 +36,7 @@ def interface_list(request):
     username = request.session['username']
     user_id = getuserid(username)
     if user_id : 
-        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("url_info","timeout","return_value","status"))
+        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("url_info","timeout","return_value","status","id"))
         return render_to_response('interface/interface_list.html',{'http_list':http_list,'username':username})
 
 def interface_return(request):
@@ -54,6 +54,19 @@ def interface_return(request):
         else :
             return HttpResponse(data)
     return HttpResponse('result')
+
+# def interface_start(request,id):
+#     return HttpResponse('start')
+
+def interface_detail(request,id):
+    return HttpResponse('detail')
+
+def interface_edit(request,id):
+    return HttpResponse('edit')
+
+def interface_delete(request,id):
+    http_list = InterfaceInfo.objects.filter( id = id ).delete()
+    return interface_list(request)
 
 def index(request):
     host = request.get_host()
