@@ -14,7 +14,7 @@ def register(request):
         pwdagain = request.POST.get('pwdagain')
         if password == pwdagain :
             if Login.objects.filter(username = username) :
-                return render_to_response('signup.html', {'errormsg': '用户名已注册'})
+                return render_to_response('login/signup.html', {'errormsg': '用户名已注册'})
             else :
                 try:
                     Login.objects.get_or_create(username=username,password=password)
@@ -25,7 +25,7 @@ def register(request):
                     return   render_to_response('login/signup.html')
         else :
             return render_to_response('login/signup.html',{'errormsg':'请输入相同密码'})
-    return render_to_response('signup.html')
+    return render_to_response('login/signup.html')
 
 def login(request):
     if request.method == 'POST' :
