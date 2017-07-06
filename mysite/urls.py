@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^interface/',include('interface_control.urls')),
     url(r'^index/',include('home.urls')),
     url(r'^project/',include('project_control.urls')),
-    # url(r'^env/',include('env_config.urls')),
+    url(r'^env/',include('env_config.urls')),
     # url(r'^data/',include('data_center.urls')),
     url(r'^auto/',include('automated_testing.urls')),
 
