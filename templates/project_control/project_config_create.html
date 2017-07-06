@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{%block title%} Project create {% endblock %}
+{% load static %}
+{% block content1 %}
+<link rel="stylesheet" type="text/css" href="{% static 'sign/new_admin/css/jquery.datetimepicker.css'%}"/>
+{% endblock %}
+{% block content %}
+		<div style="margin: 15px;">
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+				<legend>项目创建</legend>
+			</fieldset>
+
+			<form class="layui-form" action="/project/create/" method="POST">
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">项目名称</label>
+					<div class="layui-input-block">
+						<input type="text"  name="project_name" lay-verify="title" autocomplete="off" placeholder="请输入项目名称" class="layui-input">
+					</div>
+				</div>
+                <div style="width:960px;margin:0 auto;">
+	                <h3>创建时间</h3>
+	                <input type="text" name = "project_createtime" id="datetimepicker8"/>
+                </div>
+
+                <div style="width:960px;margin:0 auto;">
+	                <h3>结束时间</h3>
+	                <input type="text" name = "project_endtime" id="datetimepicker8"/>
+                </div>
+
+                <div class="layui-form-item">
+					<label class="layui-form-label">项目状态</label>
+					<div class="layui-input-block">
+						<select name="status" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0" selected="">未开始</option>
+							<option value="1" >用例阶段</option>
+							<option value="2">冒烟测试</option>
+							<option value="3">用例执行</option>
+							<option value="4">已上线</option>
+						</select>
+					</div>
+				</div>
+
+
+
+
+
+				
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script type="text/javascript" src="{%static 'sign/new_admin/plugins/layui/layui.js'%}"></script>
+		<script>
+			layui.use(['form', 'layedit', 'laydate'], function() {
+				var form = layui.form(),
+					layer = layui.layer,
+					layedit = layui.layedit,
+					laydate = layui.laydate;
+
+				//创建一个编辑器
+				var editIndex = layedit.build('LAY_demo_editor');
+				//自定义验证规则
+				form.verify({
+					title: function(value) {
+						if(value.length < 5) {
+							return '标题至少得5个字符啊';
+						}
+					},
+					pass: [/(.+){6,12}$/, '密码必须6到12位'],
+					content: function(value) {
+						layedit.sync(editIndex);
+					}
+				});
+
+				//监听提交
+				form.on('submit(demo1)', function(data) {
+					layer.alert(JSON.stringify(data.field), {
+						title: '最终的提交信息'
+					})
+					return false;
+				});
+			});
+		</script>
+    <script type="text/javascript" src="{%static 'sign/new_admin/js/jquery.js'%}"></script>
+    <script type="text/javascript" src="{% static  'sign/new_admin/js/jquery.datetimepicker.js'%}"></script>
+    <script type="text/javascript">
+$('#datetimepicker_mask').datetimepicker({
+	mask:'9999/19/39 29:59'
+});
+$('#datetimepicker').datetimepicker();
+$('#datetimepicker').datetimepicker({value:'2015/04/15 05:03',step:10});
+$('#datetimepicker1').datetimepicker({
+	datepicker:false,
+	format:'H:i',
+	step:5
+});
+$('#datetimepicker2').datetimepicker({
+	yearOffset:222,
+	lang:'ch',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d',
+	minDate:'-1970/01/02', // yesterday is minimum date
+	maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+});
+$('#datetimepicker3').datetimepicker({
+	inline:true
+});
+
+$('#datetimepicker4').datetimepicker();
+
+$('#open').click(function(){
+	$('#datetimepicker4').datetimepicker('show');
+});
+$('#close').click(function(){
+	$('#datetimepicker4').datetimepicker('hide');
+});
+$('#reset').click(function(){
+	$('#datetimepicker4').datetimepicker('reset');
+});
+$('#datetimepicker5').datetimepicker({
+	datepicker:false,
+	allowTimes:['12:00','13:00','15:00','17:00','17:05','17:20','19:00','20:00']
+});
+$('#datetimepicker6').datetimepicker();
+$('#destroy').click(function(){
+	if( $('#datetimepicker6').data('xdsoft_datetimepicker') ){
+		$('#datetimepicker6').datetimepicker('destroy');
+		this.value = 'create';
+	}else{
+		$('#datetimepicker6').datetimepicker();
+		this.value = 'destroy';
+	}
+});
+var logic = function( currentDateTime ){
+	if( currentDateTime.getDay()==6 ){
+		this.setOptions({
+			minTime:'11:00'
+		});
+	}else
+		this.setOptions({
+			minTime:'8:00'
+		});
+};
+$('#datetimepicker7').datetimepicker({
+	onChangeDateTime:logic,
+	onShow:logic
+});
+$('#datetimepicker8').datetimepicker({
+	onGenerate:function( ct ){
+		$(this).find('.xdsoft_date')
+			.toggleClass('xdsoft_disabled');
+	},
+	minDate:'-1970/01/2',
+	maxDate:'+1970/01/2',
+	timepicker:false
+});
+$('#datetimepicker9').datetimepicker({
+	onGenerate:function( ct ){
+		$(this).find('.xdsoft_date.xdsoft_weekend')
+			.addClass('xdsoft_disabled');
+	},
+	weekends:['01.01.2014','02.01.2014','03.01.2014','04.01.2014','05.01.2014','06.01.2014'],
+	timepicker:false
+});
+</script>
+
+
+{% endblock %}
