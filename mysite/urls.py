@@ -19,7 +19,12 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/',include('sign.urls')),
-    url(r'^http/',include('http_tool.urls')),
+    url(r'^http/'  , include('http_tool.urls')),
     url(r'^interface/',include('interface_control.urls')),
     url(r'^index/',include('home.urls')),
+    url(r'^project/',include('project_control.urls')),
+    url(r'^env/',include('env_config.urls')),
+    # url(r'^data/',include('data_center.urls')),
+    url(r'^auto/',include('automated_testing.urls')),
+
 ]

@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'interface_control',
     'public_tool',
     'home',
+    'project_control',
+    'env_config',
+    'data_center',
+    'automated_testing',
 ]
 
 MIDDLEWARE = [
