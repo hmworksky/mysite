@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 from django.shortcuts import  render_to_response,redirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
-from .models import HttpSend
+from http_tool.models import HttpSend
 from public_tool import user
 
 

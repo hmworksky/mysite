@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 from __future__ import unicode_literals
 from django.http import Http404,HttpResponse,HttpResponseRedirect,HttpResponseServerError
+from django.http import Http404,HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect,render_to_response
 from django.http.response import JsonResponse
 from public_tool.user import getuserid
@@ -68,5 +69,9 @@ def interface_delete(request,id):
     http_list = InterfaceInfo.objects.filter( id = id ).delete()
     return interface_list(request)
 
+
 def index(request):
     return HttpResponseServerError()
+
+
+
