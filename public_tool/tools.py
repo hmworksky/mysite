@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # from ConfigParser import  ConfigParser
+import MySQLdb
 
 
 def case(**args):
@@ -22,4 +23,26 @@ def case(**args):
 #             return  kvs[key]
 #         else :
 #             return False
+def mysql_conn(sql):
+	try :
+		conn = MySQLdb.connect(host = "127.0.0.1",port = "3306",user='root',passwd='test1324',db='test1324',charset='utf8')
+	except Exception ,e :
+		return e
+	cursor = conn.cursor()
+	li = []
+	if sql.startswith("select"):
+		cursor.execute(sql)
+		values = cursor.fetchall()
+		for i in values :
+			li.append(i)
+		return li
+	else :
+		cursor.execute(sql)
+		return cursor.rowcount
+
+def time_conctrol(str):
+	str = str+":00"
+	str = str.replace('/','-')
+	return str
+
 

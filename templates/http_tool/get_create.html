@@ -7,7 +7,7 @@
 			</fieldset>
 
 			<form class="layui-form" action="/http/get/create/" method="POST">
-
+                {% csrf_token %}
 				<div class="layui-form-item">
 					<label class="layui-form-label">请求URL</label>
 					<div class="layui-input-block">
@@ -15,14 +15,6 @@
 					</div>
 				</div>
 
-				<div class="layui-form-item">
-					<label class="layui-form-label">选择项</label>
-					<div class="layui-input-block">
-						<input id = "btn1" type="checkbox" name="md5" onclick="btn()" title="md5" checked="">
-						<input id = "btn2" type="checkbox" name="aes" onclick="btn()" title="AES" >
-						<input id = "btn3" type="checkbox" name="sha1"  onclick="btn()" title="SHA1">
-					</div>
-				</div>
 
 				<div id ="div1" class="layui-form-item">
 					<label class="layui-form-label">并发数</label>
@@ -53,6 +45,7 @@
 						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 					</div>
 				</div>
+
 			</form>
 		</div>
 		{% load static %}

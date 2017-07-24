@@ -11,17 +11,8 @@
 		<div class="admin-main">
 
 			<blockquote class="layui-elem-quote">
-				<a href="/http/get/create/" class="layui-btn layui-btn-small" id="add">
+				<a href="/project/create/" class="layui-btn layui-btn-small" id="add">
 					<i class="layui-icon">&#xe608;</i> 添加信息
-				</a>
-				<a href="#" class="layui-btn layui-btn-small" id="import">
-					<i class="layui-icon">&#xe608;</i> 导入信息
-				</a>
-				<a href="#" class="layui-btn layui-btn-small">
-					<i class="fa fa-shopping-cart" aria-hidden="true"></i> 导出信息
-				</a>
-				<a href="javascript:;" class="layui-btn layui-btn-small" id="search">
-					<i class="layui-icon">&#xe615;</i> 搜索
 				</a>
 			</blockquote>
 			<fieldset class="layui-elem-field">
@@ -31,20 +22,21 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox" id="selected-all"></th>
-								<th>请求地址</th>
-								<th>并发数</th>
-								<th>请求头</th>
-								<th>请求cookie</th>
-                                <th>操作</th>
+								<th style="text-align:center;">项目名称</th>
+								<th style="text-align:center;">上线时间</th>
+								<th style="text-align:center;">参与人员</th>
+                                <th style="text-align:center;">测试负责人</th>
+                                <th style="text-align:center;">当前阶段</th>
+                                <th style="text-align:center;">操作</th>
                                 <!--<th>接口状态</th>-->
 
 							</tr>
 						</thead>
 						<tbody>
-						{% for value in get_list %}
+						{% for value in project_list %}
 							<tr>
 								<td><input type="checkbox"></td>
-								<td class = "product-buyer-name">{{value.send_url}}</td>
+								<td class = "product-buyer-name">{{value.project_name}}</td>
 								<style type="text/css">
 								.product-buyer-name {
 								max-width: 110px;
@@ -53,9 +45,22 @@
 								white-space: nowrap;
 										}
 								</style>
-								<td> {{value.thread_num}}</td>
-								<td class = "product-buyer-name">{{value.headers}}</td>
-								<td class = "product-buyer-name">{{value.cookie}}</td>
+								<td> {{value.start_time}}</td>
+                                <td class = "product-buyer-name">{{value.participant}}</td>
+                                <td class = "product-buyer-name">{{value.project_manager}}</td>
+                                {% if value.current_phase == '0' %}
+								    <td class = "product-buyer-name">未开始</td>
+                                {% endif %}
+                                {% if value.current_phase == '1' %}
+								    <td class = "product-buyer-name">用例阶段</td>
+                                {% endif %}
+                                {% if value.current_phase == '2' %}
+								    <td class = "product-buyer-name">用例执行</td>
+                                {% endif %}
+                                {% if value.current_phase == '3' %}
+								    <td class = "product-buyer-name">已上线</td>
+                                {% endif %}
+
                             <!--
 							<td>
 

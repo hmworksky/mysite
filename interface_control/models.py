@@ -12,4 +12,4 @@ class InterfaceInfo(models.Model):
     timeout = models.IntegerField(null = True ,default=0)
     user = models.ForeignKey(Login)
     def __unicode__(self):
-	    return self.url_info
+        return self.url_info

@@ -29,7 +29,7 @@ def interface_create(request):
             InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id,timeout=timeout)
             return redirect('/interface/list/')
         except  Exception , e:
-            #此处需要记录日志
+            #此处需要n记录日志
             render_to_response('interface/interface_create.html', {'username': username})
     return render_to_response('interface/interface_create.html',{'username':username})	
 
@@ -71,7 +71,16 @@ def interface_delete(request,id):
 
 
 def index(request):
-    return HttpResponseServerError()
+    li = ['0218562017071200000001']
+    li1 = []
+    return_str1 = ''' <?xml version="1.0" encoding="GBK"?><message version="2.0"id="0218562017071200000067"><header><messengerID>021856</messengerID><timestamp>20170712200104</timestamp><    transactionType>506</transactionType><digest>072e04839e04edd28dfc12e9fd9dd1e4</digest></header><body><responsecode="0000" message="鎴愬姛锛岀郴缁熷鐞嗘甯搞€�"><bonusQueryResult bonusNum    ber="01,02,03,04,05,06#07" totalItems="2"totalMoney="220"><issue number="2017075" gameName="ssq"/>'''
+    str4 = '''</bonusQueryResult></response></body></message>'''
+    for i in li:
+        str2 = '''<bonusItem playType="103" money="200" levelBonusMoney="200"isBombBonus="false" bonusLevel="4" ticketID="{ticket}"size="1"/>'''.format(ticket=i)
+        li1.append(str2)
+    str3 = "".join(li1)
+    str5 = return_str1+str3+str4
+    return HttpResponse(str5)
 
 
 
