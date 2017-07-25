@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Get List {% endblock %}
+{% block title %} Index {% endblock %}
 {% block content1 %}
 		{% load static %}
 		<link rel="stylesheet" href="{%static 'sign/new_admin/plugins/layui/css/layui.css'%}" media="all" />
@@ -34,7 +34,7 @@
                 data: (function(){
                     $.ajax({
                         type:"post",
-                        url:"bar/ajax_dict",
+                        url:"index/ajax_dict",
                         dataType:"json",
                         success:function()
                     });
@@ -64,7 +64,7 @@
                 data: (function(){
                     $.ajax({
                         type:"post",
-                        url:"bar/ajax_dict",
+                        url:"index/ajax_dict1",
                         dataType:"json",
                         success:function()
                     });
