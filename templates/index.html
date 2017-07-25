@@ -7,71 +7,57 @@
 		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 		<link rel="stylesheet" href="{%static 'sign/new_admin/css/table.css'%}" />
         <script src="{%static 'admin/js/echarts.js'%}"></script>
+
  {% endblock %}
 {% block content %}
     <!-- 第一个图表 -->
-    <div id="first" style="width: 600px;height:400px;"></div>
+    <div id="first" style="width: 1000px;height:400px;"></div>
     <!-- 第二个图表 -->
-    <div id="second" style="width: 600px;height:400px;"></div>
+    <div id="second" style="width: 1000px;height:400px;"></div>
+
     <script type="text/javascript">
 // ------配置图表1，各个性化图表配置方法详见官网-----
-    var firstChart = ec.init(document.getElementById("first"));
-    var option = {
-        title: {
-                text: '测试'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: (function(){
-                    $.ajax({
-                        type:"post",
-                        url:"index/ajax_dict",
-                        dataType:"json",
-                        success:function()
-                    });
-                }
-            }]
-        };
-    };
-    firstChart.setOption(option);
+    var firstChart = echarts.init(document.getElementById("first"));
+option = {
+    series: [{
+        name: '测试',
+        type: 'pie',
+        radius: '55%',
+        data: [
+                {value:235, name:'待上线项目'},
+                {value:274, name:'未开始项目'},
+                {value:310, name:'用例阶段项目'},
+                {value:335, name:'用例执行阶段项目'},
+                {value:400, name:'已完成项目'}
+            ]
+
+    }]
+};
+
+firstChart.setOption(option);
 
 // -----配置图表2-----
-    var secondChart = ec.init(document.getElementById("second"));
-    option={
-        title: {
-                text: '测试1'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量1']
-            },
-            xAxis: {
-                data: ["衬衫1","羊毛衫1","雪纺衫1","裤子1","高跟鞋1","袜子1"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量1',
-                type: 'bar',
-                data: (function(){
-                    $.ajax({
-                        type:"post",
-                        url:"index/ajax_dict1",
-                        dataType:"json",
-                        success:function()
-                    });
-                }
-            }]
-        };
-    };
+    var secondChart = echarts.init(document.getElementById("second"));
+    option = {
+    title: {
+        text: 'ECharts 入门示例'
+    },
+    tooltip: {},
+    legend: {
+        data:['测试标题']
+    },
+    xAxis: {
+        data: ["项目1","项目2","项目2","项目2","项目2","项目2"]
+    },
+    yAxis: {},
+    series: [{
+        name: '测试',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+    }]
+};
+
     secondChart.setOption(option);
+
 </script>
 {% endblock %}
