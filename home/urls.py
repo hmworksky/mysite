@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from homepage import *
+from home import homepage
 
-urlpatterns = [
-    url(r'', index1),
-]
+urlpatterns = {
+    url(r'', homepage.index, name='index'),
+}

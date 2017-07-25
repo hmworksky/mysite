@@ -6,9 +6,9 @@ from django.http import  HttpResponse,Http404,HttpResponseRedirect
 
 
 
-def index1(request):
+def index(request):
     username = request.session['username']
-    return render_to_response('http_tool/get_list.html', {'username': username})
+    return render_to_response('index.html', {'username': username})
 
 
 def get_create(request):

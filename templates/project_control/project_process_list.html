@@ -72,9 +72,7 @@
                             </td>
                             -->
                                 <td>
-									<a href="/http/get/detail/{{ value.id}}/" target="_blank"  class="layui-btn layui-btn-normal layui-btn-mini" >预览</a>
-									<a href="/http/get/edit/{{ value.id}}/" class="layui-btn layui-btn-mini">编辑</a>
-									<a href="/http/get/delete/{{ value.id}}/" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
+									<a href="/project/delete/{{ value.id}}/" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
 								</td>
 							</tr>
 							{% endfor %}
@@ -88,6 +86,7 @@
 				</div>
 			</div>
 		</div>
+
 		<script type="text/javascript" src="plugins/layui/layui.js"></script>
 		<script>
 			layui.config({
@@ -179,6 +178,7 @@
 					$input.iCheck(event.currentTarget.checked ? 'check' : 'uncheck');
 				});
 			});
+
 		</script>
 
 
