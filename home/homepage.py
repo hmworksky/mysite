@@ -1,14 +1,20 @@
 # -*- coding:utf-8 -*-
 from django.shortcuts import  render_to_response,redirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect,JsonResponse
-
+from public_tool import tools
+from urllib import unquote
+from collections import defaultdict
+import json
 
 
 
 
 def index(request):
     username = request.session['username']
-    return render_to_response('index.html', {'username': username})
+    branch = tools.branch_data(5,1)
+    name_value = str(branch[0]).replace("'",'"')
+    size_value = map(int,branch[1])
+    return render_to_response('index.html', locals())
 
 
 def get_create(request):
