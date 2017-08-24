@@ -27,7 +27,7 @@ def interface_create(request):
         url_info = "http://"+ host  + "/interface/return/" + username + "/" + interface_name
         try :
             InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id,timeout=timeout)
-            return redirect('/interface/list/')
+            return HttpResponseRedirect('/interface/list/')
         except  Exception , e:
             #此处需要n记录日志
             render_to_response('interface/interface_create.html', {'username': username})

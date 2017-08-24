@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import  render_to_response,redirect
+from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from http_tool.models import HttpSend
 from public_tool import user
@@ -19,7 +19,7 @@ def get_create(request):
         try:
             #从表单获取数据插入HttpSend表
             HttpSend.objects.create(send_url = get_url , headers = get_head ,cookie = get_cookie, send_type = 'GET',thread_num =get_thread ,user_id = user_id )
-            return redirect('/http/get/list/')#插入成功跳转列表页
+            return HttpResponseRedirect('/http/get/list/')#插入成功跳转列表页
         except Exception , e :
             #此处需要添加日志
             #插入失败，刷新页面

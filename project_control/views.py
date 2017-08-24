@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import  render_to_response,redirect
+from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from public_tool import user,tools
 from http_tool.models import HttpSend
@@ -18,7 +18,7 @@ def project_create(request):
         try:
             #从表单获取数据插入ProjectInfo表
             ProjectInfo.objects.create(project_name = project_name , start_time = start_time ,smock_time = smock_time, online_time = online_time,participant =participant ,user_id = user_id,project_manager=project_manager )
-            return redirect('/project/list/')#插入成功跳转列表页
+            return HttpResponseRedirect('/project/list/')#插入成功跳转列表页
         except Exception , e :
             #此处需要添加日志
             #插入失败，刷新页面

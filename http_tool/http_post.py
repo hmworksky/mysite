@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-from django.shortcuts import  render_to_response,redirect
+from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from public_tool import user
 from .models import HttpSend
@@ -26,7 +26,7 @@ def post_create(request):
         try:
             # 从表单获取数据插入HttpSend表
             HttpSend.objects.create(send_url=post_url, headers=post_head, cookie=post_cookie, send_type='POST', thread_num=post_thread, data = post_data, user_id=user_id)
-            return redirect('/http/post/list/')  # 插入成功跳转列表页
+            return HttpResponseRedirect('/http/post/list/')  # 插入成功跳转列表页
         except Exception, e:
             # 此处需要添加日志
             # 插入失败，刷新页面
