@@ -81,5 +81,19 @@ def index(request):
     str5 = return_str1+str3+str4
     return HttpResponse(str5)
 
+def zfv2_touzhu(request):
+    params = request.POST
+    ticket_info = params['datalist']
+    ticket_list = []
+    for i in ticket_info:
+        ticket_return = {}
+        ticket_id = i.get("ticketId")
+        ticket_return["ticketId"] = ticket_id
+        ticket_return["status"] = "1000"
+        ticket_return["msg"] = "test"
+        ticket_list.append(ticket_return)
+    ticket_params = {"response":{"ticket":ticket_list},"code":"0000","msg":"test1"}
+    return JsonResponse(ticket_params)
+
 
 

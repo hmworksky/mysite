@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'edit/(\d+)/$', interface.interface_edit, name ='interface_edit'),
     url(r'delete/(\d+)/$', interface.interface_delete, name ='interface_delete'),
     url(r'index/$', interface.index, name ='index'),
+    url(r'zf/$', interface.zfv2_touzhu, name ='zfv2_touzhu'),
     # url(r'start/(\d+)/(\d+)/$', interface.interface_delete, name ='interface_start'),
 ]
