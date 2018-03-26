@@ -125,4 +125,38 @@ def getsize(sizeInBytes):
 	return (bytes[:-2] if bytes.endswith('.0') else bytes) + ' bytes'
 
 
-
+def zf_ticket_conctorl(ticket_info,state = 0):#0投注成功，1投注失败
+    ticket_id = eval(ticket_info.keys()[0])["ticket_id"]
+    ticket_list = []
+    ticket_status = {0:"1000",1:"0007"}
+    if len(ticket_id) == 1:
+        if state == 0 :
+            status = ticket_status.get(0)
+        else:
+            status = ticket_status.get(1)
+        ticket_id = ticket_id[0]
+        ticket_params = {"response":{"ticket":{"@attributes":{"ticketId":ticket_id,"status":status,"msg":"test1"}},"code":"0000","msg":"test2"}}
+    else:
+        times = 0
+        for i in ticket_id:
+            ticket_return = {} 
+            ticket_r = {}
+            ticket_return["ticketId"] = i
+            ticket_return["msg"] = "test"
+            if times ==0:
+                status = ticket_status.get(0)
+                times += 1
+            else:
+                status = ticket_status.get(1)
+            ticket_return["status"] = status
+            ticket_r["@attributes"] = ticket_return
+            ticket_list.append(ticket_r)
+        ticket_params = {"response":{"ticket":ticket_list,"code":"0000","msg":"test2"}}
+    return ticket_params
+def wucai_ticket_conctorl(ticket_info,state = 0):#state:0=投注成功，1=投注失败
+    if state == 0 :
+        status = "0000"
+    else:
+        status = "1011"
+    ticket_params = {"response":{"code":status,"message":"wucai_test"}}
+    return ticket_params
