@@ -85,7 +85,7 @@ def index(request):
 def zf_test(request):
     logger = logging.getLogger("django")
     ticket_info = dict(request.POST)
-    ticket_params = zf_ticket_conctorl(ticket_info,state = 2)
+    ticket_params = zf_ticket_conctorl(ticket_info,state = 0)
     logger.info("zf_test:{info}".format(info = ticket_params))
     #time.sleep(80)
     return JsonResponse(ticket_params) 
