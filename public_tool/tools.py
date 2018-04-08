@@ -160,3 +160,25 @@ def wucai_ticket_conctorl(ticket_info,state = 0):#state:0=投注成功，1=投�
         status = "1011"
     ticket_params = {"response":{"code":status,"message":"wucai_test"}}
     return ticket_params
+def zc_ticket_conctorl(ticket_info,state = 0):
+    ticket_list = []
+    orderid = eval(ticket_info.keys()[0])["ticket_id"]
+    uuid = eval(ticket_info.keys()[0])["uuid"]
+    status_code = {0:10000,1:10001}
+    times = 0 
+    for i in orderid:
+        ticket_r = {}
+        code = status_code.get(0)
+        if state == 1:
+            code = status_code.get(1)
+        elif state not in (0,1):
+            if times == 0:
+                code = status_code.get(1)
+                times += 1
+        ticket_r["orderId"] = i
+        ticket_r["code"] = code
+        ticket_r["message"] = "zc_test"
+        ticket_list.append(ticket_r)
+    ticket_params = {"err":{"code":10000,"des":"zctest"},"tickets":ticket_list,"uuid":uuid}
+    return ticket_params    
+            

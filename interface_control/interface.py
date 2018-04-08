@@ -4,10 +4,10 @@ from django.http import Http404,HttpResponse,HttpResponseRedirect,HttpResponseSe
 from django.shortcuts import render,redirect,render_to_response
 from django.http.response import JsonResponse
 from public_tool.user import getuserid
-from public_tool.tools import zf_ticket_conctorl,wucai_ticket_conctorl
+from public_tool.tools import zf_ticket_conctorl,wucai_ticket_conctorl,zc_ticket_conctorl
 import os
 from interface_control.models import *
-import json
+import json,time
 import time,logging,collections
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
@@ -82,42 +82,24 @@ def index(request):
     str5 = return_str1+str3+str4
     return HttpResponse(str5)
 
-def zfv2_touzhu(request):
-    logger = logging.getLogger("django")
-    #params = dict(request.POST)
-    ticket_info = dict(request.POST)
-    logger.info("ticket_info:{info}:".format(info=ticket_info))
-    ticket_id = eval(ticket_info.keys()[0])["ticket_id"]
-	#ticket_info = ticket_info.keys()
-    logger.info("info:{info}".format(info=ticket_id))
-    ticket_list = []
-    if len(ticket_id) == 1:
-        ticket_id = ticket_id[0]
-        ticket_params = {"response":{"ticket":{"@attributes":{"ticketId":ticket_id,"status":"1000","msg":"test1"}},"code":"0000","msg":"test2"}}
-        logger.info("return:{info}".format(info=ticket_params))
-    else:
-        for i in ticket_id:
-            ticket_return = {}
-            ticket_return = collections.OrderedDict()
-            ticket_r = {}
-            ticket_return["ticketId"] = i
-            ticket_return["status"] = "1000"
-            ticket_return["msg"] = "test"
-            ticket_r["@attributes"] = ticket_return
-            ticket_list.append(ticket_r)
-    #ticket_params = collections.OrderedDict()
-        ticket_params = {"response":{"ticket":ticket_list,"code":"0000","msg":"test2"}}
-        logger.info("return:{info}".format(info=ticket_params))
-    return JsonResponse(ticket_params)
 def zf_test(request):
     logger = logging.getLogger("django")
     ticket_info = dict(request.POST)
-    ticket_params = zf_ticket_conctorl(ticket_info,state = 1)
+    ticket_params = zf_ticket_conctorl(ticket_info,state = 2)
     logger.info("zf_test:{info}".format(info = ticket_params))
+    #time.sleep(80)
     return JsonResponse(ticket_params) 
+    #return HttpResponse(None)
 def wucai_test(request):
     logger = logging.getLogger("django")
     ticket_info = dict(request.POST)
-    ticket_params = wucai_ticket_conctorl(ticket_info,state = 0)
+    ticket_params = wucai_ticket_conctorl(ticket_info,state = 1)
     logger.info("wucai_test:{info}".format(info = ticket_params))
     return JsonResponse(ticket_params)
+def zc_test(request):
+    logger  = logging.getLogger("django")
+    ticket_info = dict(request.POST)
+    ticket_params = zc_ticket_conctorl(ticket_info,state = 0)
+    logger.info("zc_test:{info}".format(info = ticket_info))
+    return JsonResponse(ticket_params)
+    #return HttpResponse(ticket_info)

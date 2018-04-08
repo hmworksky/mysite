@@ -10,8 +10,8 @@ urlpatterns = [
     url(r'edit/(\d+)/$', interface.interface_edit, name ='interface_edit'),
     url(r'delete/(\d+)/$', interface.interface_delete, name ='interface_delete'),
     url(r'index/$', interface.index, name ='index'),
-    url(r'zf/$', interface.zfv2_touzhu, name ='zfv2_touzhu'),
     url(r'zf_test/$', interface.zf_test, name ='zf_test'),
     url(r'wucai_test/$', interface.wucai_test, name ='wucai_test'),
+    url(r'zc_test/$', interface.zc_test, name ='zc_test'),
     # url(r'start/(\d+)/(\d+)/$', interface.interface_delete, name ='interface_start'),
 ]
