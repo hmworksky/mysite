@@ -1,10 +1,6 @@
 # -*- coding:utf-8 -*-
-# from ConfigParser import  ConfigParser
-import requests
-import re
-from collections import defaultdict, OrderedDict
-import heapq
-
+from ConfigParser import ConfigParser
+import os,time
 import MySQLdb
 
 
@@ -18,28 +14,30 @@ def case(**args):
 			case_list.append(str)
 	return case_list
 
-# def readconfig(key):
-#     cf = ConfigParser()
-#     cf.read("config.conf")
-#     sections = cf.sections()
-#     for i in sections:
-#         kvs = dict(cf.items(i))
-#         if key in kvs.keys():
-#             return  kvs[key]
-#         else :
-#             return False
+def readconfig(key):
+	key = key.upper()
+	cf = ConfigParser()
+	cf.read("config.conf")
+	sections = cf.sections()
+	for i in sections:
+		kvs = dict(cf.items(i))
+		if key in kvs.keys():
+			return  kvs[key]
+		else :
+			pass
+
+
 def mysql_conn(sql):
+	import MySQLdb
 	try :
-		conn = MySQLdb.connect(host = "127.0.0.1",port = "3306",user='root',passwd='test1324',db='test1324',charset='utf8')
+		conn = MySQLdb.connect(host = "127.0.0.1",port = 33306,user='root',passwd='test1324',db='test2',charset='utf8')
 	except Exception ,e :
 		return e
 	cursor = conn.cursor()
-	li = []
 	if sql.startswith("select"):
 		cursor.execute(sql)
 		values = cursor.fetchall()
-		for i in values :
-			li.append(i)
+		li = [i for i in values]
 		return li
 	else :
 		cursor.execute(sql)
@@ -54,56 +52,60 @@ def time_conctrol(str):
 
 
 
-# 从页面读取分支环境信息，返回列表
-def datas():
-	r = requests.get(url='http://10test71.stg3.1768.com/branch3.txt')
-	text = r.text
-	text1 = text.split(".")
-	list_result = []
-	re_branch = re.compile(r'^\*(.*)')
-	re_pwd = re.compile(r'^/data.*')
-	re_size = re.compile(r'^\d(.*)')
-	for i in text1:
-
-		i = i.encode('utf-8')
-		i = i.split("\n")
-		i = [x for x in i if re_branch.findall(x) or re_pwd.findall(x) or re_size.findall(x)]
-		if len(i) == 0:
-			del i
-		elif len(i) == 2:
-			i.insert(1, 'None')
-			list_result.append(i)
-		else:
-			list_result.append(i)
-	return list_result
-
-
-# 接收返回数量以及返回类型，0代表字典，1代表列表
-def branch_data(nums, type=0):
-	branchs = datas()
-	k = defaultdict(str)
-	for data in branchs:
-		dirs = data[0].split("/")[-2]
-		app = data[0].split("/")[-1]
-		branch = data[1]
-		size = int(data[2])
-		k[size] = "{}/{}:{}".format(dirs, app, getsize(size))
-		size_p = getsize(size)
-	max_size = map(int, k.keys())
-	max_size = heapq.nlargest(nums, max_size)
-	li = []
-	application = []
-	size1 = []
-	for i in max_size:
-		application.append(k[i])
-		size1.append(i)
-	li.append(application)
-	li.append(size1)
-	result = OrderedDict(map(list, sorted(k.iteritems(), key=lambda d: d[0], reverse=True)[0:nums]))  # 获取最大的nums数量的key的字典
-	if type == 1:
-		return li
-	else:
-		return result
+#
+# # 从页面读取分支环境信息，返回列表
+# def datas():
+# 	import requests,re
+# 	r = requests.get(url='http://10test71.stg3.1768.com/branch3.txt')
+# 	text = r.text
+# 	text1 = text.split(".")
+# 	list_result = []
+# 	re_branch = re.compile(r'^\*(.*)')
+# 	re_pwd = re.compile(r'^/data.*')
+# 	re_size = re.compile(r'^\d(.*)')
+# 	for i in text1:
+#
+# 		i = i.encode('utf-8')
+# 		i = i.split("\n")
+# 		i = [x for x in i if re_branch.findall(x) or re_pwd.findall(x) or re_size.findall(x)]
+# 		if len(i) == 0:
+# 			del i
+# 		elif len(i) == 2:
+# 			i.insert(1, 'None')
+# 			list_result.append(i)
+# 		else:
+# 			list_result.append(i)
+# 	return list_result
+#
+#
+# # 接收返回数量以及返回类型，0代表字典，1代表列表
+# def branch_data(nums, type=0):
+# 	from collections import defaultdict, OrderedDict
+# 	import heapq
+# 	branchs = datas()
+# 	k = defaultdict(str)
+# 	for data in branchs:
+# 		dirs = data[0].split("/")[-2]
+# 		app = data[0].split("/")[-1]
+# 		branch = data[1]
+# 		size = int(data[2])
+# 		k[size] = "{}/{}:{}".format(dirs, app, getsize(size))
+# 		size_p = getsize(size)
+# 	max_size = map(int, k.keys())
+# 	max_size = heapq.nlargest(nums, max_size)
+# 	li = []
+# 	application = []
+# 	size1 = []
+# 	for i in max_size:
+# 		application.append(k[i])
+# 		size1.append(i)
+# 	li.append(application)
+# 	li.append(size1)
+# 	result = OrderedDict(map(list, sorted(k.iteritems(), key=lambda d: d[0], reverse=True)[0:nums]))  # 获取最大的nums数量的key的字典
+# 	if type == 1:
+# 		return li
+# 	else:
+# 		return result
 
 
 def round(data):  # 百分比函数，传递一个数组，返回每个值对应的百分比
@@ -125,7 +127,10 @@ def getsize(sizeInBytes):
 	return (bytes[:-2] if bytes.endswith('.0') else bytes) + ' bytes'
 
 
-def zf_ticket_conctorl(ticket_info,state = 0):#0投注成功，1投注失败
+
+
+
+def zf_ticket_conctorl(ticket_info,state = 0):#中福投注0投注成功，1投注失败
     ticket_id = eval(ticket_info.keys()[0])["ticket_id"]
     ticket_list = []
     ticket_status = {0:"1000",1:"0007"}
@@ -161,24 +166,120 @@ def wucai_ticket_conctorl(ticket_info,state = 0):#state:0=投注成功，1=投�
     ticket_params = {"response":{"code":status,"message":"wucai_test"}}
     return ticket_params
 def zc_ticket_conctorl(ticket_info,state = 0):
-    ticket_list = []
-    orderid = eval(ticket_info.keys()[0])["ticket_id"]
-    uuid = eval(ticket_info.keys()[0])["uuid"]
-    status_code = {0:10000,1:10001}
-    times = 0 
-    for i in orderid:
-        ticket_r = {}
-        code = status_code.get(0)
-        if state == 1:
-            code = status_code.get(1)
-        elif state not in (0,1):
-            if times == 0:
-                code = status_code.get(1)
-                times += 1
-        ticket_r["orderId"] = i
-        ticket_r["code"] = code
-        ticket_r["message"] = "zc_test"
-        ticket_list.append(ticket_r)
-    ticket_params = {"err":{"code":10000,"des":"zctest"},"tickets":ticket_list,"uuid":uuid}
-    return ticket_params    
+	'''
+	:param ticket_info: 票信息
+	:param state: 控制票状态，0：成功，1：失败
+	:return: 字典errorcode，10000：成功，其它失败
+	'''
+
+	ticket_list = []
+	orderid = eval(ticket_info.keys()[0])["ticket_id"]
+	uuid = eval(ticket_info.keys()[0])["uuid"]
+	status_code = {0:10000,1:10001}
+	times = 0
+	for i in orderid:
+		ticket_r = {}
+		code = status_code.get(0)
+		if state == 1:
+			code = status_code.get(1)
+		elif state not in (0,1):#状态非成功和失败时，第一次失败，后面票成功，times计数器
+			if times == 0:
+				code = status_code.get(1)
+				times += 1
+		ticket_r["orderId"] = i
+		ticket_r["code"] = code
+		ticket_r["message"] = "zc_test"
+		ticket_list.append(ticket_r)
+	ticket_params = {"err":{"code":10000,"des":"zctest"},"tickets":ticket_list,"uuid":uuid}
+	return ticket_params
             
+class Log:
+	def __init__(self):
+		self.data_path = "D:\\SOFTWARE\\study\\auto\\selenium\\data\\log"
+	def strftime(self):
+		strtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
+		return strtime
+	def strfdate(self):
+		strtime = time.strftime("%Y-%m-%d",time.localtime())
+		return strtime
+	def load_cookie_dir(self):
+		'''
+		将工作目录切换至数据目录
+		:return:
+		'''
+		os.chdir(self.data_path)
+	def log_file(self):
+		fp ="{}.log".format(self.strfdate())
+		filename = os.path.join(self.data_path,fp)
+		return filename
+	def write_log(self,msg):
+		with open(self.log_file(),'a+') as f:
+			f.write("\n{}:{}".format(self.strftime(),msg))
+
+class Memcache(object):
+	def __init__(self):
+		from pymemcache.client.base import Client
+		self.client = Client(eval(readconfig('memcache_root')))
+	def setmem(self,key,value):
+		return self.client.set(str(key),value)
+	def getmem(self,key):
+		return self.client.get(key)
+	def delmem(self,key):
+		return self.client.delete(key)
+
+
+
+def mysql_conn(sql):
+	try :
+		conn = MySQLdb.connect(
+			host=readconfig('MYSQL_HOST'.lower()),
+			port=int(readconfig('MYSQL_PORT')),
+			user=readconfig('MYSQL_USERNAME'),
+			passwd=readconfig('MYSQL_PASSWORD'),
+			db=readconfig('MYSQL_DBNAME'),
+			charset=readconfig('MYSQL_CHARSET')
+		)
+	except Exception ,e :
+		return e
+	cursor = conn.cursor()
+	cursor.execute(sql)
+	conn.commit()
+	if sql.startswith("select"):
+		values = cursor.fetchall()
+		li = [i for i in values]
+		return li
+	else :
+		return cursor.rowcount
+
+class Mysql(object):
+	def __init__(self):
+		self.conn = self.__get_conn()
+		self.cursor = self.conn.cursor()
+	@staticmethod
+	def __get_conn(self):
+		try:
+			conn = MySQLdb.connect(
+				host = readconfig('MYSQL_HOST'),
+				port = int(readconfig('MYSQL_PORT')),
+				user = readconfig('MYSQL_USERNAME'),
+				passwd = readconfig('MYSQL_PASSWORD'),
+				db = readconfig('MYSQL_DBNAME'),
+				charset = readconfig('MYSQL_CHARSET')
+			)
+		except Exception, e:
+			return e
+		return  conn
+	def selectone(self,colunm,table,condition):
+		sql = "select {column} from {table} where {}"
+		self.cursor.excute(sql)
+		values = self.cursor.fetchone()
+		return values
+def logger(msg):
+	log = Log()
+	return log.write_log(msg)
+#
+if __name__ == '__main__':
+	logger = Log().write_log("test1")
+
+
+

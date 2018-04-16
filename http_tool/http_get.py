@@ -3,6 +3,7 @@ from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from http_tool.models import HttpSend
 from public_tool import user
+from public_tool.tools import logger
 
 
 
@@ -23,7 +24,7 @@ def get_create(request):
         except Exception , e :
             #此处需要添加日志
             #插入失败，刷新页面
-            return HttpResponse(e)
+            logger(e)
     return render_to_response('http_tool/get_create.html',{'username':username})
 
 

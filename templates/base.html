@@ -129,14 +129,14 @@
 						</dd>						
 						
 						<dd>
-					        <a href="javascript:;" data-url="interface/interface_create.html">
+					        <a href="/env/branch" data-url="interface/interface_create.html">
 					        <i class="layui-icon" data-icon=""></i>
 					        <cite>环境分支</cite>
 					        </a>
 						</dd>
 
 						<dd>
-                            <a href="javascript:;" data-url="interface/interface_create.html">
+                            <a href="/env/property/list/" data-url="interface/interface_create.html">
                                 <i class="layui-icon" data-icon=""></i>
                                 <cite>资产配置</cite>
                             </a>
@@ -296,10 +296,9 @@
 
 					<div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
 						<div class="layui-tab-item layui-show">
-							
+                        {% autoescape off %}
 							{%block content%}{%endblock%}
-							
-							
+                        {% endautoescape %}
 						</div>
 					</div>
 				</div>

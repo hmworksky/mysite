@@ -11,7 +11,6 @@ def post_list(request):
         post_list = list(HttpSend.objects.filter(user_id=user_id, send_type="POST").values("send_url", "thread_num", "headers", "cookie", "status","data" ,"id"))
         return render_to_response('http_tool/post_list.html', {'post_list': post_list, 'username': username})
 
-
 def post_create(request):
     username = request.session['username']
     user_id = user.getuserid(username)

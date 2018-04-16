@@ -7,13 +7,15 @@ from public_tool.user import getuserid
 from public_tool.tools import zf_ticket_conctorl,wucai_ticket_conctorl,zc_ticket_conctorl
 import os
 from interface_control.models import *
+# from public_tool.user import verifyUser
+from public_tool.tools import Memcache
 import json,time
 import time,logging,collections
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
 
 
-
+# @verifyUser(Memcache.getmem('username'))
 def interface_create(request):
     username = request.session.get('username')
     user_id = getuserid(username)
@@ -42,9 +44,10 @@ def interface_list(request):
 
 def interface_return(request):
     if request.method == 'POST' or request.method == 'GET':
-        host = request.get_host()
-        path = request.path
-        url = "http://" + host + path
+        # host = request.get_host()
+        # path = request.path
+        # url = "http://" + host + path
+        url = "http://{}{}".format(request.get_host(),request.path)
     if InterfaceInfo.objects.filter(url_info = url):
         data = InterfaceInfo.objects.values("return_value").get(url_info=url)["return_value"]
         timeout = InterfaceInfo.objects.values("timeout").get(url_info=url)["timeout"]
