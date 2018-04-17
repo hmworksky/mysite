@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} 资产列表 {% endblock %}
+{% block title %} Get List {% endblock %}
 {% block content1 %}
 		{% load static %}
 		<link rel="stylesheet" href="{%static 'sign/new_admin/plugins/layui/css/layui.css'%}" media="all" />
@@ -11,7 +11,7 @@
 		<div class="admin-main">
 
 			<blockquote class="layui-elem-quote">
-				<a href="/env/property/create/" class="layui-btn layui-btn-small" id="add">
+				<a href="#" class="layui-btn layui-btn-small" id="add">
 					<i class="layui-icon">&#xe608;</i> 添加信息
 				</a>
 				<a href="#" class="layui-btn layui-btn-small" id="import">
@@ -31,20 +31,19 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox" id="selected-all"></th>
-								<th style="text-align:center;">机器型号</th>
-								<th style="text-align:center;">机器版本</th>
-								<th style="text-align:center;">所属人</th>
-								<th style="text-align:center;">当前使用者</th>
-                                <th style="text-align:center;">操作</th>
+								<th style="text-align:center;">应用</th>
+								<th style="text-align:center;">分支</th>
+								<th style="text-align:center;">开发</th>
+								<th style="text-align:center;">大小</th>
                                 <!--<th>接口状态</th>-->
 
 							</tr>
 						</thead>
 						<tbody>
-						{% for value in property_info %}
+						{% for value in branchs %}
 							<tr>
 								<td><input type="checkbox"></td>
-								<td class = "product-buyer-name">{{value.model}}</td>
+								<td class = "product-buyer-name">{{value.app}}</td>
 								<style type="text/css">
 								.product-buyer-name {
 								max-width: 110px;
@@ -53,16 +52,13 @@
 								white-space: nowrap;
 										}
 								</style>
-								<td> {{value.version}}</td>
-								<td class = "product-buyer-name">{{value.from_people}}</td>
-								<td class = "product-buyer-name">{{value.now_people}}</td>
+								<td> {{value.branch}}</td>
+								<td class = "product-buyer-name">{{value.dev}}</td>
+								<td class = "product-buyer-name">{{value.size}}</td>
                             <!--
 
                             -->
-                                <td>
-									<a href="/env/property/{{ value.id}}/" class="layui-btn layui-btn-mini">编辑</a>
-									<a href="/env/property/delete/{{ value.id}}/" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
-								</td>
+
 							</tr>
 							{% endfor %}
 						</tbody>

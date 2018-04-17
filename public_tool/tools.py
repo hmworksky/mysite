@@ -139,7 +139,7 @@ def logger(title,msg):
 	load_data_file()
 	log_path = "{}.log".format(strf_time('date'))
 	with open(log_path,"w+") as f:
-		f.write("{}:--[{}]--:{}".format(strf_time('time'),title,msg))
+		f.write("{}:---[{}]---:{}".format(strf_time('time'),title,msg))
 
 
 class Memcached:
