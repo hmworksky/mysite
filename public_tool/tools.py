@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # from ConfigParser import  ConfigParser
 import requests
-import re
+import re,os
 from collections import defaultdict, OrderedDict
 import heapq
 
@@ -123,6 +123,37 @@ def getsize(sizeInBytes):
 		else:
 			bytes = "%.1f" % (sizeInBytes or 0,)
 	return (bytes[:-2] if bytes.endswith('.0') else bytes) + ' bytes'
+
+def load_data_file():
+	data_path = "D:\\SOFTWARE\\study\\auto\\selenium\\data\\log"
+	os.chdir(data_path)
+
+def strf_time(type):
+	import time
+	if type == 'time':
+		return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+	else:
+		return time.strftime("%Y-%m-%d", time.localtime())
+
+def logger(title,msg):
+	load_data_file()
+	log_path = "{}.log".format(strf_time('date'))
+	with open(log_path,"w+") as f:
+		f.write("{}:--[{}]--:{}".format(strf_time('time'),title,msg))
+
+
+class Memcached:
+	def __init__(self):
+		from pymemcache.client.base import Client
+		self.client = Client(('127.0.0.1',11211))
+
+	def setmem(self,key,value):#设置修改缓存key
+		return self.client.set(key,value)
+	def getmem(self,key):
+		return self.client.get(key)
+	def delmem(self,key):
+		return self.client.delete(key)
+
 
 
 def zf_ticket_conctorl(ticket_info,state = 0):#0投注成功，1投注失败
