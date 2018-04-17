@@ -19,4 +19,4 @@ class ProjectInfo(models.Model):
 	user = models.ForeignKey(Login)
 
 	def __unicode__(self):
-		return self.url_info
+		return self.project_name

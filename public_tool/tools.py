@@ -45,10 +45,7 @@ def mysql_conn(sql):
 		cursor.execute(sql)
 		return cursor.rowcount
 
-def time_conctrol(str):
-	str = str+":00"
-	str = str.replace('/','-')
-	return str
+
 
 
 

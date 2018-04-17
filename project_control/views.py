@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
-from public_tool import user,tools
+from public_tool import user
+import tools
 from http_tool.models import HttpSend
 from .models import ProjectInfo
 
@@ -25,13 +26,13 @@ def project_create(request):
             return HttpResponse(e)
     return render_to_response('project_control/project_process_create.html',{'username':username})
 
-
+#@tools.update_project
 def project_list(request):
     username = request.session['username']
     user_id = user.getuserid(username)
     if user_id :
-        project_list = list(ProjectInfo.objects.filter(user_id = user_id).values("project_name","start_time","smock_time","online_time","participant","project_manager","current_phase"))
-        return render_to_response('project_control/project_process_list.html',{'project_list':project_list,'username':username})
+        project_info = list(ProjectInfo.objects.filter(user_id = user_id).values("project_name","start_time","smock_time","online_time","participant","project_manager","current_phase"))
+        return render_to_response('project_control/project_process_list.html',locals())
 
 
 def get_edit(request,id):
