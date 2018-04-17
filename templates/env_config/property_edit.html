@@ -1,44 +1,43 @@
 {% extends 'base.html' %}
-{%block title%} GET配置 {% endblock %}
+{%block title%} 资产配置修改 {% endblock %}
 {% block content %}
 		<div style="margin: 15px;">
 			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-				<legend>HTTP-GET请求配置</legend>
+				<legend>资产配置修改</legend>
 			</fieldset>
-
-			<form class="layui-form" action="/http/get/create/" method="POST">
+            {% for value in property_info %}
+			<form class="layui-form" action="/env/property/update/" method="POST">
                 {% csrf_token %}
 				<div class="layui-form-item">
-					<label class="layui-form-label">请求URL</label>
+					<label class="layui-form-label">机器型号</label>
 					<div class="layui-input-block">
-						<input type="text"  name="get_url" lay-verify="title" autocomplete="off" placeholder="请输入一个url地址" class="layui-input">
+						<input type="text" readonly = "readonly" name="model" lay-verify="title" autocomplete="off" value={{ value.model }} placeholder={{ value.model }} class="layui-input">
 					</div>
 				</div>
 
 
 				<div id ="div1" class="layui-form-item">
-					<label class="layui-form-label">并发数</label>
+					<label class="layui-form-label">机器版本</label>
 					<div class="layui-input-block">
-						<input type="text" name="get_thread" lay-verify="title" autocomplete="off" placeholder="请输入一个数字" class="layui-input">
+						<input type="text" name="version" lay-verify="title" autocomplete="off" value={{ value.version }} placeholder={{ value.version }} class="layui-input">
 					</div>
 				</div>
 
 				<div id ="div2" class="layui-form-item layui-form-text">
-					<label class="layui-form-label">请求头信息</label>
+					<label class="layui-form-label">所属人</label>
 					<div class="layui-input-block">
-						<textarea  name = "get_head"  placeholder="请输入内容" class="layui-textarea"></textarea>
+						<input  name = "from_people" readonly = "readonly" value={{ value.from_people }} placeholder={{ value.from_people }} class="layui-input" >
 					</div>
 				</div>
-
                 <div id ="div3" class="layui-form-item layui-form-text">
-					<label class="layui-form-label">请求cookie</label>
+					<label class="layui-form-label">当前使用者</label>
 					<div class="layui-input-block">
-						<textarea  name = "get_cookie"  placeholder="请输入内容" class="layui-textarea"></textarea>
+						<input  name = "now_people" value={{ value.now_people }}  placeholder={{ value.now_people }} class="layui-input">
 					</div>
 				</div>
 
 
-				
+				<input type=hidden name=id value={{ value.id }}>
 				<div class="layui-form-item">
 					<div class="layui-input-block">
 						<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
@@ -47,6 +46,7 @@
 				</div>
 
 			</form>
+        {% endfor %}
 		</div>
 		{% load static %}
 		<script type="text/javascript" src="{%static 'sign/new_admin/plugins/layui/layui.js'%}"></script>

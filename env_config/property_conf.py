@@ -28,11 +28,26 @@ def property_list(request):
 		logger('property_list num:28',e)
 		return HttpResponseRedirect('/env/property/list/')
 def property_edit(request,id):
-	pass
+	username = request.session['username']
+	try:
+		property_info = Property.objects.filter(id=id).values("model","version","from_people","now_people","id")
+	except Exception,e:
+		logger('property_edit fail',e)
+		return HttpResponseRedirect('/env/property/list/')
+	return render_to_response('env_config/property_edit.html',locals())
 
 
 def property_update(request):
-	pass
+	id = request.POST.get("id")
+	model = request.POST.get("model")
+	version = request.POST.get("version")
+	from_people = request.POST.get("from_people")
+	now_people = request.POST.get("now_people")
+	try:
+		Property.objects.filter(id = id).update(model=model,version=version,from_people=from_people,now_people=now_people)
+		return HttpResponseRedirect('/env/property/list/')
+	except Exception,e:
+		logger('property_update fail',e)
 def property_delete(request,id):
 	try:
 		Property.objects.filter(id = id ).delete()
