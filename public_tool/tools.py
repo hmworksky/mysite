@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# from ConfigParser import  ConfigParser
+from ConfigParser import  ConfigParser
 import requests
 import re,os
 from collections import defaultdict, OrderedDict
@@ -16,16 +16,16 @@ def case(**args):
 			case_list.append(str)
 	return case_list
 
-# def readconfig(key):
-#     cf = ConfigParser()
-#     cf.read("config.conf")
-#     sections = cf.sections()
-#     for i in sections:
-#         kvs = dict(cf.items(i))
-#         if key in kvs.keys():
-#             return  kvs[key]
-#         else :
-#             return False
+def readconfig(key):
+    cf = ConfigParser()
+    cf.read("config.conf")
+    sections = cf.sections()
+    for i in sections:
+        kvs = dict(cf.items(i))
+        if key in kvs.keys():
+            return  kvs[key]
+        else :
+            pass
 
 
 
@@ -91,7 +91,7 @@ def strf_time(type):
 def logger(title,msg):
 	load_data_file()
 	log_path = "{}.log".format(strf_time('date'))
-	with open(log_path,"w+") as f:
+	with open(log_path,"a+") as f:
 		f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
 
 
@@ -165,4 +165,3 @@ def zc_ticket_conctorl(ticket_info,state = 0):
         ticket_list.append(ticket_r)
     ticket_params = {"err":{"code":10000,"des":"zctest"},"tickets":ticket_list,"uuid":uuid}
     return ticket_params    
-            

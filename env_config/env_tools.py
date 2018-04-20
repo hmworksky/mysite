@@ -11,8 +11,6 @@ def get_branch(sort = False):
 		for i in r:
 			i['size'] = size_for_num(i.get('size'))
 		sort_data = sorted(r, key=lambda s: s.get('size'), reverse=True)
-		for i in sort_data:
-			i['size']= getsize(i.get('size'))
 		mem.setmem('branch_sort',sort_data)
 		return sort_data
 	else:

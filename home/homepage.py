@@ -11,8 +11,11 @@ import json
 
 
 def index(request):
-    from env_config import tools
-    branch_data = tools.get_branch(sort=True)[:5]
+    from public_tool.tools import Memcached,logger
+    mem = Memcached()
+    #获取大小最大的5个应用
+    branch_data = eval(mem.getmem('branch_sort'))[:5]
+    logger('branchtype',type(branch_data))
     name_value = str([x.get('app') for x in branch_data])
     size_value = [x.get('size') for x in branch_data]
     return render_to_response('index.html', locals())
@@ -25,8 +28,8 @@ def ajax_dict():
     name_dict = {'测试':[1,50,35,20,57]}
     return JsonResponse(name_dict)
 def ajax_dict1(request):
-    from env_config import tools
-    branch_data = tools.get_branch(sort = True)[:5]
+    from env_config.env_tools import get_branch
+    branch_data = get_branch(sort = True)[:5]
     name_value = str([x.get('app') for x in branch_data])
     size_value = str([x.get('size') for x in branch_data])
     return render_to_response('index.html',locals())
