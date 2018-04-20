@@ -20,5 +20,5 @@ from home import homepage
 
 urlpatterns = {
     url(r'', homepage.index, name='index'),
-    url(r'ajax_dict1', homepage.ajax_dict1, name='ajax_dict1'),
+    url(r'^ajax_dict1/', homepage.ajax_dict1, name='ajax_dict1'),
 }

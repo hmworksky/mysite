@@ -11,15 +11,11 @@ import json
 
 
 def index(request):
-    # username = request.session['username']
-    branch = tools.branch_data(5)
-    name_value = str(branch[0]).replace("'",'"')
-    # name_value = branch.values()
-    # size_value = map(int,branch.keys())
-    return HttpResponse(isinstance(name_value,list))
-    # parser = HTMLParser()
-    # name_value= map(parser.unescape(),name_value)
-    # return render_to_response('index.html', locals())
+    from env_config import tools
+    branch_data = tools.get_branch(sort=True)[:5]
+    name_value = str([x.get('app') for x in branch_data])
+    size_value = [x.get('size') for x in branch_data]
+    return render_to_response('index.html', locals())
 
 
 def get_create(request):
@@ -29,5 +25,9 @@ def ajax_dict():
     name_dict = {'测试':[1,50,35,20,57]}
     return JsonResponse(name_dict)
 def ajax_dict1(request):
-    name_dict = {'衬衫': '5', '羊毛衫': '2', '雪纺衫': '36', '裤子': '10', '高跟鞋': '10', '袜子': '20'}
-    return JsonResponse(name_dict)
+    from env_config import tools
+    branch_data = tools.get_branch(sort = True)[:5]
+    name_value = str([x.get('app') for x in branch_data])
+    size_value = str([x.get('size') for x in branch_data])
+    return render_to_response('index.html',locals())
+

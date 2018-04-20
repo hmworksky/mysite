@@ -8,7 +8,4 @@ def getuserid(username):
 	    return False
     return user_id
 
-# def getusername(sessionid):
-# 	try :
-# 		sess = Session.objects.get(pk=sessionid).session_data
 

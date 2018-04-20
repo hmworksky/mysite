@@ -5,8 +5,6 @@ import re,os
 from collections import defaultdict, OrderedDict
 import heapq
 
-import MySQLdb
-
 
 def case(**args):
 	case_list = []
@@ -28,22 +26,7 @@ def case(**args):
 #             return  kvs[key]
 #         else :
 #             return False
-def mysql_conn(sql):
-	try :
-		conn = MySQLdb.connect(host = "127.0.0.1",port = "3306",user='root',passwd='test1324',db='test1324',charset='utf8')
-	except Exception ,e :
-		return e
-	cursor = conn.cursor()
-	li = []
-	if sql.startswith("select"):
-		cursor.execute(sql)
-		values = cursor.fetchall()
-		for i in values :
-			li.append(i)
-		return li
-	else :
-		cursor.execute(sql)
-		return cursor.rowcount
+
 
 
 
@@ -74,33 +57,6 @@ def datas():
 			list_result.append(i)
 	return list_result
 
-
-# 接收返回数量以及返回类型，0代表字典，1代表列表
-def branch_data(nums, type=0):
-	branchs = datas()
-	k = defaultdict(str)
-	for data in branchs:
-		dirs = data[0].split("/")[-2]
-		app = data[0].split("/")[-1]
-		branch = data[1]
-		size = int(data[2])
-		k[size] = "{}/{}:{}".format(dirs, app, getsize(size))
-		size_p = getsize(size)
-	max_size = map(int, k.keys())
-	max_size = heapq.nlargest(nums, max_size)
-	li = []
-	application = []
-	size1 = []
-	for i in max_size:
-		application.append(k[i])
-		size1.append(i)
-	li.append(application)
-	li.append(size1)
-	result = OrderedDict(map(list, sorted(k.iteritems(), key=lambda d: d[0], reverse=True)[0:nums]))  # 获取最大的nums数量的key的字典
-	if type == 1:
-		return li
-	else:
-		return result
 
 
 def round(data):  # 百分比函数，传递一个数组，返回每个值对应的百分比
@@ -136,7 +92,7 @@ def logger(title,msg):
 	load_data_file()
 	log_path = "{}.log".format(strf_time('date'))
 	with open(log_path,"w+") as f:
-		f.write("{}:---[{}]---:{}".format(strf_time('time'),title,msg))
+		f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
 
 
 class Memcached:
