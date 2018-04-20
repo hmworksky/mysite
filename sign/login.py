@@ -33,7 +33,7 @@ def login(request):
         password = request.POST.get('password')
         if Login.objects.filter(username = username,password=password):
             request.session['username'] = username
-            return HttpResponseRedirect('/interface/create/')
+            return HttpResponseRedirect('/index/')
         else :
             return render_to_response('login/login.html',{'errormsg':'用户名密码错误'})
     return render_to_response('login/login.html')

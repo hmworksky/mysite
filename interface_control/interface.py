@@ -5,6 +5,7 @@ from django.shortcuts import render,redirect,render_to_response
 from django.http.response import JsonResponse
 from public_tool.user import getuserid
 from public_tool.tools import zf_ticket_conctorl,wucai_ticket_conctorl,zc_ticket_conctorl
+from public_tool.tools import logger
 import os
 from interface_control.models import *
 import json,time
@@ -19,17 +20,21 @@ def interface_create(request):
     user_id = getuserid(username)
     if request.method == 'POST' : 
         interface_name = request.POST.get('url_name')
-        return_value = request.POST.get('return_value')
+        return_value = str(request.POST.get('return_value'))
         timeout = request.POST.get('timeout')
-        if timeout == None :
+        logger(timeout, len(timeout))
+        if len(timeout)  == 0:
             timeout = 0
+            logger(timeout,type(timeout))
         host = request.get_host()
         url_info = "http://"+ host  + "/interface/return/" + username + "/" + interface_name
+        logger('return_value',return_value)
         try :
             InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id,timeout=timeout)
             return HttpResponseRedirect('/interface/list/')
         except  Exception , e:
             #此处需要n记录日志
+            logger('insert',e)
             render_to_response('interface/interface_create.html', {'username': username})
     return render_to_response('interface/interface_create.html',{'username':username})	
 
