@@ -1,9 +1,6 @@
 # -*- coding:utf-8 -*-
 from ConfigParser import  ConfigParser
-import requests
-import re,os
-from collections import defaultdict, OrderedDict
-import heapq
+import os
 
 
 def case(**args):
@@ -22,40 +19,10 @@ def readconfig(key):
     sections = cf.sections()
     for i in sections:
         kvs = dict(cf.items(i))
-        if key in kvs.keys():
-            return  kvs[key]
+        if key.lower() in kvs.keys():
+            return  kvs[key.lower()]
         else :
             pass
-
-
-
-
-
-
-
-
-# 从页面读取分支环境信息，返回列表
-def datas():
-	r = requests.get(url='http://10test71.stg3.1768.com/branch3.txt')
-	text = r.text
-	text1 = text.split(".")
-	list_result = []
-	re_branch = re.compile(r'^\*(.*)')
-	re_pwd = re.compile(r'^/data.*')
-	re_size = re.compile(r'^\d(.*)')
-	for i in text1:
-
-		i = i.encode('utf-8')
-		i = i.split("\n")
-		i = [x for x in i if re_branch.findall(x) or re_pwd.findall(x) or re_size.findall(x)]
-		if len(i) == 0:
-			del i
-		elif len(i) == 2:
-			i.insert(1, 'None')
-			list_result.append(i)
-		else:
-			list_result.append(i)
-	return list_result
 
 
 
@@ -107,6 +74,43 @@ class Memcached:
 	def delmem(self,key):
 		return self.client.delete(key)
 
+class Sendmail(object):
+	def __init__(self):
+		self._errors = {}
+	def __call__(self,content,subject,msg_to,types = None):
+		'''
+		:param content: 发送的内容
+		:param subject: 主题
+		:param msg_to: 收件人
+		:param types: 默认是文本，如传递了html，则发送的是html
+		:return: 0000成功，1001失败
+		'''
+		from email.mime.text import MIMEText
+		import smtplib
+		try:
+			msg_from =readconfig('SERVER_MAIL_USER')
+			self._s = smtplib.SMTP_SSL(readconfig('SERVER_MAIL_HOST'), readconfig('SERVER_MAIL_PORT'))
+			self._s.login(msg_from, readconfig('SERVER_MAIL_PWD'))
+			if  types =='html':
+				msg = MIMEText(content,_subtype='html', _charset='utf-8')
+			else:
+				msg =MIMEText(content)
+			msg['Subject'] = subject
+			msg['From'] =msg_from
+			msg['To'] = msg_to
+			self._s.sendmail(msg_from,msg_to,msg.as_string())
+			self._errors['status'] = '0000'
+			self._errors['msg'] = '发送成功'
+			print self._errors
+		except Exception,e:
+			self._errors['status'] = '1001'
+			self._errors['msg'] = '发送失败,{}'.format(e)
+		finally:
+			self._s.quit()
+		return self._errors
+	def __str__(self):
+		return str(self._errors)
+	__repr__ = __str__
 
 
 def zf_ticket_conctorl(ticket_info,state = 0):#0投注成功，1投注失败
