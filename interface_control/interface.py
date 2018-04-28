@@ -4,9 +4,8 @@ from django.http import Http404,HttpResponse,HttpResponseRedirect,HttpResponseSe
 from django.shortcuts import render,redirect,render_to_response
 from django.http.response import JsonResponse
 from public_tool.user import getuserid
-from public_tool.tools import zf_ticket_conctorl,wucai_ticket_conctorl,zc_ticket_conctorl
 from public_tool.tools import logger
-import os
+import os,requests
 from interface_control.models import *
 import json,time
 import time,logging,collections
@@ -14,42 +13,110 @@ os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
 
 
+#中福票处理返回函数
+def zf_ticket_conctorl(ticket_info,state = 0):#0投注成功，1投注失败
+    ticket_id = eval(ticket_info.keys()[0])["ticket_id"]
+    ticket_list = []
+    ticket_status = {0:"1000",1:"0007"}
+    if len(ticket_id) == 1:
+        if state == 0 :
+            status = ticket_status.get(0)
+        else:
+            status = ticket_status.get(1)
+        ticket_id = ticket_id[0]
+        ticket_params = {"response":{"ticket":{"@attributes":{"ticketId":ticket_id,"status":status,"msg":"test1"}},"code":"0000","msg":"test2"}}
+    else:
+        times = 0
+        for i in ticket_id:
+            ticket_return = {}
+            ticket_r = {}
+            ticket_return["ticketId"] = i
+            ticket_return["msg"] = "test"
+            if times ==0:
+                status = ticket_status.get(0)
+                times += 1
+            else:
+                status = ticket_status.get(1)
+            ticket_return["status"] = status
+            ticket_r["@attributes"] = ticket_return
+            ticket_list.append(ticket_r)
+        ticket_params = {"response":{"ticket":ticket_list,"code":"0000","msg":"test2"}}
+    return ticket_params
 
+#吾彩票处理返回函数
+def wucai_ticket_conctorl(ticket_info,state = 0):#state:0=投注成功，1=投注失败
+    if state == 0 :
+        status = "0000"
+    else:
+        status = "1011"
+    ticket_params = {"response":{"code":status,"message":"wucai_test"}}
+    return ticket_params
+
+#中创票处理返回函数
+def zc_ticket_conctorl(ticket_info,state = 0):
+    ticket_list = []
+    orderid = eval(ticket_info.keys()[0])["ticket_id"]
+    uuid = eval(ticket_info.keys()[0])["uuid"]
+    status_code = {0:10000,1:10001}
+    times = 0
+    for i in orderid:
+        ticket_r = {}
+        code = status_code.get(0)
+        if state == 1:
+            code = status_code.get(1)
+        elif state not in (0,1):
+            if times == 0:
+                code = status_code.get(1)
+                times += 1
+        ticket_r["orderId"] = i
+        ticket_r["code"] = code
+        ticket_r["message"] = "zc_test"
+        ticket_list.append(ticket_r)
+    ticket_params = {"err":{"code":10000,"des":"zctest"},"tickets":ticket_list,"uuid":uuid}
+    return ticket_params
+
+#创建接口返回
 def interface_create(request):
     username = request.session.get('username')
     user_id = getuserid(username)
+    logger('host',"host:{},path:{}".format(request.get_host(),request.path))
     if request.method == 'POST' : 
-        interface_name = request.POST.get('url_name')
+        interface_name = request.POST.get('interface_name')
+        url_info = request.POST.get('url_info')
         return_value = str(request.POST.get('return_value'))
+        request_type = request.POST.get('request_type')
         timeout = request.POST.get('timeout')
-        logger(timeout, len(timeout))
         if len(timeout)  == 0:
             timeout = 0
             logger(timeout,type(timeout))
-        host = request.get_host()
-        url_info = "http://"+ host  + "/interface/return/" + username + "/" + interface_name
         logger('return_value',return_value)
         try :
-            InterfaceInfo.objects.create(url_info = url_info ,status = 1 ,return_value = return_value ,user_id = user_id,timeout=timeout)
+            InterfaceInfo.objects.create(interface_name = interface_name,url_info = url_info ,request_type = request_type ,return_value = return_value ,user_id = user_id,timeout=timeout)
             return HttpResponseRedirect('/interface/list/')
         except  Exception , e:
             #此处需要n记录日志
             logger('insert',e)
             render_to_response('interface/interface_create.html', {'username': username})
-    return render_to_response('interface/interface_create.html',{'username':username})	
+    return render_to_response('interface/interface_create.html',{'username':username})
 
+
+#接口列表展示
 def interface_list(request):
     username = request.session['username']
     user_id = getuserid(username)
     if user_id : 
-        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("url_info","timeout","return_value","status","id"))
+        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("interface_name","url_info","timeout","return_value","request_type","id"))
+        logger('http_list',http_list)
         return render_to_response('interface/interface_list.html',{'http_list':http_list,'username':username})
 
+#实际接口返回处理
 def interface_return(request):
     if request.method == 'POST' or request.method == 'GET':
         host = request.get_host()
         path = request.path
-        url = "http://" + host + path
+        url = "http://{host}{path}".format(**locals())
+        request_host = request.get_host()
+        logger('host',request_host)
     if InterfaceInfo.objects.filter(url_info = url):
         data = InterfaceInfo.objects.values("return_value").get(url_info=url)["return_value"]
         timeout = InterfaceInfo.objects.values("timeout").get(url_info=url)["timeout"]
@@ -60,6 +127,69 @@ def interface_return(request):
         else :
             return HttpResponse(data)
     return HttpResponse('result')
+
+def interface_return_new(request):
+    from public_tool.tools import django_return
+    path = request.path
+    #获取请求地址中的用户名
+    uname = path.split('/')[3]
+    user_id = getuserid(uname)
+    request_path = path.split('/')[4:][0]
+    result = list(InterfaceInfo.objects.filter(user_id = user_id,url_info__contains =request_path).values('id','request_type','return_value','timeout','url_info'))
+    if len(result)==0:
+        return HttpResponse('请求地址未配置')
+    #列表转化为字典
+    result = result[0]
+    logger('result',result)
+    request_type = result['request_type']
+    return_data = result['return_value']
+    timeout = result['timeout']
+    java_url = result['url_info']
+    if request.method =='POST':
+        post_flag = True
+        request_data = request.POST
+    else:
+        post_flag = False
+        request_data = request.GET
+    def request_java(flag,url,data=None):
+        if flag:
+            java_result = requests.post(url =url ,data = data).content
+        else:
+            if data:
+                java_result = requests.get(url =url ,data = data).content
+            else:
+                java_result = requests.get(url).content
+        return java_result
+
+    #该接口来源过滤
+    if request_type == 1:
+        time.sleep(200)
+        return HttpResponse('error')
+    #返回指定结果
+    elif request_type ==2:
+        time.sleep(timeout)
+        if return_data.startswith("{"):
+            data = json.loads(return_data)
+            return JsonResponse(data)
+        else:
+            return HttpResponse(return_data)
+
+    #继续请求JAVA获取JAVA结果
+    elif request_type ==3:
+        java_result = request_java(post_flag,java_url,request_data)
+        return HttpResponse(java_result)
+
+    # 继续请求JAVA返回指定结果
+    elif request_type ==4:
+        request_java(post_flag, java_url, request_data)
+        return HttpResponse(return_data)
+    return HttpResponse('result')
+
+def test_get(request):
+    return HttpResponse('get')
+def test_post(request):
+    return HttpResponse('post')
+
 
 # def interface_start(request,id):
 #     return HttpResponse('start')

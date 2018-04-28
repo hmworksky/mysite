@@ -6,12 +6,27 @@
 				<legend>生成自定义接口</legend>
 			</fieldset>
 
+
 			<form class="layui-form" action="/interface/create/" method="POST">
 
 				<div class="layui-form-item">
 					<label class="layui-form-label">请求接口名</label>
 					<div class="layui-input-block">
-						<input type="text" name="url_name" lay-verify="title" autocomplete="off" placeholder="请输入一个名字 ps:英文" class="layui-input">
+						<input type="text" name="interface_name" lay-verify="title" autocomplete="off" placeholder="请输入一个名字 如:T点接口" class="layui-input">
+					</div>
+				</div>
+
+                <div class="layui-form-item">
+					<label class="layui-form-label">接口path</label>
+					<div class="layui-input-block">
+						<input type="text" name="url_info" lay-verify="title" autocomplete="off" placeholder="如：tpoint/test.do" class="layui-input">
+					</div>
+				</div>
+
+                <div class="layui-form-item">
+					<label class="layui-form-label">请求类型</label>
+					<div class="layui-input-block">
+						<input type="text" name="request_type" lay-verify="title" autocomplete="off" placeholder="类型说明1:该接口来源过滤2：返回指定结果3：继续请求JAVA获取JAVA结果4：继续请求JAVA返回指定结果" class="layui-input">
 					</div>
 				</div>
 
@@ -22,13 +37,13 @@
 					</div>
 				</div>
 
+
 				<div class="layui-form-item layui-form-text">
 					<label class="layui-form-label">返回值</label>
 					<div class="layui-input-block">
 						<textarea  name = "return_value"  placeholder="请输入内容" class="layui-textarea"></textarea>
 					</div>
 				</div>
-
 
 				
 				<div class="layui-form-item">

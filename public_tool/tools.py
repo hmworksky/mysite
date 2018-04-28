@@ -1,6 +1,9 @@
 # -*- coding:utf-8 -*-
 from ConfigParser import  ConfigParser
-import os
+import os,requests
+from lxml import etree
+from bs4 import BeautifulSoup
+requests.packages.urllib3.disable_warnings()
 
 
 def case(**args):
@@ -13,9 +16,9 @@ def case(**args):
 			case_list.append(str)
 	return case_list
 
-def readconfig(key):
+def readconfig(file,key):
     cf = ConfigParser()
-    cf.read("config.conf")
+    cf.read(file)
     sections = cf.sections()
     for i in sections:
         kvs = dict(cf.items(i))
@@ -56,7 +59,7 @@ def strf_time(type):
 		return time.strftime("%Y-%m-%d", time.localtime())
 
 def logger(title,msg):
-	load_data_file()
+	#load_data_file()
 	log_path = "{}.log".format(strf_time('date'))
 	with open(log_path,"a+") as f:
 		f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
@@ -77,6 +80,7 @@ class Memcached:
 class Sendmail(object):
 	def __init__(self):
 		self._errors = {}
+		self.config_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),'config.conf')
 	def __call__(self,content,subject,msg_to,types = None):
 		'''
 		:param content: 发送的内容
@@ -88,9 +92,9 @@ class Sendmail(object):
 		from email.mime.text import MIMEText
 		import smtplib
 		try:
-			msg_from =readconfig('SERVER_MAIL_USER')
-			self._s = smtplib.SMTP_SSL(readconfig('SERVER_MAIL_HOST'), readconfig('SERVER_MAIL_PORT'))
-			self._s.login(msg_from, readconfig('SERVER_MAIL_PWD'))
+			msg_from =readconfig('.','SERVER_MAIL_USER')
+			self._s = smtplib.SMTP_SSL(readconfig(self.config_path,'SERVER_MAIL_HOST'), readconfig(self.config_path,'SERVER_MAIL_PORT'))
+			self._s.login(msg_from, readconfig(self.config_path,'SERVER_MAIL_PWD'))
 			if  types =='html':
 				msg = MIMEText(content,_subtype='html', _charset='utf-8')
 			else:
@@ -113,59 +117,117 @@ class Sendmail(object):
 	__repr__ = __str__
 
 
-def zf_ticket_conctorl(ticket_info,state = 0):#0投注成功，1投注失败
-    ticket_id = eval(ticket_info.keys()[0])["ticket_id"]
-    ticket_list = []
-    ticket_status = {0:"1000",1:"0007"}
-    if len(ticket_id) == 1:
-        if state == 0 :
-            status = ticket_status.get(0)
-        else:
-            status = ticket_status.get(1)
-        ticket_id = ticket_id[0]
-        ticket_params = {"response":{"ticket":{"@attributes":{"ticketId":ticket_id,"status":status,"msg":"test1"}},"code":"0000","msg":"test2"}}
-    else:
-        times = 0
-        for i in ticket_id:
-            ticket_return = {} 
-            ticket_r = {}
-            ticket_return["ticketId"] = i
-            ticket_return["msg"] = "test"
-            if times ==0:
-                status = ticket_status.get(0)
-                times += 1
-            else:
-                status = ticket_status.get(1)
-            ticket_return["status"] = status
-            ticket_r["@attributes"] = ticket_return
-            ticket_list.append(ticket_r)
-        ticket_params = {"response":{"ticket":ticket_list,"code":"0000","msg":"test2"}}
-    return ticket_params
-def wucai_ticket_conctorl(ticket_info,state = 0):#state:0=投注成功，1=投注失败
-    if state == 0 :
-        status = "0000"
-    else:
-        status = "1011"
-    ticket_params = {"response":{"code":status,"message":"wucai_test"}}
-    return ticket_params
-def zc_ticket_conctorl(ticket_info,state = 0):
-    ticket_list = []
-    orderid = eval(ticket_info.keys()[0])["ticket_id"]
-    uuid = eval(ticket_info.keys()[0])["uuid"]
-    status_code = {0:10000,1:10001}
-    times = 0 
-    for i in orderid:
-        ticket_r = {}
-        code = status_code.get(0)
-        if state == 1:
-            code = status_code.get(1)
-        elif state not in (0,1):
-            if times == 0:
-                code = status_code.get(1)
-                times += 1
-        ticket_r["orderId"] = i
-        ticket_r["code"] = code
-        ticket_r["message"] = "zc_test"
-        ticket_list.append(ticket_r)
-    ticket_params = {"err":{"code":10000,"des":"zctest"},"tickets":ticket_list,"uuid":uuid}
-    return ticket_params    
+#将url中的参数转化为字典
+def url2Dict(url):
+	import urlparse
+	query = urlparse.urlparse(url).query
+	return dict([(k, v[0]) for k, v in urlparse.parse_qs(query).items()])
+
+
+class Login(object):
+	def __init__(self):
+		'''
+			用户名及密码后期改成传参
+		'''
+		self.config_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'config.conf')
+		self.session = requests.Session()
+		self.login_user = readconfig(self.config_path,'PAW_LOGIN_USER')
+		self.login_pwd = readconfig(self.config_path,'PAW_LOGIN_PWD')
+		self.passport_login_form_url = readconfig(self.config_path,'PASSPORT_LOGIN_URL')
+	def __call__(self,source):
+		if source == 'game_pc':
+			return self._game_pc_login()
+		elif source == 'game_wap':
+			return self._game_wap_login()
+
+	def _game_pc_login(self):
+		session = self.session
+		game_pc_url = readconfig(self.config_path,'GAME_PC_LOGIN_URL')
+		passport_login_url = session.get(url=game_pc_url, allow_redirects=False).headers.get('Location')
+
+		# 从页面获取登录的form参数
+		passport_html = session.get(url=passport_login_url, verify=False).content
+		etrees = etree.HTML(passport_html)
+		datas = url2Dict(etrees.xpath('//*[@id="id_pawform"]/div[2]/a/@href')[0])
+
+		# 添加用户名密码参数
+		datas['loginName'] = self.login_user
+		datas['pwd'] = self.login_pwd
+
+		# 发送登录请求,获取passport登录后的location
+		login_location_url = session.post(url=self.passport_login_form_url, data=datas, verify=False, allow_redirects=False).headers.get('Location')
+		print login_location_url
+		# 跳转游戏页面
+		session.get(login_location_url)
+
+		#返回session信息
+		return session
+
+	def _game_wap_login(self):
+		session = self.session
+		game_wap_login_url = readconfig(self.config_path,'GAME_WAP_LOGIN_URL')
+		#从wap页面获取passport请求
+		game_to_passport_location_url = session.get(game_wap_login_url, allow_redirects=False).headers.get('Location')
+
+		#请求passport login请求返回的登录页html
+		passport_login_page = session.get(game_to_passport_location_url, verify=False).content
+
+		#通过BS4获取下一个登录请求所需要的参数信息
+		soup = BeautifulSoup(passport_login_page, 'lxml')
+		div = soup.find_all('div', id='pawList2')
+		new_soup = BeautifulSoup(str(div), 'lxml')
+		data = url2Dict(new_soup.find('a').attrs.get('href'))
+
+		#添加用户名密码
+		data['loginName'] = self.login_user
+		data['pwd'] = self.login_pwd
+
+		#发送登录请求,获取passport登录后的location
+		login_location_url = session.post(url=self.passport_login_form_url, data=data, verify=False, allow_redirects=False).headers.get('Location')
+
+		#登录后跳转
+		session.get(login_location_url)
+
+		# 返回session信息
+		return session
+
+
+def read_excel(filename = None,sheetname = None):
+	'''
+	:param filename: excel文件路径
+	:param sheetname: sheet名
+	:return: example:[{"a":1},{"b":2}]，一行是一个字典，第一行是key，后面的每行为value
+	'''
+	import xlrd
+	data = xlrd.open_workbook(filename)
+	table = data.sheet_by_name(sheetname)
+	li = []
+	for i in range(table.nrows):
+		li.append(table.row_values(i))
+
+	#将第一行设为key
+	key = li[0]
+
+	#获取从第二行开始的值
+	values = li[1:]
+
+	#转化为字典
+	datas = [dict(zip(key,value)) for value in values ]
+	return datas
+
+def django_return(data,sleep_time = 0):
+	from django.http import JsonResponse,HttpResponse
+	import json,time
+	logger(2,2)
+	time.sleep(sleep_time)
+	if data.startswith("{"):
+		data = json.loads(data)
+		return JsonResponse(data)
+	else:
+		return HttpResponse(data)
+
+if __name__ == '__main__':
+	login = Login()
+	session = login('game_pc')
+	cookie = requests.utils.dict_from_cookiejar(session.cookies)
+	print cookie

@@ -14,6 +14,7 @@ def index(request):
     from public_tool.tools import Memcached,logger
     mem = Memcached()
     #获取大小最大的5个应用
+    logger('mem',mem.getmem('branch_sort'))
     branch_data = eval(mem.getmem('branch_sort'))[:5]
     logger('branchtype',type(branch_data))
     name_value = str([x.get('app') for x in branch_data])

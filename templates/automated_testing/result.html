@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Index {% endblock %}
+{% block content1 %}
+		{% load static %}
+		<link rel="stylesheet" href="{%static 'sign/new_admin/plugins/layui/css/layui.css'%}" media="all" />
+		<link rel="stylesheet" href="{%static 'sign/new_admin/css/global.css'%}" media="all">
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		<link rel="stylesheet" href="{%static 'sign/new_admin/css/table.css'%}" />
+        <script src="{%static 'admin/js/echarts.js'%}"></script>
+
+ {% endblock %}
+
+<table>
+    <thead>
+    <tr>
+        <th>用例名称</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for value in datas %}
+            <tr>
+                <td class = "product-buyer-name">{{datas.headers}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -34,6 +34,7 @@ class Memcached:
 			return r
 	def run(self):
 		self.get_branch()
+		self.get_branch(sort = True)
 
 
 if __name__ == '__main__':

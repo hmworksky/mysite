@@ -14,16 +14,15 @@
 				<a href="/interface/create/" class="layui-btn layui-btn-small" id="add">
 					<i class="layui-icon">&#xe608;</i> 添加信息
 				</a>
-				<a href="#" class="layui-btn layui-btn-small" id="import">
-					<i class="layui-icon">&#xe608;</i> 导入信息
-				</a>
-				<a href="#" class="layui-btn layui-btn-small">
-					<i class="fa fa-shopping-cart" aria-hidden="true"></i> 导出信息
-				</a>
+
 				<a href="javascript:;" class="layui-btn layui-btn-small" id="search">
 					<i class="layui-icon">&#xe615;</i> 搜索
 				</a>
+
 			</blockquote>
+            <blockquote class="layui-elem-quote">
+                <a>类型说明1:该接口来源过滤2：返回指定结果3：继续请求JAVA获取JAVA结果4：继续请求JAVA返回指定结果</a>
+            </blockquote>
 			<fieldset class="layui-elem-field">
 				<legend>数据列表</legend>
 				<div class="layui-field-box">
@@ -31,9 +30,11 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox" id="selected-all"></th>
-								<th style="text-align:center;">请求地址</th>
+								<th style="text-align:center;">接口名称</th>
+                                <th style="text-align:center;">接口路径</th>
 								<th style="text-align:center;">返回值</th>
 								<th style="text-align:center;">延迟时间</th>
+                                <th style="text-align:center;">请求类型</th>
 								<!--<th>状态</th>-->
 								<th style="text-align:center;">操作</th>
 							</tr>
@@ -42,6 +43,7 @@
 						{% for value in http_list %}
 							<tr>
 								<td><input type="checkbox"></td>
+                                <td class = "product-buyer-name">{{value.interface_name}}</td>
 								<td>{{value.url_info}}</td>
 								<style type="text/css">
 								.product-buyer-name {
@@ -53,6 +55,7 @@
 								</style>
 								<td class = "product-buyer-name">{{value.return_value}}</td>
 								<td>{{value.timeout}}</td>
+                                <td>{{value.request_type}}</td>
 
 
                             <td>
