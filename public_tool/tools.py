@@ -1,8 +1,6 @@
 # -*- coding:utf-8 -*-
 from ConfigParser import  ConfigParser
 import os,requests
-from lxml import etree
-from bs4 import BeautifulSoup
 requests.packages.urllib3.disable_warnings()
 
 
