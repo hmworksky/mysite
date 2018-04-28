@@ -124,72 +124,6 @@ def url2Dict(url):
 	return dict([(k, v[0]) for k, v in urlparse.parse_qs(query).items()])
 
 
-class Login(object):
-	def __init__(self):
-		'''
-			用户名及密码后期改成传参
-		'''
-		self.config_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'config.conf')
-		self.session = requests.Session()
-		self.login_user = readconfig(self.config_path,'PAW_LOGIN_USER')
-		self.login_pwd = readconfig(self.config_path,'PAW_LOGIN_PWD')
-		self.passport_login_form_url = readconfig(self.config_path,'PASSPORT_LOGIN_URL')
-	def __call__(self,source):
-		if source == 'game_pc':
-			return self._game_pc_login()
-		elif source == 'game_wap':
-			return self._game_wap_login()
-
-	def _game_pc_login(self):
-		session = self.session
-		game_pc_url = readconfig(self.config_path,'GAME_PC_LOGIN_URL')
-		passport_login_url = session.get(url=game_pc_url, allow_redirects=False).headers.get('Location')
-
-		# 从页面获取登录的form参数
-		passport_html = session.get(url=passport_login_url, verify=False).content
-		etrees = etree.HTML(passport_html)
-		datas = url2Dict(etrees.xpath('//*[@id="id_pawform"]/div[2]/a/@href')[0])
-
-		# 添加用户名密码参数
-		datas['loginName'] = self.login_user
-		datas['pwd'] = self.login_pwd
-
-		# 发送登录请求,获取passport登录后的location
-		login_location_url = session.post(url=self.passport_login_form_url, data=datas, verify=False, allow_redirects=False).headers.get('Location')
-		print login_location_url
-		# 跳转游戏页面
-		session.get(login_location_url)
-
-		#返回session信息
-		return session
-
-	def _game_wap_login(self):
-		session = self.session
-		game_wap_login_url = readconfig(self.config_path,'GAME_WAP_LOGIN_URL')
-		#从wap页面获取passport请求
-		game_to_passport_location_url = session.get(game_wap_login_url, allow_redirects=False).headers.get('Location')
-
-		#请求passport login请求返回的登录页html
-		passport_login_page = session.get(game_to_passport_location_url, verify=False).content
-
-		#通过BS4获取下一个登录请求所需要的参数信息
-		soup = BeautifulSoup(passport_login_page, 'lxml')
-		div = soup.find_all('div', id='pawList2')
-		new_soup = BeautifulSoup(str(div), 'lxml')
-		data = url2Dict(new_soup.find('a').attrs.get('href'))
-
-		#添加用户名密码
-		data['loginName'] = self.login_user
-		data['pwd'] = self.login_pwd
-
-		#发送登录请求,获取passport登录后的location
-		login_location_url = session.post(url=self.passport_login_form_url, data=data, verify=False, allow_redirects=False).headers.get('Location')
-
-		#登录后跳转
-		session.get(login_location_url)
-
-		# 返回session信息
-		return session
 
 
 def read_excel(filename = None,sheetname = None):
@@ -215,19 +149,4 @@ def read_excel(filename = None,sheetname = None):
 	datas = [dict(zip(key,value)) for value in values ]
 	return datas
 
-def django_return(data,sleep_time = 0):
-	from django.http import JsonResponse,HttpResponse
-	import json,time
-	logger(2,2)
-	time.sleep(sleep_time)
-	if data.startswith("{"):
-		data = json.loads(data)
-		return JsonResponse(data)
-	else:
-		return HttpResponse(data)
 
-if __name__ == '__main__':
-	login = Login()
-	session = login('game_pc')
-	cookie = requests.utils.dict_from_cookiejar(session.cookies)
-	print cookie

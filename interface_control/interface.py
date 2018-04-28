@@ -79,7 +79,6 @@ def zc_ticket_conctorl(ticket_info,state = 0):
 def interface_create(request):
     username = request.session.get('username')
     user_id = getuserid(username)
-    logger('host',"host:{},path:{}".format(request.get_host(),request.path))
     if request.method == 'POST' : 
         interface_name = request.POST.get('interface_name')
         url_info = request.POST.get('url_info')
@@ -89,7 +88,6 @@ def interface_create(request):
         if len(timeout)  == 0:
             timeout = 0
             logger(timeout,type(timeout))
-        logger('return_value',return_value)
         try :
             InterfaceInfo.objects.create(interface_name = interface_name,url_info = url_info ,request_type = request_type ,return_value = return_value ,user_id = user_id,timeout=timeout)
             return HttpResponseRedirect('/interface/list/')
@@ -106,7 +104,6 @@ def interface_list(request):
     user_id = getuserid(username)
     if user_id : 
         http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("interface_name","url_info","timeout","return_value","request_type","id"))
-        logger('http_list',http_list)
         return render_to_response('interface/interface_list.html',{'http_list':http_list,'username':username})
 
 #实际接口返回处理
@@ -116,7 +113,6 @@ def interface_return(request):
         path = request.path
         url = "http://{host}{path}".format(**locals())
         request_host = request.get_host()
-        logger('host',request_host)
     if InterfaceInfo.objects.filter(url_info = url):
         data = InterfaceInfo.objects.values("return_value").get(url_info=url)["return_value"]
         timeout = InterfaceInfo.objects.values("timeout").get(url_info=url)["timeout"]
@@ -139,7 +135,6 @@ def interface_return_new(request):
         return HttpResponse('请求地址未配置')
     #列表转化为字典
     result = result[0]
-    logger('result',result)
     request_type = result['request_type']
     return_data = result['return_value']
     timeout = result['timeout']
