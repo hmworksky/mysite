@@ -129,7 +129,6 @@ def interface_return(request):
     return HttpResponse('result')
 
 def interface_return_new(request):
-    from public_tool.tools import django_return
     path = request.path
     #获取请求地址中的用户名
     uname = path.split('/')[3]
