@@ -11,7 +11,7 @@ class InterfaceInfo(models.Model):
     request_type  =  models.IntegerField(default=0)
     return_value =  models.CharField(null = True,max_length = 2500)
     timeout = models.IntegerField(null = True ,default=0)
-    user = models.ForeignKey(Login)
+    user = models.ForeignKey(Login,on_delete=models.DO_NOTHING)
 
     class Meta:
         unique_together = ('url_info', 'user',)

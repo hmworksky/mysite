@@ -1,11 +1,7 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import  render_to_response,redirect
-from django.http import  HttpResponse,Http404,HttpResponseRedirect,JsonResponse
-from public_tool import tools
-from urllib import unquote
-from collections import defaultdict
-import json
-#from html.parser import HTMLParser
+from django.shortcuts import  render_to_response
+from django.http import  JsonResponse
+
 
 
 

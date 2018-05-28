@@ -37,4 +37,4 @@ def getsize(sizeInBytes):
 			bytes = "%.1f" % (sizeInBytes or 0,)
 	return (bytes[:-2] if bytes.endswith('.0') else bytes) + ' bytes'
 if __name__ == '__main__':
-	print get_branch(sort = False)
+	print(get_branch(sort = False))

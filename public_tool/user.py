@@ -4,7 +4,7 @@ from django.contrib.sessions.models import Session
 def getuserid(username):
     try :
         user_id = Login.objects.values("id").get(username = username)["id"]
-    except Exception , e :
+    except Exception as e :
 	    return False
     return user_id
 

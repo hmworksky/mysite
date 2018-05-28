@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block title %} 用例列表 {% endblock %}
+{% block content1 %}
+		{% load static %}
+		<link rel="stylesheet" href="{%static 'sign/new_admin/plugins/layui/css/layui.css'%}" media="all" />
+		<link rel="stylesheet" href="{%static 'sign/new_admin/css/global.css'%}" media="all">
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		<link rel="stylesheet" href="{%static 'sign/new_admin/css/table.css'%}" />
+ {% endblock %}
+{% block content %}
+		<div class="admin-main">
+        <form  action="/auto/queue/" method="POST">
+			<blockquote class="layui-elem-quote">
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit="" lay-filter="demo1">添加到队列</button>
+						<button type="reset" class="layui-btn layui-btn-primary">清除选择</button>
+					</div>
+				</div>
+			</blockquote>
+			<fieldset class="layui-elem-field">
+				<legend>数据列表</legend>
+				<div class="layui-field-box">
+
+					<table class="site-table table-hover">
+						<thead>
+							<tr>
+								<th><input type="checkbox" id="selected-all"></th>
+								<th style="text-align:center;">所属游戏</th>
+								<th style="text-align:center;">所属模块</th>
+								<th style="text-align:center;">用例名称</th>
+                                <th style="text-align:center;">用例编号</th>
+                                <!--<th>接口状态</th>-->
+
+							</tr>
+						</thead>
+						<tbody>
+						{% for value in case_list %}
+
+							<tr>
+                                {% if value.id in case_tmp_list %}
+								    <td><input type="checkbox"  name = "case_check" checked = "checked" value = {{ value.id }} ></td>
+                                {% else %}
+                                    <td><input type="checkbox"  name = "case_check"  value = {{ value.id }} ></td>
+                                {% endif %}
+								<td class = "product-buyer-name">{{value.game_id}}</td>
+								<style type="text/css">
+								.product-buyer-name {
+								max-width: 110px;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+										}
+								</style>
+								<td> {{value.class_memo}}</td>
+								<td class = "product-buyer-name">{{value.case_memo}}</td>
+                                <td class = "product-buyer-name">{{value.id}}</td>
+                            <!--
+
+                            -->
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+				</div>
+			</fieldset>
+			<div class="admin-table-page">
+				<div id="page" class="page">
+				</div>
+			</div>
+            <input name = "queue_id" hidden = "hidden" value = {{queue_id}} >
+</form>
+		</div>
+		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script>
+			layui.config({
+				base: 'plugins/layui/modules/'
+			});
+
+			layui.use(['icheck', 'laypage','layer'], function() {
+				var $ = layui.jquery,
+					laypage = layui.laypage,
+					layer = parent.layer === undefined ? layui.layer : parent.layer;
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-green'
+				});
+
+				//page
+				laypage({
+					cont: 'page',
+					pages: 25 //总页数
+						,
+					groups: 5 //连续显示分页数
+						,
+					jump: function(obj, first) {
+						//得到了当前页，用于向服务端请求对应数据
+						var curr = obj.curr;
+						if(!first) {
+							//layer.msg('第 '+ obj.curr +' 页');
+						}
+					}
+				});
+
+				$('#search').on('click', function() {
+					parent.layer.alert('你点击了搜索按钮')
+				});
+
+				$('#add').on('click', function() {
+					$.get('temp/edit-form.html', null, function(form) {
+						layer.open({
+							type: 1,
+							title: '添加表单',
+							content: form,
+							btn: ['保存', '取消'],
+							area: ['600px', '400px'],
+							maxmin: true,
+							yes: function(index) {
+								console.log(index);
+							},
+							full: function(elem) {
+								var win = window.top === window.self ? window : parent.window;
+								$(win).on('resize', function() {
+									var $this = $(this);
+									elem.width($this.width()).height($this.height()).css({
+										top: 0,
+										left: 0
+									});
+									elem.children('div.layui-layer-content').height($this.height() - 95);
+								});
+							}
+						});
+					});
+				});
+
+				$('#import').on('click', function() {
+					var that = this;
+					var index = layer.tips('只想提示地精准些', that,{tips: [1, 'white']});
+					$('#layui-layer'+index).children('div.layui-layer-content').css('color','#000000');
+				});
+
+				$('.site-table tbody tr').on('click', function(event) {
+					var $this = $(this);
+					var $input = $this.children('td').eq(0).find('input');
+					$input.on('ifChecked', function(e) {
+						$this.css('background-color', '#EEEEEE');
+					});
+					$input.on('ifUnchecked', function(e) {
+						$this.removeAttr('style');
+					});
+					$input.iCheck('toggle');
+				}).find('input').each(function() {
+					var $this = $(this);
+					$this.on('ifChecked', function(e) {
+						$this.parents('tr').css('background-color', '#EEEEEE');
+					});
+					$this.on('ifUnchecked', function(e) {
+						$this.parents('tr').removeAttr('style');
+					});
+				});
+				$('#selected-all').on('ifChanged', function(event) {
+					var $input = $('.site-table tbody tr td').find('input');
+					$input.iCheck(event.currentTarget.checked ? 'check' : 'uncheck');
+				});
+			});
+		</script>
+
+
+{% endblock %}

@@ -13,9 +13,8 @@ class Login(models.Model):
     email = models.EmailField(max_length = 50 , null = True)
     phone = models.IntegerField(null = True)
     def __unicode__(self):
-	return self.username
+        return self.username
 	
-
 class Person(models.Model):
     name = models.CharField(max_length=30)
     age = models.IntegerField()

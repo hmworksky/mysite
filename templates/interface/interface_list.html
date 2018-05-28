@@ -21,7 +21,7 @@
 
 			</blockquote>
             <blockquote class="layui-elem-quote">
-                <a>类型说明1:该接口来源过滤2：返回指定结果3：继续请求JAVA获取JAVA结果4：继续请求JAVA返回指定结果</a>
+                <a>类型说明1:该接口来源过滤2：返回指定结果3：继续请求JAVA获取JAVA结果4：继续请求JAVA返回指定结果,11:开发接口（所有人可查看）</a>
             </blockquote>
 			<fieldset class="layui-elem-field">
 				<legend>数据列表</legend>
@@ -59,7 +59,11 @@
 
 
                             <td>
-									<a href="/interface/detail/{{ value.id }}/" target="_blank"  class="layui-btn layui-btn-normal layui-btn-mini" >预览</a>
+                                    {% if hidden_flag == 'True' %}
+									    <a href="/interface/attr/{{ value.id }}/" target="_blank" hidden="hidden" class="layui-btn layui-btn-normal layui-btn-mini" >预览</a>
+                                    {% else  %}
+                                        <a href="/interface/attr/{{ value.id }}/" target="_blank"  class="layui-btn layui-btn-normal layui-btn-mini" >字段设置</a>
+                                    {% endif %}
 									<a href="/interface/edit/{{ value.id }}/" class="layui-btn layui-btn-mini">编辑</a>
 									<a href="/interface/delete/{{ value.id }}/" data-id="6" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
 								</td>

@@ -1,9 +1,8 @@
 # -*- coding:utf-8 -*-
 import sys
-from urllib import unquote
-from env_tools import get_branch
-reload(sys)
-sys.setdefaultencoding("utf-8")
+from urllib.parse import unquote
+from .env_tools import get_branch
+
 from public_tool import tools
 from django.http import JsonResponse,HttpResponse
 from django.shortcuts import render_to_response

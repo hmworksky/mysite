@@ -5,10 +5,12 @@ from django.shortcuts import render,redirect,render_to_response
 from django.http.response import JsonResponse
 from public_tool.user import getuserid
 from public_tool.tools import logger
+from django.db.models import Q
 import os,requests
 from interface_control.models import *
 import json,time
 import time,logging,collections
+import traceback
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
 
@@ -87,11 +89,10 @@ def interface_create(request):
         timeout = request.POST.get('timeout')
         if len(timeout)  == 0:
             timeout = 0
-            logger(timeout,type(timeout))
         try :
             InterfaceInfo.objects.create(interface_name = interface_name,url_info = url_info ,request_type = request_type ,return_value = return_value ,user_id = user_id,timeout=timeout)
             return HttpResponseRedirect('/interface/list/')
-        except  Exception , e:
+        except  Exception as e:
             #此处需要n记录日志
             logger('insert',e)
             render_to_response('interface/interface_create.html', {'username': username})
@@ -100,11 +101,17 @@ def interface_create(request):
 
 #接口列表展示
 def interface_list(request):
+    from automated_testing.models import InterfaceAttr
     username = request.session['username']
     user_id = getuserid(username)
     if user_id : 
-        http_list = list(InterfaceInfo.objects.filter(user_id = user_id).values("interface_name","url_info","timeout","return_value","request_type","id"))
-        return render_to_response('interface/interface_list.html',{'http_list':http_list,'username':username})
+        http_list = list(InterfaceInfo.objects.filter(Q(user_id = user_id) | Q(request_type = 11)).values("interface_name","url_info","timeout","return_value","request_type","id","user_id"))
+        interface_id = http_list[0]['id']
+        hidden_flag = False
+        attr = list(InterfaceAttr.objects.filter(interface_id = interface_id).values('id'))
+        if len(attr) >0:
+            hidden_flag =True
+        return render_to_response('interface/interface_list.html',{'http_list':http_list,'username':username,'hidden_flag':hidden_flag})
 
 #实际接口返回处理
 def interface_return(request):
@@ -184,19 +191,33 @@ def test_get(request):
 def test_post(request):
     return HttpResponse('post')
 
-
-# def interface_start(request,id):
-#     return HttpResponse('start')
+def interface_attr(request,id):
+    from automated_testing.models import InterfaceAttr
+    username = request.session['username']
+    field_name = request.POST.get('field_name')
+    field_max = request.POST.get('field_max')
+    field_min = request.POST.get('field_min')
+    field_type = request.POST.get('field_type')
+    field_null = request.POST.get('field_null')
+    memo = request.POST.get('field_memo')
+    logger('request',request.POST)
+    try:
+        InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+        return HttpResponseRedirect('/interface/list/')
+    except Exception as e:
+        logger('InterfaceAttr insert fail',traceback.format_exc())
+        return render_to_response('interface/interface_conf.html',locals())
+    return render_to_response('interface/interface_conf.html',locals())
 
 def interface_detail(request,id):
-    return HttpResponse('detail')
+	return HttpResponse('detail')
 
 def interface_edit(request,id):
-    return HttpResponse('edit')
+	return HttpResponse('edit')
 
 def interface_delete(request,id):
-    http_list = InterfaceInfo.objects.filter( id = id ).delete()
-    return interface_list(request)
+	http_list = InterfaceInfo.objects.filter( id = id ).delete()
+	return interface_list(request)
 
 
 def index(request):

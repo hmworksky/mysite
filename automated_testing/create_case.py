@@ -1,8 +1,6 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import render,render_to_response
-from collections import OrderedDict
-# Create your views here.
-from models import  InterfaceAttr
+from django.shortcuts import render_to_response
+from .models import  InterfaceAttr
 
 
 

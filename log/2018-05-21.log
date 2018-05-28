@@ -1,0 +1,782 @@
+
+2018-05-21 11:50:23:---[request]---:<QueryDict: {}>
+2018-05-21 11:50:23:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")
+
+2018-05-21 11:50:32:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 11:50:44:---[data]---:14
+2018-05-21 11:53:10:---[data]---:15
+2018-05-21 11:54:07:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:13:02:---[data]---:None
+2018-05-21 12:13:03:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:21:07:---[data]---:15
+2018-05-21 12:23:14:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:23:20:---[data]---:<QueryDict: {'case_check': ['12', '13']}>
+2018-05-21 12:24:22:---[request]---:<QueryDict: {}>
+2018-05-21 12:24:22:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")
+
+2018-05-21 12:24:32:---[request]---:<QueryDict: {}>
+2018-05-21 12:24:32:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")
+
+2018-05-21 12:24:33:---[request]---:<QueryDict: {}>
+2018-05-21 12:24:33:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")
+
+2018-05-21 12:24:39:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:25:02:---[data]---:16
+2018-05-21 12:26:08:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:26:12:---[data]---:['13', '14', '15']
+2018-05-21 12:27:39:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:30:47:---[data]---:['13', '14', '15', '16']
+2018-05-21 12:30:49:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:30:52:---[data]---:['13', '14', '15', '16', '17']
+2018-05-21 12:58:42:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 12:58:45:---[data]---:['13', '14', '15', '16', '17']
+2018-05-21 13:02:22:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 13:02:23:---[data]---:['13', '14', '15', '16', '17']
+2018-05-21 13:03:49:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 13:03:50:---[data]---:['13', '14', '15', '16', '17']
+2018-05-21 13:16:35:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 13:16:36:---[data]---:['13', '14', '15', '16', '17']
+2018-05-21 13:17:19:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 13:17:22:---[data]---:['13', '14', '15', '16', '17']
+2018-05-21 13:26:58:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:26:11:---[request]---:<QueryDict: {}>
+2018-05-21 14:26:11:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")
+
+2018-05-21 14:26:16:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:26:20:---[data]---:['13', '14']
+2018-05-21 14:39:34:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:43:51:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:46:06:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:49:12:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:54:20:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:55:16:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:56:51:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 14:58:09:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:08:59:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:15:48:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:22:36:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:22:54:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:22:57:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:26:31:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:27:06:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:32:41:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:33:46:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:49:44:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:51:38:---[data]---:['13', '14']
+2018-05-21 15:51:38:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:51:41:---[data]---:['13', '14']
+2018-05-21 15:51:41:---[case_list]---:[{'id': 12, 'case_memo': '判断首屏中奖线', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 13, 'case_memo': '判断首屏中奖线数量', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 14, 'case_memo': '判断首屏中奖倍率', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 15, 'case_memo': '首屏未中奖', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 16, 'case_memo': '首屏判断是否所有中奖坐标补充了图案', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 17, 'case_memo': '判断返奖总倍数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 18, 'case_memo': '判断消除层数', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 19, 'case_memo': '判断每个中奖线是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 20, 'case_memo': '判断每个返奖倍数是否正确', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}, {'id': 21, 'case_memo': '判断是否免费游戏', 'class_memo': '星星风暴普通种子', 'game_id': '星星风暴'}]
+2018-05-21 15:52:28:---[data]---:None
+2018-05-21 15:52:28:---[queue]---:20
+2018-05-21 15:52:28:---[case_list]---:b'None'
+2018-05-21 15:52:32:---[data]---:['13', '14']
+2018-05-21 15:52:32:---[queue]---:21
+2018-05-21 15:52:32:---[case_list]---:b"['13', '14']"
+2018-05-21 15:53:27:---[data]---:['13', '14']
+2018-05-21 15:53:27:---[queue]---:22
+2018-05-21 15:55:03:---[data]---:None
+2018-05-21 15:55:03:---[queue]---:23
+2018-05-21 15:55:03:---[case_list]---:None
+2018-05-21 15:55:06:---[data]---:['13', '14']
+2018-05-21 15:55:06:---[queue]---:24
+2018-05-21 15:55:06:---[case_list]---:['13', '14']
+2018-05-21 15:56:49:---[data]---:['13', '14']
+2018-05-21 15:56:49:---[queue]---:25
+2018-05-21 15:56:49:---[case_list]---:<map object at 0x0000000004AE8E48>
+2018-05-21 15:56:52:---[data]---:['13', '14']
+2018-05-21 15:56:52:---[queue]---:26
+2018-05-21 15:56:53:---[case_list]---:<map object at 0x0000000004B03AC8>
+2018-05-21 15:57:23:---[data]---:['13', '14']
+2018-05-21 15:57:23:---[queue]---:27
+2018-05-21 15:58:06:---[data]---:None
+2018-05-21 15:58:06:---[queue]---:28
+2018-05-21 15:58:11:---[data]---:['13', '14']
+2018-05-21 15:58:11:---[queue]---:29
+2018-05-21 15:58:11:---[case_list]---:[13, 14]
+2018-05-21 16:13:31:---[data]---:['13', '14', '15']
+2018-05-21 16:13:31:---[queue]---:30
+2018-05-21 16:13:31:---[case_list]---:[13, 14, 15]
+2018-05-21 16:13:51:---[data]---:['13', '14', '15']
+2018-05-21 16:13:51:---[queue]---:31
+2018-05-21 16:13:51:---[case_list]---:[13, 14, 15]
+2018-05-21 16:13:53:---[data]---:['13', '14', '15', '16']
+2018-05-21 16:13:53:---[queue]---:32
+2018-05-21 16:13:53:---[case_list]---:[13, 14, 15, 16]
+2018-05-21 16:13:56:---[data]---:['14', '15', '16']
+2018-05-21 16:13:56:---[queue]---:33
+2018-05-21 16:13:56:---[case_list]---:[14, 15, 16]
+2018-05-21 16:23:38:---[mem]---:None
+2018-05-21 16:24:25:---[mem]---:b"[{'app': '10-api', 'branch': '*hotfix/180123_gw_cg', 'dev': 'WEIBAOSEN741', 'size': 30064771072.0}, {'app': '10-cp', 'branch': '*hotfix/180509_iphoneX', 'dev': 'huangmin600', 'size': 1181116006.4}, {'app': '7-api', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 653262848.0}, {'app': '5-cp', 'branch': '*release/180510_iphonex', 'dev': 'WEIBAOSEN741', 'size': 642777088.0}, {'app': '3-api', 'branch': '*feature/180403_wucai_cgyj', 'dev': 'WEIBAOSEN741', 'size': 546308096.0}, {'app': '4-api', 'branch': '*hotfix/180424_omission', 'dev': 'ouguanghong223', 'size': 378535936.0}, {'app': '7-pc', 'branch': '*hotfix/171214_lianghao_youhua', 'dev': 'ouguanghong223', 'size': 368050176.0}, {'app': '3-pc', 'branch': '*hotfix/180507_99wan', 'dev': 'huangmin600', 'size': 340787200.0}, {'app': '5-pc', 'branch': '*feature/180302_ticket_betting', 'dev': 'ouguanghong223', 'size': 335544320.0}, {'app': '4-pc', 'branch': '*hotfix/180514_dlt_leshanma', 'dev': 'ouguanghong223', 'size': 333447168.0}, {'app': '5-openapi', 'branch': '*hotfix/180228_close_wifi', 'dev': 'WEIBAOSEN741', 'size': 313524224.0}, {'app': '2-api', 'branch': '*examination/180516_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 307232768.0}, {'app': '8-cp', 'branch': '*examination/180517_shuangkaizhushou', 'dev': 'WEIBAOSEN741', 'size': 303038464.0}, {'app': '2-pc', 'branch': '*hotfix/180518_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 301989888.0}, {'app': '7-cp', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 299892736.0}, {'app': '9-pc', 'branch': '*hotfix/180330_tixian_msg', 'dev': 'ouguanghong223', 'size': 296747008.0}, {'app': '6-pc', 'branch': '*hotfix/180507_99wan', 'dev': 'huangmin600', 'size': 295698432.0}, {'app': '4-cp', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 286261248.0}, {'app': '8-pc', 'branch': '*hotfix/180507_bank_cash_open', 'dev': 'ouguanghong223', 'size': 284164096.0}, {'app': '6-cp', 'branch': '*examination/180509_youyang_alipay', 'dev': 'weibaosen741', 'size': 276824064.0}, {'app': '9-cp', 'branch': '*release/180510_iphonex', 'dev': 'WEIBAOSEN741', 'size': 270532608.0}, {'app': '10-pc', 'branch': '*master', 'dev': 'release-admin', 'size': 270532608.0}, {'app': '6-api', 'branch': '*examination/180509_youyang_alipay', 'dev': 'WEIBAOSEN741', 'size': 230686720.0}, {'app': '2-cp', 'branch': '*examination/180516_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 208666624.0}, {'app': '3-cp', 'branch': '*feature/180517_dantuo_bet', 'dev': 'ouguanghong223', 'size': 193986560.0}, {'app': '9-api', 'branch': '*hotfix/180518_ware_result', 'dev': 'ouguanghong223', 'size': 148897792.0}, {'app': '8-api', 'branch': '*feature/180508_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 118489088.0}, {'app': '5-api', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 101711872.0}, {'app': '10-openapi', 'branch': '*feature/171204_shengfutong', 'dev': 'release-admin', 'size': 90177536.0}, {'app': '8-openapi', 'branch': '*hotfix/180323_yingbaocp', 'dev': 'ouguanghong223', 'size': 69206016.0}, {'app': '6-openapi', 'branch': '*hotfix/180201_pay_limit_money', 'dev': 'WEIBAOSEN741', 'size': 35651584.0}, {'app': '7-openapi', 'branch': '*hotfix/170519_login_error_msg', 'dev': 'xuwei302', 'size': 27262976.0}, {'app': '3-openapi', 'branch': '*examination/180201_trend', 'dev': 'ouguanghong223', 'size': 26214400.0}, {'app': '4-openapi', 'branch': '*hotfix/180323_yingbaocp', 'dev': 'ouguanghong223', 'size': 25165824.0}, {'app': '2-openapi', 'branch': '*master', 'dev': 'release-admin', 'size': 12582912.0}, {'app': '9-openapi', 'branch': '*hotfix/180314_jclq_league_name', 'dev': 'ouguanghong223', 'size': 7025459.2}]"
+2018-05-21 16:24:25:---[branchtype]---:<class 'list'>
+2018-05-21 16:24:25:---[mem]---:b"[{'app': '10-api', 'branch': '*hotfix/180123_gw_cg', 'dev': 'WEIBAOSEN741', 'size': 30064771072.0}, {'app': '10-cp', 'branch': '*hotfix/180509_iphoneX', 'dev': 'huangmin600', 'size': 1181116006.4}, {'app': '7-api', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 653262848.0}, {'app': '5-cp', 'branch': '*release/180510_iphonex', 'dev': 'WEIBAOSEN741', 'size': 642777088.0}, {'app': '3-api', 'branch': '*feature/180403_wucai_cgyj', 'dev': 'WEIBAOSEN741', 'size': 546308096.0}, {'app': '4-api', 'branch': '*hotfix/180424_omission', 'dev': 'ouguanghong223', 'size': 378535936.0}, {'app': '7-pc', 'branch': '*hotfix/171214_lianghao_youhua', 'dev': 'ouguanghong223', 'size': 368050176.0}, {'app': '3-pc', 'branch': '*hotfix/180507_99wan', 'dev': 'huangmin600', 'size': 340787200.0}, {'app': '5-pc', 'branch': '*feature/180302_ticket_betting', 'dev': 'ouguanghong223', 'size': 335544320.0}, {'app': '4-pc', 'branch': '*hotfix/180514_dlt_leshanma', 'dev': 'ouguanghong223', 'size': 333447168.0}, {'app': '5-openapi', 'branch': '*hotfix/180228_close_wifi', 'dev': 'WEIBAOSEN741', 'size': 313524224.0}, {'app': '2-api', 'branch': '*examination/180516_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 307232768.0}, {'app': '8-cp', 'branch': '*examination/180517_shuangkaizhushou', 'dev': 'WEIBAOSEN741', 'size': 303038464.0}, {'app': '2-pc', 'branch': '*hotfix/180518_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 301989888.0}, {'app': '7-cp', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 299892736.0}, {'app': '9-pc', 'branch': '*hotfix/180330_tixian_msg', 'dev': 'ouguanghong223', 'size': 296747008.0}, {'app': '6-pc', 'branch': '*hotfix/180507_99wan', 'dev': 'huangmin600', 'size': 295698432.0}, {'app': '4-cp', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 286261248.0}, {'app': '8-pc', 'branch': '*hotfix/180507_bank_cash_open', 'dev': 'ouguanghong223', 'size': 284164096.0}, {'app': '6-cp', 'branch': '*examination/180509_youyang_alipay', 'dev': 'weibaosen741', 'size': 276824064.0}, {'app': '9-cp', 'branch': '*release/180510_iphonex', 'dev': 'WEIBAOSEN741', 'size': 270532608.0}, {'app': '10-pc', 'branch': '*master', 'dev': 'release-admin', 'size': 270532608.0}, {'app': '6-api', 'branch': '*examination/180509_youyang_alipay', 'dev': 'WEIBAOSEN741', 'size': 230686720.0}, {'app': '2-cp', 'branch': '*examination/180516_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 208666624.0}, {'app': '3-cp', 'branch': '*feature/180517_dantuo_bet', 'dev': 'ouguanghong223', 'size': 193986560.0}, {'app': '9-api', 'branch': '*hotfix/180518_ware_result', 'dev': 'ouguanghong223', 'size': 148897792.0}, {'app': '8-api', 'branch': '*feature/180508_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 118489088.0}, {'app': '5-api', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 101711872.0}, {'app': '10-openapi', 'branch': '*feature/171204_shengfutong', 'dev': 'release-admin', 'size': 90177536.0}, {'app': '8-openapi', 'branch': '*hotfix/180323_yingbaocp', 'dev': 'ouguanghong223', 'size': 69206016.0}, {'app': '6-openapi', 'branch': '*hotfix/180201_pay_limit_money', 'dev': 'WEIBAOSEN741', 'size': 35651584.0}, {'app': '7-openapi', 'branch': '*hotfix/170519_login_error_msg', 'dev': 'xuwei302', 'size': 27262976.0}, {'app': '3-openapi', 'branch': '*examination/180201_trend', 'dev': 'ouguanghong223', 'size': 26214400.0}, {'app': '4-openapi', 'branch': '*hotfix/180323_yingbaocp', 'dev': 'ouguanghong223', 'size': 25165824.0}, {'app': '2-openapi', 'branch': '*master', 'dev': 'release-admin', 'size': 12582912.0}, {'app': '9-openapi', 'branch': '*hotfix/180314_jclq_league_name', 'dev': 'ouguanghong223', 'size': 7025459.2}]"
+2018-05-21 16:24:25:---[branchtype]---:<class 'list'>
+2018-05-21 16:24:26:---[mem]---:b"[{'app': '10-api', 'branch': '*hotfix/180123_gw_cg', 'dev': 'WEIBAOSEN741', 'size': 30064771072.0}, {'app': '10-cp', 'branch': '*hotfix/180509_iphoneX', 'dev': 'huangmin600', 'size': 1181116006.4}, {'app': '7-api', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 653262848.0}, {'app': '5-cp', 'branch': '*release/180510_iphonex', 'dev': 'WEIBAOSEN741', 'size': 642777088.0}, {'app': '3-api', 'branch': '*feature/180403_wucai_cgyj', 'dev': 'WEIBAOSEN741', 'size': 546308096.0}, {'app': '4-api', 'branch': '*hotfix/180424_omission', 'dev': 'ouguanghong223', 'size': 378535936.0}, {'app': '7-pc', 'branch': '*hotfix/171214_lianghao_youhua', 'dev': 'ouguanghong223', 'size': 368050176.0}, {'app': '3-pc', 'branch': '*hotfix/180507_99wan', 'dev': 'huangmin600', 'size': 340787200.0}, {'app': '5-pc', 'branch': '*feature/180302_ticket_betting', 'dev': 'ouguanghong223', 'size': 335544320.0}, {'app': '4-pc', 'branch': '*hotfix/180514_dlt_leshanma', 'dev': 'ouguanghong223', 'size': 333447168.0}, {'app': '5-openapi', 'branch': '*hotfix/180228_close_wifi', 'dev': 'WEIBAOSEN741', 'size': 313524224.0}, {'app': '2-api', 'branch': '*examination/180516_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 307232768.0}, {'app': '8-cp', 'branch': '*examination/180517_shuangkaizhushou', 'dev': 'WEIBAOSEN741', 'size': 303038464.0}, {'app': '2-pc', 'branch': '*hotfix/180518_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 301989888.0}, {'app': '7-cp', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 299892736.0}, {'app': '9-pc', 'branch': '*hotfix/180330_tixian_msg', 'dev': 'ouguanghong223', 'size': 296747008.0}, {'app': '6-pc', 'branch': '*hotfix/180507_99wan', 'dev': 'huangmin600', 'size': 295698432.0}, {'app': '4-cp', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 286261248.0}, {'app': '8-pc', 'branch': '*hotfix/180507_bank_cash_open', 'dev': 'ouguanghong223', 'size': 284164096.0}, {'app': '6-cp', 'branch': '*examination/180509_youyang_alipay', 'dev': 'weibaosen741', 'size': 276824064.0}, {'app': '9-cp', 'branch': '*release/180510_iphonex', 'dev': 'WEIBAOSEN741', 'size': 270532608.0}, {'app': '10-pc', 'branch': '*master', 'dev': 'release-admin', 'size': 270532608.0}, {'app': '6-api', 'branch': '*examination/180509_youyang_alipay', 'dev': 'WEIBAOSEN741', 'size': 230686720.0}, {'app': '2-cp', 'branch': '*examination/180516_huodong_worldcup', 'dev': 'ouguanghong223', 'size': 208666624.0}, {'app': '3-cp', 'branch': '*feature/180517_dantuo_bet', 'dev': 'ouguanghong223', 'size': 193986560.0}, {'app': '9-api', 'branch': '*hotfix/180518_ware_result', 'dev': 'ouguanghong223', 'size': 148897792.0}, {'app': '8-api', 'branch': '*feature/180508_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 118489088.0}, {'app': '5-api', 'branch': '*examination/180516_yueduoduo', 'dev': 'WEIBAOSEN741', 'size': 101711872.0}, {'app': '10-openapi', 'branch': '*feature/171204_shengfutong', 'dev': 'release-admin', 'size': 90177536.0}, {'app': '8-openapi', 'branch': '*hotfix/180323_yingbaocp', 'dev': 'ouguanghong223', 'size': 69206016.0}, {'app': '6-openapi', 'branch': '*hotfix/180201_pay_limit_money', 'dev': 'WEIBAOSEN741', 'size': 35651584.0}, {'app': '7-openapi', 'branch': '*hotfix/170519_login_error_msg', 'dev': 'xuwei302', 'size': 27262976.0}, {'app': '3-openapi', 'branch': '*examination/180201_trend', 'dev': 'ouguanghong223', 'size': 26214400.0}, {'app': '4-openapi', 'branch': '*hotfix/180323_yingbaocp', 'dev': 'ouguanghong223', 'size': 25165824.0}, {'app': '2-openapi', 'branch': '*master', 'dev': 'release-admin', 'size': 12582912.0}, {'app': '9-openapi', 'branch': '*hotfix/180314_jclq_league_name', 'dev': 'ouguanghong223', 'size': 7025459.2}]"
+2018-05-21 16:24:26:---[branchtype]---:<class 'list'>
+2018-05-21 16:24:29:---[queue]---:None
+2018-05-21 16:25:43:---[queue]---:None
+2018-05-21 16:25:43:---[case_list]---:[]
+2018-05-21 16:25:48:---[data]---:['13', '14']
+2018-05-21 16:25:48:---[queue]---:34
+2018-05-21 16:25:49:---[case_list]---:[13, 14]
+2018-05-21 16:25:52:---[data]---:['13', '14']
+2018-05-21 16:25:52:---[queue]---:35
+2018-05-21 16:25:52:---[case_list]---:[13, 14]
+2018-05-21 16:35:16:---[data]---:['13', '14']
+2018-05-21 16:35:16:---[queue]---:36
+2018-05-21 16:35:16:---[case_list]---:[13, 14]
+2018-05-21 16:36:13:---[data]---:['13', '14', '15']
+2018-05-21 16:36:13:---[queue]---:['36']
+2018-05-21 16:36:14:---[case_list]---:[13, 14, 15]
+2018-05-21 16:36:16:---[data]---:['13', '14', '15']
+2018-05-21 16:36:16:---[queue]---:["['36']"]
+2018-05-21 16:36:16:---[case_list]---:[13, 14, 15]
+2018-05-21 16:36:47:---[data]---:['13', '14', '15']
+2018-05-21 16:36:47:---[queue]---:['["[\'36\']"]']
+2018-05-21 16:36:47:---[case_list]---:[13, 14, 15]
+2018-05-21 16:38:41:---[case_queue]---:None
+2018-05-21 16:38:41:---[data]---:None
+2018-05-21 16:38:41:---[queue]---:37
+2018-05-21 16:39:43:---[case_queue]---:None
+2018-05-21 16:39:43:---[data]---:None
+2018-05-21 16:39:43:---[queue]---:38
+2018-05-21 16:40:18:---[case_queue]---:None
+2018-05-21 16:40:18:---[data]---:None
+2018-05-21 16:40:18:---[queue]---:39
+2018-05-21 16:41:18:---[case_queue]---:None
+2018-05-21 16:41:18:---[data]---:None
+2018-05-21 16:41:18:---[queue]---:40
+2018-05-21 16:42:01:---[case_queue]---:None
+2018-05-21 16:42:01:---[data]---:None
+2018-05-21 16:42:01:---[queue]---:41
+2018-05-21 16:42:16:---[case_queue]---:None
+2018-05-21 16:42:16:---[data]---:None
+2018-05-21 16:42:16:---[queue]---:42
+2018-05-21 16:42:16:---[case_tmp]---:b'None'
+2018-05-21 16:43:05:---[case_queue]---:None
+2018-05-21 16:43:05:---[data]---:None
+2018-05-21 16:43:05:---[queue]---:43
+2018-05-21 16:43:06:---[case_tmp]---:b'None'
+2018-05-21 16:44:12:---[case_queue]---:None
+2018-05-21 16:44:12:---[data]---:None
+2018-05-21 16:44:12:---[queue]---:44
+2018-05-21 16:44:12:---[case_tmp]---:True
+2018-05-21 16:44:53:---[case_queue]---:None
+2018-05-21 16:44:53:---[data]---:None
+2018-05-21 16:44:53:---[queue]---:45
+2018-05-21 16:44:53:---[case_tmp]---:False
+2018-05-21 16:45:40:---[case_queue]---:None
+2018-05-21 16:45:41:---[data]---:None
+2018-05-21 16:45:41:---[queue]---:46
+2018-05-21 16:45:41:---[case_tmp]---:False
+2018-05-21 16:45:41:---[case_list]---:[]
+2018-05-21 16:45:48:---[case_queue]---:['46']
+2018-05-21 16:45:48:---[data]---:['13', '14']
+2018-05-21 16:45:48:---[queue]---:47
+2018-05-21 16:45:48:---[case_tmp]---:True
+2018-05-21 16:45:48:---[case_list]---:[13, 14]
+2018-05-21 16:46:42:---[case_queue]---:None
+2018-05-21 16:46:42:---[data]---:None
+2018-05-21 16:46:42:---[queue]---:48
+2018-05-21 16:46:42:---[case_list]---:[]
+2018-05-21 16:46:46:---[case_queue]---:['48']
+2018-05-21 16:46:46:---[data]---:['13', '14']
+2018-05-21 16:46:46:---[queue]---:49
+2018-05-21 16:46:46:---[case_list]---:[13, 14]
+2018-05-21 16:48:57:---[data]---:None
+2018-05-21 16:48:57:---[queue]---:50
+2018-05-21 16:48:57:---[case_list]---:[]
+2018-05-21 16:49:00:---[case_queue]---:50
+2018-05-21 16:49:00:---[data]---:['13', '14']
+2018-05-21 16:49:00:---[queue]---:51
+2018-05-21 16:49:00:---[case_list]---:[13, 14]
+2018-05-21 16:49:08:---[case_queue]---:51
+2018-05-21 16:49:08:---[data]---:['13', '14']
+2018-05-21 16:49:08:---[queue]---:52
+2018-05-21 16:49:08:---[case_list]---:[13, 14]
+2018-05-21 16:50:10:---[case_queue]---:53
+2018-05-21 16:50:10:---[data]---:None
+2018-05-21 16:50:10:---[queue]---:53
+2018-05-21 16:50:10:---[case_list]---:[]
+2018-05-21 16:50:13:---[case_queue]---:53
+2018-05-21 16:50:13:---[data]---:['14', '15']
+2018-05-21 16:50:13:---[queue]---:53
+2018-05-21 16:50:13:---[case_list]---:[14, 15]
+2018-05-21 16:50:15:---[case_queue]---:53
+2018-05-21 16:50:15:---[data]---:['14', '15']
+2018-05-21 16:50:15:---[queue]---:53
+2018-05-21 16:50:15:---[case_list]---:[14, 15]
+2018-05-21 16:50:32:---[case_queue]---:53
+2018-05-21 16:50:32:---[data]---:['14', '15', '16']
+2018-05-21 16:50:32:---[queue]---:53
+2018-05-21 16:50:32:---[case_list]---:[14, 15, 16]
+2018-05-21 17:00:33:---[case_queue]---:53
+2018-05-21 17:00:33:---[data]---:['14', '15', '16']
+2018-05-21 17:00:33:---[queue]---:53
+2018-05-21 17:00:33:---[case_list]---:[14, 15, 16]
+2018-05-21 17:00:35:---[case_queue]---:53
+2018-05-21 17:00:35:---[data]---:['14', '15', '16', '17']
+2018-05-21 17:00:35:---[queue]---:53
+2018-05-21 17:00:35:---[case_list]---:[14, 15, 16, 17]
+2018-05-21 17:07:36:---[case_queue]---:53
+2018-05-21 17:07:36:---[data]---:['14', '15', '16', '17']
+2018-05-21 17:07:36:---[queue]---:53
+2018-05-21 17:07:36:---[case_list]---:[14, 15, 16, 17]
+2018-05-21 17:09:35:---[case_queue]---:53
+2018-05-21 17:09:35:---[data]---:['14', '15', '16', '17']
+2018-05-21 17:09:35:---[queue]---:53
+2018-05-21 17:09:35:---[case_list]---:[14, 15, 16, 17]
+2018-05-21 17:12:39:---[queue]---:None
+2018-05-21 17:25:02:---[queue]---:None
+2018-05-21 17:31:22:---[queue]---:None
+2018-05-21 17:31:22:---[case_list]---:None
+2018-05-21 17:32:33:---[case_queue]---:54
+2018-05-21 17:33:09:---[case_queue]---:55
+2018-05-21 17:33:09:---[data]---:None
+2018-05-21 17:33:09:---[queue]---:55
+2018-05-21 17:33:13:---[case_queue]---:56
+2018-05-21 17:33:13:---[data]---:None
+2018-05-21 17:33:13:---[queue]---:56
+2018-05-21 17:36:19:---[case_queue]---:57
+2018-05-21 17:36:19:---[data]---:None
+2018-05-21 17:36:23:---[case_queue]---:58
+2018-05-21 17:36:23:---[data]---:None
+2018-05-21 17:42:30:---[case_queue]---:59
+2018-05-21 17:42:30:---[data]---:None
+2018-05-21 17:57:40:---[request]---:<QueryDict: {}>
+2018-05-21 17:57:40:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")
+
+2018-05-21 17:58:07:---[request]---:<QueryDict: {'field_name': ['max_num'], 'field_max': ['60'], 'field_min': [''], 'field_type': ['1'], 'field_null': ['1'], 'field_memo': [''], 'id': ['12']}>
+2018-05-21 18:37:37:---[request]---:<QueryDict: {}>
+2018-05-21 18:37:37:---[InterfaceAttr insert fail]---:Traceback (most recent call last):
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'type' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Users\huangmin\git\interface_control\interface.py", line 205, in interface_attr
+    InterfaceAttr.objects.create(field = field_name,max = field_max,min = field_min,type = field_type,is_null = field_null,interface_id = id,memo = memo)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\models\sql\compiler.py", line 1284, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Users\huangmin\AppData\Roaming\Python\Python36\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\SOFTWARE\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'type' cannot be null")

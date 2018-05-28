@@ -15,5 +15,5 @@ urlpatterns = [
     url(r'zc_test/$', interface.zc_test, name ='zc_test'),
     url(r'get/$', interface.test_get, name ='test_get'),
     url(r'post/$', interface.test_post, name ='test_post'),
-    # url(r'start/(\d+)/(\d+)/$', interface.interface_delete, name ='interface_start'),
+    url(r'attr/(\d+)/$', interface.interface_attr, name ='interface_attr'),
 ]

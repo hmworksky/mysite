@@ -1,7 +1,10 @@
 # -*- coding:utf-8 -*-
-from ConfigParser import  ConfigParser
-import os,requests
-requests.packages.urllib3.disable_warnings()
+from configparser import  ConfigParser
+import os,django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+django.setup()
+import redis
+
 
 
 def case(**args):
@@ -14,9 +17,9 @@ def case(**args):
 			case_list.append(str)
 	return case_list
 
-def readconfig(file,key):
+def readconfig(file = 'config.conf',key = None):
     cf = ConfigParser()
-    cf.read(file)
+    cf.read(file).decode('utf-8')
     sections = cf.sections()
     for i in sections:
         kvs = dict(cf.items(i))
@@ -24,7 +27,6 @@ def readconfig(file,key):
             return  kvs[key.lower()]
         else :
             pass
-
 
 
 def round(data):  # 百分比函数，传递一个数组，返回每个值对应的百分比
@@ -49,7 +51,7 @@ def load_data_file():
 	data_path = "D:\\SOFTWARE\\study\\auto\\selenium\\data\\log"
 	os.chdir(data_path)
 
-def strf_time(type):
+def strf_time(type='date'):
 	import time
 	if type == 'time':
 		return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -58,10 +60,14 @@ def strf_time(type):
 
 def logger(title,msg):
 	#load_data_file()
-	log_path = "{}.log".format(strf_time('date'))
-	with open(log_path,"a+") as f:
-		f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
-
+	log_path = "log/{}.log".format(strf_time('date'))
+	if os.path.exists(log_path):
+		with open(log_path,"a+") as f:
+			f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
+	else:
+		with open(log_path,"w") as f:
+			f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
+		
 
 class Memcached:
 	def __init__(self):
@@ -103,8 +109,7 @@ class Sendmail(object):
 			self._s.sendmail(msg_from,msg_to,msg.as_string())
 			self._errors['status'] = '0000'
 			self._errors['msg'] = '发送成功'
-			print self._errors
-		except Exception,e:
+		except Exception as e:
 			self._errors['status'] = '1001'
 			self._errors['msg'] = '发送失败,{}'.format(e)
 		finally:
@@ -117,9 +122,9 @@ class Sendmail(object):
 
 #将url中的参数转化为字典
 def url2Dict(url):
-	import urlparse
-	query = urlparse.urlparse(url).query
-	return dict([(k, v[0]) for k, v in urlparse.parse_qs(query).items()])
+	from urllib import parse
+	query = parse.urlparse(url).query
+	return dict([(k, v[0]) for k, v in parse.parse_qs(query).items()])
 
 
 
@@ -147,4 +152,16 @@ def read_excel(filename = None,sheetname = None):
 	datas = [dict(zip(key,value)) for value in values ]
 	return datas
 
+
+def get_pool():
+	u'''获取redis连接池'''
+	p = redis.ConnectionPool(host ='127.0.0.1',port=6379)
+	pool = redis.Redis(connection_pool=p)
+	return pool
+
+
+
+
+
+	
 

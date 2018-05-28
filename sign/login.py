@@ -3,7 +3,7 @@ from django.http import Http404,HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,HttpResponseRedirect,render_to_response
 from django.http.response import JsonResponse
 import os
-from models import *
+from .models import *
 os.environ.update({"DJANGO_SETTINGS_MODULE": "config.settings"})
 
 
@@ -20,7 +20,7 @@ def register(request):
                     Login.objects.get_or_create(username=username,password=password)
                     request.session['username']=username
                     return HttpResponseRedirect('/index/')
-                except Exception ,e :
+                except Exception as e :
                     #此处需要添加日志
                     return   render_to_response('login/signup.html')
         else :
@@ -49,7 +49,7 @@ def resetlogin(request):
                     Login.objects.filter(username = username ).update(password = password)
                     request.session['username']=username
                     return HttpResponseRedirect('/index/')
-                except Exception ,e :
+                except Exception as e :
                     #此处需要添加日志
                     return render_to_response('login/reset.html')
             else :

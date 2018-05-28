@@ -12,6 +12,6 @@ class HttpSend(models.Model):
     cookie =  models.CharField(default=None,null = True,max_length = 2500)
     send_type = models.CharField(max_length = 50)
     thread_num = models.IntegerField(default=0)
-    user = models.ForeignKey(Login)
+    user = models.ForeignKey(Login,on_delete=models.DO_NOTHING)
     def __unicode__(self):
         return self.send_url

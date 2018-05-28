@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
-from models import Property
+from env_config.models import Property
 from public_tool.tools import logger
 
 def property_create(request):
@@ -13,7 +13,7 @@ def property_create(request):
 		try:
 			Property.objects.create(model= model,version=version,from_people=from_people,now_people=now_people)
 			return HttpResponseRedirect('/env/property/list/')
-		except Exception,e:
+		except Exception as e:
 			logger('property create fail num:17',e)
 			return HttpResponseRedirect('/env/property/create/')
 	return render_to_response('env_config/property_create.html',locals())
@@ -24,14 +24,14 @@ def property_list(request):
 	try:
 		property_info = Property.objects.filter().values("model","version","from_people","now_people","id")
 		return render_to_response('env_config/property_list.html',locals())
-	except Exception,e:
+	except Exception as e:
 		logger('property_list num:28',e)
 		return HttpResponseRedirect('/env/property/list/')
 def property_edit(request,id):
 	username = request.session['username']
 	try:
 		property_info = Property.objects.filter(id=id).values("model","version","from_people","now_people","id")
-	except Exception,e:
+	except Exception as e:
 		logger('property_edit fail',e)
 		return HttpResponseRedirect('/env/property/list/')
 	return render_to_response('env_config/property_edit.html',locals())
@@ -46,11 +46,11 @@ def property_update(request):
 	try:
 		Property.objects.filter(id = id).update(model=model,version=version,from_people=from_people,now_people=now_people)
 		return HttpResponseRedirect('/env/property/list/')
-	except Exception,e:
+	except Exception as e:
 		logger('property_update fail',e)
 def property_delete(request,id):
 	try:
 		Property.objects.filter(id = id ).delete()
 		return HttpResponseRedirect('/env/property/list/')
-	except Exception,e:
+	except Exception as e:
 		logger('property_update fail',e)

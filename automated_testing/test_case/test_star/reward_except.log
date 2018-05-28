@@ -1,0 +1,952 @@
+id:10930
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120000
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120004
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120006
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120008
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120010
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120012
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120014
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120016
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120018
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120020
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120022
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120024
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120026
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120028
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120030
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120032
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120034
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120036
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120038
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120040
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120042
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120044
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120046
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120048
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120050
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120052
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120054
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120056
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120058
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120060
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120062
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120064
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120066
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120068
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120070
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120072
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120074
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120076
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120078
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120080
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120082
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120084
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120086
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120088
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120090
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120092
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120094
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120096
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120098
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120100
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120102
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120104
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120106
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:120108
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+
+id:10930
+,detail:Traceback (most recent call last):
+  File "test_reward.py", line 193, in <module>
+    result = tc.run_all_case(i)
+  File "test_reward.py", line 174, in run_all_case
+    self.test_case11
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  File "test_reward.py", line 139, in test_case11
+    self.fail.append(self.test_case11.__doc__)
+  [Previous line repeated 494 more times]
+  File "test_reward.py", line 138, in test_case11
+    if not self.assertTrue(self.tc.cmp_reward_page(first_map,reward_num,self.reward_pic)):
+RecursionError: maximum recursion depth exceeded
+

@@ -27,7 +27,7 @@ def post_create(request):
             # 从表单获取数据插入HttpSend表
             HttpSend.objects.create(send_url=post_url, headers=post_head, cookie=post_cookie, send_type='POST', thread_num=post_thread, data = post_data, user_id=user_id)
             return HttpResponseRedirect('/http/post/list/')  # 插入成功跳转列表页
-        except Exception, e:
+        except Exception as e:
             # 此处需要添加日志
             # 插入失败，刷新页面
             return HttpResponse(e)

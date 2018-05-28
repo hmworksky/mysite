@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import base64,hashlib,json
-from urllib import urlencode,quote,unquote
+from urllib.parse import urlencode,quote,unquote
 
 
 def to_base64(str):
@@ -10,7 +10,7 @@ def from_base64(str):
 	try :
 		result = base64.decodestring(str)
 		return result
-	except Exception,e :
+	except Exception as e :
 		return "Error:无效的字符串"
 
 def md5(data):

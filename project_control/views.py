@@ -2,7 +2,7 @@
 from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from public_tool import user
-import tools
+from public_tool import tools
 from http_tool.models import HttpSend
 from .models import ProjectInfo
 
@@ -20,7 +20,7 @@ def project_create(request):
             #从表单获取数据插入ProjectInfo表
             ProjectInfo.objects.create(project_name = project_name , start_time = start_time ,smock_time = smock_time, online_time = online_time,participant =participant ,user_id = user_id,project_manager=project_manager )
             return HttpResponseRedirect('/project/list/')#插入成功跳转列表页
-        except Exception , e :
+        except Exception as e :
             #此处需要添加日志
             #插入失败，刷新页面
             return HttpResponse(e)

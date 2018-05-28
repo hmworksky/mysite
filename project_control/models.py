@@ -16,7 +16,7 @@ class ProjectInfo(models.Model):
 	participant = models.CharField('参与人员',default = None , null = True, max_length=200)
 	project_manager = models.CharField('测试负责人',default = None ,null = True ,max_length=200)
 	current_phase = models.CharField('当前阶段',default = '0' ,null = True ,max_length=200)
-	user = models.ForeignKey(Login)
+	user = models.ForeignKey(Login,on_delete=models.DO_NOTHING)
 
 	def __unicode__(self):
 		return self.project_name
