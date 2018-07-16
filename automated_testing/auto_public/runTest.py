@@ -11,10 +11,19 @@ class RunTest(object):
 		self.sys_dir = 'D:\\Users\\huangmin\\git\\automated_testing\\test_case\\'
 	
 	def get_case_info(self, id):
+		'''
+		从数据库中获取用例信息
+		:param id:case_id
+		:return: 用例对应的类名、用例名、用例描述
+		'''
 		info = CaseInfo.objects.get(id=id)
 		return info.class_name, info.case_name, info.case_memo
 	
 	def find_exec_file(self, id):
+		'''
+		:param id:case_id
+		:return: 需要执行的文件路径，文件名，类名
+		'''
 		class_name, _, _ = self.get_case_info(id)
 		file_path = 'test_{}'.format(class_name.split('_')[0].lower())
 		file_name = 'test_{}'.format(class_name.split('_')[1])

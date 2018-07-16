@@ -18,6 +18,7 @@ def md5(data):
 	m = hashlib.md5()
 	m.update(str)
 	return m.hexdigest()
+
 def url_encode(type):
 	if type == 'encode':
 		return urlencode(str)

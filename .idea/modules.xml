@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://D:/Vue/.idea/Vue.iml" filepath="D:/Vue/.idea/Vue.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/git.iml" filepath="$PROJECT_DIR$/.idea/git.iml" />
+      <module fileurl="file://D:/tmp_0427/.idea/tmp_0427.iml" filepath="D:/tmp_0427/.idea/tmp_0427.iml" />
     </modules>
   </component>
 </project>

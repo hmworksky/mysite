@@ -1,5 +1,5 @@
 from django.conf.urls import url,include
-from http_tool import http_get,http_post,encryption
+from http_tool import http_get,http_post,encryption,translation
 urlpatterns = [
     url(r'^get/list/',http_get.get_list,name='get_list'),
     url(r'^get/create/',http_get.get_create,name='get_create'),
@@ -12,5 +12,7 @@ urlpatterns = [
     url(r'^get/delete/(\d+)/$',http_get.get_delete,name='get_delete'),
     url(r'^post/delete/(\d+)/$',http_post.post_delete,name='post_delete'),
     url(r'^encryption/$',encryption.encry_base64,name='encry_base64'),
+    url(r'^translation/$',translation.viewTranslation,name='viewTranslation'),
+    url(r'^get_translation_result/$',translation.getTranslationResult,name='getTranslationResult'),
   ]
 

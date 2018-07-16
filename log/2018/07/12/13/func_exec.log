@@ -1,0 +1,3 @@
+2018-07-12 13:01:20,097 - print_func_exec_time - INFO - _wrapper函数消耗了0.15401554107666016秒
+2018-07-12 13:09:10,861 - print_func_exec_time - INFO - _wrapper函数消耗了0.1420140266418457秒
+2018-07-12 13:11:51,156 - print_func_exec_time - ERROR - b'Traceback (most recent call last):\n  File "D:\\Users\\huangmin\\git\\public_tool\\myDecorator.py", line 31, in wraper\n    func(*args,**kwargs)\n  File "D:\\Users\\huangmin\\git\\public_tool\\myDecorator.py", line 62, in _wrapper\n    print(inspect.getmro(func))\n  File "D:\\SOFTWARE\\python\\lib\\inspect.py", line 481, in getmro\n    return cls.__mro__\nAttributeError: \'function\' object has no attribute \'__mro__\'\n'

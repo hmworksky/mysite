@@ -1,0 +1,5 @@
+2018-07-12 11:02:04,759 - print_func_information - ERROR - b"get_result\xe5\x87\xbd\xe6\x95\xb0\xe7\x9a\x84moudle\xe4\xbf\xa1\xe6\x81\xaf\xe6\x98\xaf:<module '__main__' from 'D:/Users/huangmin/git/public_tool/youdao.py'>"
+2018-07-12 11:03:02,470 - print_func_information - ERROR - b"get_result\xe5\x87\xbd\xe6\x95\xb0\xe7\x9a\x84moudle\xe4\xbf\xa1\xe6\x81\xaf\xe6\x98\xaf:<module '__main__' from 'D:/Users/huangmin/git/public_tool/youdao.py'>"
+2018-07-12 11:04:11,301 - print_func_information - ERROR - b"get_result\xe5\x87\xbd\xe6\x95\xb0\xe7\x9a\x84moudle\xe4\xbf\xa1\xe6\x81\xaf\xe6\x98\xaf:<module '__main__' from 'D:/Users/huangmin/git/public_tool/youdao.py'>"
+2018-07-12 11:06:11,450 - print_func_information - ERROR - b'get_result\xe5\x87\xbd\xe6\x95\xb0\xe7\x9a\x84moudle\xe4\xbf\xa1\xe6\x81\xaf\xe6\x98\xaf:b"<module \'__main__\' from \'D:/Users/huangmin/git/public_tool/youdao.py\'>"'
+2018-07-12 11:06:55,430 - print_func_information - ERROR - b'wraper\xe5\x87\xbd\xe6\x95\xb0\xe7\x9a\x84moudle\xe4\xbf\xa1\xe6\x81\xaf\xe6\x98\xaf:b"<module \'public_tool.myDecorator\' from \'D:\\\\\\\\Users\\\\\\\\huangmin\\\\\\\\git\\\\\\\\public_tool\\\\\\\\myDecorator.py\'>"'

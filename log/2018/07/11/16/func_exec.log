@@ -1,0 +1,4 @@
+2018-07-11 16:36:55,749 - print_func_exec_time - INFO - get_resultº¯ÊýÏûºÄÁË0.19299983978271484Ãë
+2018-07-11 16:38:04,068 - print_func_exec_time - INFO - get_resultº¯ÊýÏûºÄÁË0.10800004005432129Ãë
+2018-07-11 16:40:20,756 - print_func_exec_time - INFO - get_resultå‡½æ•°æ¶ˆè€—äº†0.10100030899047852ç§’
+2018-07-11 16:41:14,611 - print_func_exec_time - ERROR - b'Traceback (most recent call last):\n  File "D:\\Users\\huangmin\\git\\public_tool\\myDecorator.py", line 16, in wraper\n    func(*args,**kwargs)\n  File "D:/Users/huangmin/git/public_tool/youdao.py", line 43, in get_result\n    raise IOError\nOSError\n'

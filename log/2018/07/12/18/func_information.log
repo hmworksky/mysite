@@ -1,0 +1,2 @@
+2018-07-12 18:03:49,913 - print_func_information - INFO - wraper函数的moudle信息是:b"<module 'public_tool.myDecorator' from 'D:\\\\Users\\\\huangmin\\\\git\\\\public_tool\\\\myDecorator.py'>"
+2018-07-12 18:04:05,983 - print_func_information - INFO - wraper函数的moudle信息是:b"<module 'public_tool.myDecorator' from 'D:\\\\Users\\\\huangmin\\\\git\\\\public_tool\\\\myDecorator.py'>"

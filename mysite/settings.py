@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'env_config',
     'data_center',
     'automated_testing',
+    'scripts',
+    'django_crontab',
 ]
 
 MIDDLEWARE = (
@@ -170,7 +172,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+CRONJOBS = [
+    ('*/5 * * * *', 'scripts.crontab.run','>> D:\\crontab.log')
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

@@ -36,8 +36,9 @@ class Mem:
 			mem.setmem('branch', r)
 			return r
 	def run(self):
-		self.get_branch()
-		self.get_branch(sort = True)
+		m = Mem()
+		m.get_branch()
+		m.get_branch(sort = True)
 		
 
 		

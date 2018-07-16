@@ -2,8 +2,10 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.2 (D:\SOFTWARE\python\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.5 (D:\SOFTWARE\anaconda\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Vue" />
+    <orderEntry type="module" module-name="tmp_0427" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

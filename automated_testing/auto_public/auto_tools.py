@@ -5,7 +5,7 @@
 # @File    : tools.py
 # @Software: PyCharm
 
-#coding:utf-8
+
 import os,django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 django.setup()

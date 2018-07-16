@@ -27,6 +27,7 @@ def property_list(request):
 	except Exception as e:
 		logger('property_list num:28',e)
 		return HttpResponseRedirect('/env/property/list/')
+
 def property_edit(request,id):
 	username = request.session['username']
 	try:

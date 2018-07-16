@@ -152,11 +152,7 @@ class Tc:
 			# 获取相同图标的坐标
 			zuobiao = [k for k, v in self_martix_img.items() if v in i]
 			# 组成排列组合
-			new = comb(zuobiao, 4)
-			_prize_num = [sorted(list(map(zuobiao_to_num,x))) for x in new if x_line(x)]
-			if _prize_num:
-				for i in _prize_num:
-					win_list['{}'.format(value_get_key(self.win_line_zuobiao,i))] = i
+#self.win_line_zuobiao,i))] = i
 		return win_list
 	
 	#单个版面倍数

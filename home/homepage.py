@@ -20,14 +20,13 @@ def index(request):
 
 def get_create(request):
     username = request.session['username']
-    return render_to_response('http_tool/get_create.html',{'username':username})
+    return render_to_response('http_tool/get_create.html', {'username':username})
 def ajax_dict():
-    name_dict = {'测试':[1,50,35,20,57]}
+    name_dict = {'测试': [1,50,35,20,57]}
     return JsonResponse(name_dict)
 def ajax_dict1(request):
     from env_config.env_tools import get_branch
-    branch_data = get_branch(sort = True)[:5]
+    branch_data = get_branch(sort=True)[:5]
     name_value = str([x.get('app') for x in branch_data])
     size_value = str([x.get('size') for x in branch_data])
     return render_to_response('index.html',locals())
-

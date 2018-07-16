@@ -67,7 +67,7 @@ def logger(title,msg):
 	else:
 		with open(log_path,"w") as f:
 			f.write("\n{}:---[{}]---:{}".format(strf_time('time'),title,msg))
-		
+
 
 class Memcached:
 	def __init__(self):

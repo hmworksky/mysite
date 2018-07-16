@@ -1,0 +1,2 @@
+2018-07-11 18:03:46,567 - print_func_exec_time - ERROR - b'Traceback (most recent call last):\n  File "D:\\Users\\huangmin\\git\\public_tool\\myDecorator.py", line 21, in wraper\n    func(*args,**kwargs)\n  File "D:/Users/huangmin/git/public_tool/youdao.py", line 43, in get_result\n    raise IOError\nOSError\n'
+2018-07-11 18:04:01,971 - print_func_exec_time - INFO - get_result函数消耗了0.33899998664855957秒
