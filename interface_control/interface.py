@@ -132,6 +132,7 @@ def interface_return(request):
     return HttpResponse('result')
 
 def interface_return_new(request):
+    default_java_host = '18test-app.stg3.1768.com:8080'
     path = request.path
     #获取请求地址中的用户名
     uname = path.split('/')[3]
@@ -139,13 +140,17 @@ def interface_return_new(request):
     request_path = path.split('/')[4:][0]
     result = list(InterfaceInfo.objects.filter(user_id = user_id,url_info__contains =request_path).values('id','request_type','return_value','timeout','url_info'))
     if len(result)==0:
-        return HttpResponse('请求地址未配置')
+        request_type = 3
+        timeout = 0
+        java_url = "http://{default_java_host}{path}".format(**locals())
+        return HttpResponse(java_url)
+    else:
     #列表转化为字典
-    result = result[0]
-    request_type = result['request_type']
-    return_data = result['return_value']
-    timeout = result['timeout']
-    java_url = result['url_info']
+        result = result[0]
+        request_type = result['request_type']
+        return_data = result['return_value']
+        timeout = result['timeout']
+        java_url = result['url_info']
     if request.method =='POST':
         post_flag = True
         request_data = request.POST
@@ -164,7 +169,7 @@ def interface_return_new(request):
 
     #该接口来源过滤
     if request_type == 1:
-        time.sleep(200)
+        time.sleep(timeout)
         return HttpResponse('error')
     #返回指定结果
     elif request_type ==2:

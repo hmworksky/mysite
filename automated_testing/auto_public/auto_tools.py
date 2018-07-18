@@ -338,6 +338,7 @@ def run_all_queue(first,second,pool_num=4):
 	pool.join()
 	end = time.time()-start
 	print(end)
+	
 if __name__ == '__main__':
 	run_all_queue(30140,100000)
 

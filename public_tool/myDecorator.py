@@ -9,6 +9,7 @@ import time,traceback,inspect
 from public_tool.myLog import Log
 
 
+
 def logs(filename,name,msg):
 	def wrapper(func):
 		def _wrapper(*args, **kwargs):
