@@ -1,5 +1,5 @@
 from django.conf.urls import url,include
-from http_tool import http_get,http_post,encryption,translation
+from http_tool import http_get,http_post,encryption,translation,mySocket
 urlpatterns = [
     url(r'^get/list/',http_get.get_list,name='get_list'),
     url(r'^get/create/',http_get.get_create,name='get_create'),
@@ -14,5 +14,7 @@ urlpatterns = [
     url(r'^encryption/$',encryption.encry_base64,name='encry_base64'),
     url(r'^translation/$',translation.viewTranslation,name='viewTranslation'),
     url(r'^get_translation_result/$',translation.getTranslationResult,name='getTranslationResult'),
+    url(r'^echo$',mySocket.echo,name='echo'),
+    url(r'^shutdown',http_post.shutdown,name='shutdown'),
   ]
 

@@ -51,16 +51,19 @@ INSTALLED_APPS = [
     'django_crontab',
 ]
 
-MIDDLEWARE = (
+MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.csrf.CsrfViewMiddleware',
-    'dwebsocket.middleware.WebSocketMiddleware'
+    'dwebsocket.middleware.WebSocketMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    
 )
+
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -195,6 +198,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 DJANGO_SETTINGS_MODULE="mysite.settings"
-
+#WEBSOCKET_ACCEPT_ALL=True
 
 

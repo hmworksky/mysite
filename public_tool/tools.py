@@ -159,7 +159,9 @@ def get_pool():
 	pool = redis.Redis(connection_pool=p)
 	return pool
 
-
+if __name__ == '__main__':
+	p = get_pool()
+	p.get('test1')
 
 
 

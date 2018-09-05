@@ -7,7 +7,8 @@
 
 import time,traceback,inspect
 from public_tool.myLog import Log
-
+from functools import wraps
+from concurrent.futures import ThreadPoolExecutor
 
 
 def logs(filename,name,msg):
@@ -64,7 +65,66 @@ def record_func_caller(func):
 		file = inspect.getfile(func)
 		print(file)
 		# print(sourcelines)
-		# print(caller_name)
+		for i in caller_name:
+			print(type(i))
+			print(i)
+		# print(type(caller_name))
 		return func(*args,**kwargs)
 	return _wrapper
 
+def multi_threading(number):
+	'''
+	多线程装饰器
+	:param number:
+	:return:
+	'''
+	def wrapper(func):
+		def inner(*args,**kwargs):
+			func(*args,**kwargs)
+		return inner
+	return wrapper
+def key_exists(func):
+	'''
+	判断key是否存在，不存在返回一个空字典
+	'''
+	def inner(*args,**kwargs):
+		try:
+			func(*args,**kwargs)
+		except KeyError:
+			return {}
+	return inner
+
+def multi_process(number = 2):
+	'''
+	多进程装饰器
+	:param number:
+	:return:
+	'''
+	p = ThreadPoolExecutor()
+	l = []
+	def wrapper(func):
+		def inner(*args,**kwargs):
+			for _ in range(number):
+				obj = p.submit(func,*args,**kwargs)
+				l.append(obj)
+				p.shutdown()
+				result = [x.result() for x in l]
+				return result
+		return inner
+	return wrapper
+
+def record_exception(func):
+	@wraps
+	def inner(*args,**kwargs):
+		try:
+			func(*args,**kwargs)
+		except:
+			log = Log
+@multi_process(3)
+def test(*args,**kwargs):
+	if args != None:
+		return  args[0]
+	elif kwargs != None:
+		return kwargs
+if __name__ == '__main__':
+	print(test(2,3))

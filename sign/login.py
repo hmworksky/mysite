@@ -18,7 +18,7 @@ def register(request):
             else :
                 try:
                     Login.objects.get_or_create(username=username,password=password)
-                    request.session['username']=username
+                    #request.session['username']=username
                     return HttpResponseRedirect('/index/')
                 except Exception as e :
                     #此处需要添加日志
@@ -32,7 +32,7 @@ def login(request):
         username  = request.POST.get('username')
         password = request.POST.get('password')
         if Login.objects.filter(username = username,password=password):
-            request.session['username'] = username
+            #request.session['username'] = username
             return HttpResponseRedirect('/index/')
         else :
             return render_to_response('login/login.html',{'errormsg':'用户名密码错误'})
@@ -47,7 +47,7 @@ def resetlogin(request):
             if Login.objects.filter(username = username) :#判断用户名是否存在
                 try :
                     Login.objects.filter(username = username ).update(password = password)
-                    request.session['username']=username
+                    #request.session['username']=username
                     return HttpResponseRedirect('/index/')
                 except Exception as e :
                     #此处需要添加日志

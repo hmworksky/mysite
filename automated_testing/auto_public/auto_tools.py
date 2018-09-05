@@ -4,8 +4,8 @@
 # @Site    : 
 # @File    : tools.py
 # @Software: PyCharm
-
-
+import traceback
+import inspect
 import os,django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 django.setup()
@@ -251,7 +251,8 @@ def zuobiao_to_num(data):
 
 #字典中根据value获取key
 def value_get_key(dicxx,value):
-	return list(dicxx.keys())[list(dicxx.values()).index(value)]
+	return [key for (key,values) in dicxx.items() if value == values ]
+	#return list(dicxx.keys())[list(dicxx.values()).index(value)]
 #时间换算成秒数
 def time_to_second(flag,num=1):
 	if flag == 'year':
@@ -268,12 +269,19 @@ def time_to_second(flag,num=1):
 		return num*60
 class Uts():
 	def __init__(self):
-		pass
+		print(self.__name__)
+		# pass
 	def assertEqual(self,data1,data2):
-			if not data1 == data2:
-				raise AssertionError
-			else:
-				return True
+		comming_func = traceback.extract_stack()
+		if not data1 == data2:
+			raise AssertionError
+		else:
+			return True
+	def assertNotEqual(self,data1,data2):
+		if  data1 == data2:
+			raise AssertionError
+		else:
+			return True
 	def assertTrue(self,data):
 		if bool(data):
 			return True
@@ -340,7 +348,14 @@ def run_all_queue(first,second,pool_num=4):
 	print(end)
 	
 if __name__ == '__main__':
-	run_all_queue(30140,100000)
+	d = {
+		'a':2,
+		'b':2,
+		'c':3
+	}
+	#run_all_queue(30140,100000)
+	result = value_get_key(d,2)
+	print(result)
 
 
 

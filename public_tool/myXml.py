@@ -4,7 +4,7 @@
 # @Site    : 
 # @File    : myXml.py
 # @Software: PyCharm
-
+import requests
 
 
 def read_xml(filename,xpath,property='text'):
@@ -22,4 +22,6 @@ def read_xml(filename,xpath,property='text'):
 
 
 
-
+if __name__ == '__main__':
+	r = requests.get('http://www.baidu.com').content
+	read_xml(r,)

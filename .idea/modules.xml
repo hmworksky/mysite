@@ -4,7 +4,11 @@
     <modules>
       <module fileurl="file://D:/Vue/.idea/Vue.iml" filepath="D:/Vue/.idea/Vue.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/git.iml" filepath="$PROJECT_DIR$/.idea/git.iml" />
+      <module fileurl="file://D:/project/.idea/project.iml" filepath="D:/project/.idea/project.iml" />
+      <module fileurl="file://D:/rest/.idea/rest.iml" filepath="D:/rest/.idea/rest.iml" />
+      <module fileurl="file://D:/SOFTWARE/study/auto/selenium1/.idea/selenium.iml" filepath="D:/SOFTWARE/study/auto/selenium1/.idea/selenium.iml" />
       <module fileurl="file://D:/tmp_0427/.idea/tmp_0427.iml" filepath="D:/tmp_0427/.idea/tmp_0427.iml" />
+      <module fileurl="file://D:/untitled/.idea/untitled.iml" filepath="D:/untitled/.idea/untitled.iml" />
     </modules>
   </component>
 </project>

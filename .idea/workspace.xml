@@ -2,33 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36cdea2c-34ea-4a7a-b058-2a2acf043c69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/auto_public/request_server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_addBubbles.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getBubbles.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRecord.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRoomInfo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getUserInfo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_land.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_launch.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needLand.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_noticeAddBubbles.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_noticeLand.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherAddBubbles.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherLand.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherLaunch.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherReplay.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_replay.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_roundOver.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_toIn.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useItem.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useSkill.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/http_tool/hexadecimal_conversion.py" />
+      <change type="NEW" beforePath="" afterPath="D:/SOFTWARE/study/auto/selenium1/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/SOFTWARE/study/auto/selenium1/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/SOFTWARE/study/auto/selenium1/qc.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automated_testing/test_case/public/bubble_tool.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/http_tool/mySocket.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_tool/mySocket.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/http_tool/test_socket.html" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/data/log/2018-04-23.log" afterPath="D:/SOFTWARE/study/auto/selenium1/data/log/2018-04-23.log" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/test_case/config.conf" afterPath="D:/SOFTWARE/study/auto/selenium1/test_case/config.conf" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/test_case/cookie.txt" afterPath="D:/SOFTWARE/study/auto/selenium1/test_case/cookie.txt" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/test_case/geckodriver.log" afterPath="D:/SOFTWARE/study/auto/selenium1/test_case/geckodriver.log" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/test_case/pc_betting.py" afterPath="D:/SOFTWARE/study/auto/selenium1/test_case/pc_betting.py" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/test_case/pclogin.py" afterPath="D:/SOFTWARE/study/auto/selenium1/test_case/pclogin.py" />
+      <change type="MODIFICATION" beforePath="D:/SOFTWARE/study/auto/selenium1/test_case/tools.py" afterPath="D:/SOFTWARE/study/auto/selenium1/test_case/tools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/git.iml" afterPath="$PROJECT_DIR$/.idea/git.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/auto_public/auto_tools.py" afterPath="$PROJECT_DIR$/automated_testing/auto_public/auto_tools.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_control/interface.py" afterPath="$PROJECT_DIR$/interface_control/interface.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/config/config.py" afterPath="$PROJECT_DIR$/automated_testing/config/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_addBubbles.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_addBubbles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getBubbles.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getBubbles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRecord.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRecord.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRoomInfo.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRoomInfo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getUserInfo.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getUserInfo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_land.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_land.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_launch.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_launch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_toIn.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_toIn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useItem.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useItem.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useSkill.py" afterPath="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useSkill.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_tool/http_get.py" afterPath="$PROJECT_DIR$/http_tool/http_get.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_tool/http_post.py" afterPath="$PROJECT_DIR$/http_tool/http_post.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_tool/urls.py" afterPath="$PROJECT_DIR$/http_tool/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/settings.py" afterPath="$PROJECT_DIR$/mysite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_tool/encryption.py" afterPath="$PROJECT_DIR$/public_tool/encryption.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_tool/myDecorator.py" afterPath="$PROJECT_DIR$/public_tool/myDecorator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_tool/myThread.py" afterPath="$PROJECT_DIR$/public_tool/myThread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_tool/myXml.py" afterPath="$PROJECT_DIR$/public_tool/myXml.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_tool/tools.py" afterPath="$PROJECT_DIR$/public_tool/tools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sign/login.py" afterPath="$PROJECT_DIR$/sign/login.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,17 +56,46 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/git$myLog.coverage" NAME="myLog Coverage Results" MODIFIED="1531295168146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
     <SUITE FILE_PATH="coverage/git$youdao__1_.coverage" NAME="youdao (1) Coverage Results" MODIFIED="1531801624231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
-    <SUITE FILE_PATH="coverage/git$test_addBubbles.coverage" NAME="test_addBubbles Coverage Results" MODIFIED="1531821750804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
-    <SUITE FILE_PATH="coverage/git$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1531816242918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
-    <SUITE FILE_PATH="coverage/git$clien.coverage" NAME="clien Coverage Results" MODIFIED="1531818282336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$bubble_tool.coverage" NAME="bubble_tool Coverage Results" MODIFIED="1533628663061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/public" />
+    <SUITE FILE_PATH="coverage/git$socket_server.coverage" NAME="socket_server Coverage Results" MODIFIED="1532416011571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/try" />
+    <SUITE FILE_PATH="coverage/git$tools.coverage" NAME="tools Coverage Results" MODIFIED="1533219475302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$login.coverage" NAME="login Coverage Results" MODIFIED="1534500533920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/project/game/public" />
+    <SUITE FILE_PATH="coverage/git$read_console.coverage" NAME="read_console Coverage Results" MODIFIED="1535541999316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/try" />
+    <SUITE FILE_PATH="coverage/git$test_getUserInfo.coverage" NAME="test_getUserInfo Coverage Results" MODIFIED="1533221461896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
+    <SUITE FILE_PATH="coverage/git$locust_test2.coverage" NAME="locust_test2 Coverage Results" MODIFIED="1532080872784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$tmp_post.coverage" NAME="tmp_post Coverage Results" MODIFIED="1532610191445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$create_case.coverage" NAME="create_case Coverage Results" MODIFIED="1533880446515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/project/game/data" />
     <SUITE FILE_PATH="coverage/git$day_02.coverage" NAME="day_02 Coverage Results" MODIFIED="1531803642859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
     <SUITE FILE_PATH="coverage/git$crontab.coverage" NAME="crontab Coverage Results" MODIFIED="1530761888057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
-    <SUITE FILE_PATH="coverage/git$youdao.coverage" NAME="youdao Coverage Results" MODIFIED="1531477120177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$mySocket.coverage" NAME="mySocket Coverage Results" MODIFIED="1533623511315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$youdao.coverage" NAME="youdao Coverage Results" MODIFIED="1535357170264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
     <SUITE FILE_PATH="coverage/git$colors.coverage" NAME="colors Coverage Results" MODIFIED="1531193777543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
-    <SUITE FILE_PATH="coverage/git$day_03.coverage" NAME="day_03 Coverage Results" MODIFIED="1531804783108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
+    <SUITE FILE_PATH="coverage/git$auto_tools.coverage" NAME="auto_tools Coverage Results" MODIFIED="1532340537278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/auto_public" />
+    <SUITE FILE_PATH="coverage/git$try_pywin32.coverage" NAME="try_pywin32 Coverage Results" MODIFIED="1534504299792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/try" />
     <SUITE FILE_PATH="coverage/git$huangmin_day_01.coverage" NAME="huangmin_day_01 Coverage Results" MODIFIED="1531804982757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
-    <SUITE FILE_PATH="coverage/git$alfa.coverage" NAME="alfa Coverage Results" MODIFIED="1531208766616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$huangmin_day05.coverage" NAME="huangmin-day05 Coverage Results" MODIFIED="1532410303541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
+    <SUITE FILE_PATH="coverage/git$test_launch.coverage" NAME="test_launch Coverage Results" MODIFIED="1533550421482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
     <SUITE FILE_PATH="coverage/git$myTime.coverage" NAME="myTime Coverage Results" MODIFIED="1531289341346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$test_toIn.coverage" NAME="test_toIn Coverage Results" MODIFIED="1533113787263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
+    <SUITE FILE_PATH="coverage/git$test_addBubbles.coverage" NAME="test_addBubbles Coverage Results" MODIFIED="1533025355326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
+    <SUITE FILE_PATH="coverage/git$pub_work.coverage" NAME="pub_work Coverage Results" MODIFIED="1532511655676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
+    <SUITE FILE_PATH="coverage/git$pclogin.coverage" NAME="pclogin Coverage Results" MODIFIED="1533535309961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/SOFTWARE/study/auto/selenium1/test_case" />
+    <SUITE FILE_PATH="coverage/git$test_socket.coverage" NAME="test_socket Coverage Results" MODIFIED="1533021461636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$myThread.coverage" NAME="myThread Coverage Results" MODIFIED="1534473033069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$myDecorator.coverage" NAME="myDecorator Coverage Results" MODIFIED="1533526571087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$first.coverage" NAME="first Coverage Results" MODIFIED="1534253998878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/project/baidutieba" />
+    <SUITE FILE_PATH="coverage/git$clien.coverage" NAME="clien Coverage Results" MODIFIED="1531818282336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1532933946354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$test_threadPool.coverage" NAME="test_threadPool Coverage Results" MODIFIED="1534502357614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/try" />
+    <SUITE FILE_PATH="coverage/git$sort_dict.coverage" NAME="sort_dict Coverage Results" MODIFIED="1533899003861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$itercount.coverage" NAME="itercount Coverage Results" MODIFIED="1534487004355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/try" />
+    <SUITE FILE_PATH="coverage/git$huangmin_day06.coverage" NAME="huangmin-day06 Coverage Results" MODIFIED="1532514406838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
+    <SUITE FILE_PATH="coverage/git$day_03.coverage" NAME="day_03 Coverage Results" MODIFIED="1531804783108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
+    <SUITE FILE_PATH="coverage/git$huangmin_day04.coverage" NAME="huangmin-day04 Coverage Results" MODIFIED="1532404210512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427/homework" />
+    <SUITE FILE_PATH="coverage/git$test_useSkill.coverage" NAME="test_useSkill Coverage Results" MODIFIED="1533032397384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
+    <SUITE FILE_PATH="coverage/git$alfa.coverage" NAME="alfa Coverage Results" MODIFIED="1531208766616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/tmp_0427" />
+    <SUITE FILE_PATH="coverage/git$encryption.coverage" NAME="encryption Coverage Results" MODIFIED="1532917727399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public_tool" />
+    <SUITE FILE_PATH="coverage/git$test_import.coverage" NAME="test_import Coverage Results" MODIFIED="1533109760870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -67,13 +112,16 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="git" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <file leaf-file-name="readXml.py" pinned="false" current-in-tab="true">
+        <entry file="file://D:/tmp_0427/readXml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1541">
-              <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,22 +140,47 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>urlpa</find>
+      <find>parse</find>
+      <find>__next</find>
+      <find>start</find>
+      <find>_bootstrap(</find>
+      <find>_bootstrap</find>
+      <find>run(</find>
+      <find>btn-danger</find>
+      <find>am-tab-panel</find>
+      <find>argv</find>
+      <find>login</find>
+      <find>sql</find>
+      <find>mySql</find>
+      <find>pymysql</find>
+      <find>echo</find>
+      <find>BROKER_URL</find>
+      <find>pyyaml</find>
+      <find>PyYAML</find>
+      <find>colorama</find>
+      <find>eventlet</find>
+      <find>suite添加异常</find>
+      <find>Download</find>
       <find>mysite</find>
-      <find>button</find>
-      <find>item</find>
-      <find>queue</find>
-      <find>msg</find>
-      <find>map</find>
-      <find>tmp_list</find>
-      <find>layout</find>
-      <find>check_coordinate_status</find>
-      <find>find_around_bubble</find>
-      <find>print</find>
-      <find>获取6个边行</find>
-      <find>generate_layout</find>
-      <find>请求方式</find>
+      <find>UserTypeManager</find>
+      <find>tab2</find>
+      <find>paramiko</find>
+      <find>搜索</find>
+      <find>mySocket</find>
+      <find>self.add</find>
+      <find>main_content</find>
+      <find>split</find>
     </findStrings>
+    <replaceStrings>
+      <replace>itemId</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\Users\huangmin\git</dir>
+      <dir>D:\SOFTWARE\study\auto\selenium1</dir>
+      <dir>D:\project</dir>
+      <dir>D:\tmp_0427</dir>
+      <dir>D:\project\httprunner_manager</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,57 +188,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/home/homepage.py" />
-        <option value="$PROJECT_DIR$/scripts/crontab.py" />
-        <option value="D:/Vue/templates/first/for.html" />
-        <option value="D:/tmp_0427/tmp.xml" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/test_star/public_tool.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/http_tool/urls.py" />
-        <option value="$PROJECT_DIR$/http_tool/translation.py" />
-        <option value="$PROJECT_DIR$/templates/http_tool/translation.html" />
-        <option value="D:/tmp_0427/test_alfafile.py" />
-        <option value="D:/tmp_0427/alfa.py" />
-        <option value="D:/tmp_0427/cmplist.py" />
-        <option value="$PROJECT_DIR$/public_tool/tools.py" />
-        <option value="$PROJECT_DIR$/public_tool/myTime.py" />
-        <option value="$PROJECT_DIR$/public_tool/myXml.py" />
-        <option value="$PROJECT_DIR$/public_tool/myLog.py" />
-        <option value="D:/Vue/templates/first/hello1.html" />
-        <option value="$PROJECT_DIR$/public_tool/youdao.py" />
-        <option value="D:/tmp_0427/colors.py" />
-        <option value="$PROJECT_DIR$/interface_control/interface.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_roundOver.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getBubbles.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRecord.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRoomInfo.py" />
-        <option value="D:/tmp_0427/youdao.py" />
-        <option value="D:/tmp_0427/homework/day_02.py" />
-        <option value="D:/tmp_0427/homework/day_03.py" />
-        <option value="D:/tmp_0427/homework/huangmin_day_01.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getUserInfo.py" />
+        <option value="D:/project/httprunner_manager/HttpRunnerManager/urls.py" />
+        <option value="$PROJECT_DIR$/http_tool/http_get.py" />
+        <option value="D:/project/httprunner_manager/ApiManager/templatetags/custom_tags.py" />
+        <option value="D:/project/game/data/create_case.py" />
         <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_land.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_launch.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needLand.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherAddBubbles.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_noticeLand.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_noticeAddBubbles.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherLand.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherLaunch.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherReplay.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_replay.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_toIn.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useItem.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useSkill.py" />
-        <option value="D:/tmp_0427/bubble.py" />
+        <option value="D:/tmp_0427/sort_dict.py" />
         <option value="D:/tmp_0427/clien.py" />
-        <option value="$PROJECT_DIR$/automated_testing/auto_public/auto_tools.py" />
-        <option value="$PROJECT_DIR$/automated_testing/auto_public/request_server.py" />
-        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_addBubbles.py" />
-        <option value="$PROJECT_DIR$/public_tool/myDecorator.py" />
-        <option value="$PROJECT_DIR$/http_tool/hexadecimal_conversion.py" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
+        <option value="D:/project/baidutieba/first.py" />
+        <option value="$PROJECT_DIR$/public_tool/myXml.py" />
+        <option value="$PROJECT_DIR$/public_tool/myThread.py" />
+        <option value="D:/python/Lib/threading.py" />
+        <option value="D:/project/game/public/login.py" />
+        <option value="D:/tmp_0427/try/test_threadPool.py" />
+        <option value="D:/tmp_0427/try/try_pywin32.py" />
+        <option value="D:/tmp_0427/0524/test_skill.py" />
+        <option value="$PROJECT_DIR$/http_tool/urls.py" />
+        <option value="$PROJECT_DIR$/http_tool/http_post.py" />
+        <option value="D:/tmp_0427/try/itercount.py" />
+        <option value="D:/tmp_0427/ttt.py" />
+        <option value="D:/tmp_0427/0525/052501/mysqlconn.py" />
+        <option value="D:/project/httprunner_manager/templates/register.html" />
+        <option value="D:/python/Lib/site-packages/celery-3.1.26.post2-py3.7.egg/celery/concurrency/asynpool.py" />
+        <option value="D:/Vue/Vue/settings.py" />
+        <option value="D:/Vue/firstvue/__init__.py" />
+        <option value="D:/Vue/firstvue/urls.py" />
+        <option value="D:/Vue/templates/first/num_2.html" />
+        <option value="D:/Vue/templates/first/base.html" />
+        <option value="D:/Vue/firstvue/views.py" />
+        <option value="D:/Vue/templates/first/v_repeat.html" />
+        <option value="D:/rest/rest/__init__.py" />
+        <option value="D:/rest/quickstart/serializers.py" />
+        <option value="D:/rest/rest/settings.py" />
+        <option value="D:/rest/snippets/models.py" />
+        <option value="D:/rest/snippets/serializers.py" />
+        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_launch.py" />
+        <option value="D:/tmp_0427/youdao.py" />
+        <option value="D:/project/httprunner_manager/ApiManager/models.py" />
+        <option value="D:/project/httprunner_manager/ApiManager/admin.py" />
+        <option value="D:/project/httprunner_manager/HttpRunnerManager/activator.py" />
+        <option value="D:/project/httprunner_manager/ApiManager/views.py" />
+        <option value="D:/project/httprunner_manager/ApiManager/tasks.py" />
+        <option value="D:/project/httprunner_manager/EnvManager/serializers.py" />
+        <option value="D:/project/httprunner_manager/EnvManager/models.py" />
+        <option value="$PROJECT_DIR$/automated_testing/test_case/public/bubble_tool.py" />
+        <option value="D:/project/httprunner_manager/HttpRunnerManager/settings.py" />
+        <option value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py" />
+        <option value="D:/project/httprunner_manager/templates/base.html" />
+        <option value="D:/project/httprunner_manager/EnvManager/views.py" />
+        <option value="D:/project/httprunner_manager/templates/env/code.html" />
+        <option value="D:/tmp_0427/try/read_console.py" />
+        <option value="D:/tmp_0427/locust_test2.py" />
       </list>
     </option>
   </component>
@@ -179,12 +252,10 @@
     <handled-path value="D:/Vue/frontend/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1366" />
+    <option name="height" value="728" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -202,7 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,7 +295,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="homework" />
+              <option name="myItemId" value="try" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,140 +333,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http_tool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automated_testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automated_testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test_case" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automated_testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test_case" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test_star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automated_testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test_case" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automated_testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auto_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/SOFTWARE/anaconda/python.exe" />
+    <property name="last_opened_file_path" value="D:/SOFTWARE/study/python_project/selenium" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -394,44 +353,62 @@
       <recent name="D:\Vue\templates\first" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_addBubbles">
-    <configuration default="false" name="day_03" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.read_console">
+    <configuration default="false" name="login" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/tmp_0427/homework" />
+      <option name="WORKING_DIRECTORY" value="D:/project/game/public" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tmp_0427" />
+      <module name="project" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/tmp_0427/homework/day_03.py" />
+      <option name="SCRIPT_NAME" value="D:/project/game/public/login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="huangmin_day_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test_threadPool" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/tmp_0427/homework" />
+      <option name="WORKING_DIRECTORY" value="D:/tmp_0427/try" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tmp_0427" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/tmp_0427/homework/huangmin_day_01.py" />
+      <option name="SCRIPT_NAME" value="D:/tmp_0427/try/test_threadPool.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="bubble" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="try_pywin32" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/tmp_0427/try" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tmp_0427" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/tmp_0427/try/try_pywin32.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="youdao" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -444,43 +421,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tmp_0427" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/tmp_0427/bubble.py" />
+      <option name="SCRIPT_NAME" value="D:/tmp_0427/youdao.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="clien" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="read_console" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/tmp_0427" />
+      <option name="WORKING_DIRECTORY" value="D:/tmp_0427/try" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tmp_0427" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/tmp_0427/clien.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_addBubbles" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="git" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_addBubbles.py" />
+      <option name="SCRIPT_NAME" value="D:/tmp_0427/try/read_console.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -512,6 +471,9 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -610,6 +572,19 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -745,21 +720,69 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <list size="6">
+    <configuration default="false" name="untitled" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rest" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="rest" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Django server.Vue" />
-      <item index="1" class="java.lang.String" itemvalue="Python.day_03" />
-      <item index="2" class="java.lang.String" itemvalue="Python.huangmin_day_01" />
-      <item index="3" class="java.lang.String" itemvalue="Python.bubble" />
-      <item index="4" class="java.lang.String" itemvalue="Python.clien" />
-      <item index="5" class="java.lang.String" itemvalue="Python.test_addBubbles" />
+      <item index="1" class="java.lang.String" itemvalue="Django server.untitled" />
+      <item index="2" class="java.lang.String" itemvalue="Django server.rest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.login" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_threadPool" />
+      <item index="5" class="java.lang.String" itemvalue="Python.try_pywin32" />
+      <item index="6" class="java.lang.String" itemvalue="Python.youdao" />
+      <item index="7" class="java.lang.String" itemvalue="Python.read_console" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_addBubbles" />
-        <item index="1" class="java.lang.String" itemvalue="Python.clien" />
-        <item index="2" class="java.lang.String" itemvalue="Python.bubble" />
-        <item index="3" class="java.lang.String" itemvalue="Python.huangmin_day_01" />
-        <item index="4" class="java.lang.String" itemvalue="Python.day_03" />
+        <item index="0" class="java.lang.String" itemvalue="Python.read_console" />
+        <item index="1" class="java.lang.String" itemvalue="Python.youdao" />
+        <item index="2" class="java.lang.String" itemvalue="Python.try_pywin32" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_threadPool" />
+        <item index="4" class="java.lang.String" itemvalue="Python.login" />
       </list>
     </recent_temporary>
   </component>
@@ -777,25 +800,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3184569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4050536" sideWeight="0.49172577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34389856" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36133122" sideWeight="0.48184568" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3707317" sideWeight="0.48184568" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34266263" sideWeight="0.50827426" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35023773" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3821138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46275753" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39936608" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -811,479 +835,102 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_tool/myMail.py">
+    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/encryption.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/config.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/checkinterface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1015">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_control/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_control/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/2018/07/16/16/record_func_caller.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/test_star/public_tool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/test_star/test_reward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/test_star/normal_detail.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tmp_0427/youdao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tmp_0427/homework/day_02.py" />
-    <entry file="file://D:/tmp_0427/homework/day_03.py" />
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getBubbles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRecord.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getRoomInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_getUserInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_land.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_launch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="414">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1535447738330" expanded="true" signature="0:164" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="280:474" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="301:362" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="394:474" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="397:415" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needAddBubbles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="248">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1535447738330" expanded="true" signature="0:164" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="280:474" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="301:362" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="394:474" ph="..." />
+            <marker date="1535447738330" expanded="true" signature="397:415" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_needLand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_noticeAddBubbles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherAddBubbles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_noticeLand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherLand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherReplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_otherLaunch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_replay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_roundOver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_toIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useItem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_useSkill.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tmp_0427/homework/huangmin_day_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tmp_0427/homework/huangmin_day_03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/auto_public/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1334">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/tests.py">
+    <entry file="file://D:/project/webselenium/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1535625743072" expanded="true" signature="0:137" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_tool/myXml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <marker date="1534313635941" expanded="true" signature="0:131" ph="..." />
+            <marker date="1534313635941" expanded="true" signature="195:511" ph="..." />
+            <marker date="1534313635941" expanded="true" signature="222:330" ph="'''...'''" />
+            <marker date="1534313635941" expanded="true" signature="541:605" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_tool/tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3285">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="118">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <marker date="1533219474792" expanded="false" signature="23:78" ph="import ..." />
+            <marker date="1533219474792" expanded="true" signature="194:592" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="433:574" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="502:574" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="642:891" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="752:891" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="910:1037" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="963:1026" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1065:1399" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1156:1332" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1422:1505" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1534:1689" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1713:2023" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1813:1915" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="1922:2023" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2042:2336" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2063:2151" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2181:2227" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2250:2280" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2303:2336" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2361:3548" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2382:2494" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2551:3481" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="2554:2695" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1533219474792" expanded="true" signature="2758:3325" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="3350:3430" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="3501:3528" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="3584:3713" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="3767:4189" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="3769:3895" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1533219474792" expanded="true" signature="4207:4333" ph="..." />
+            <marker date="1533219474792" expanded="true" signature="4361:4393" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/auto_public/runTest.py">
+    <entry file="file://D:/tmp_0427/readXml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/test_star/test_arr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tmp_0427/bubble.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="261" column="4" lean-forward="true" selection-start-line="261" selection-start-column="4" selection-end-line="261" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tmp_0427/clien.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/auto_public/auto_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="340" column="4" lean-forward="false" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
-          <folding>
-            <marker date="1531819047987" expanded="true" signature="0:130" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="348:757" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="848:1105" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="850:970" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531819047987" expanded="true" signature="1169:1250" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1297:1462" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1299:1345" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531819047987" expanded="true" signature="1406:1451" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1528:1606" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1653:1703" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1735:2258" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1956:2176" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="1997:2176" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="2103:2154" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="2294:2541" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="2375:2529" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="2568:2730" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="2806:3644" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="3160:3604" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="3327:3575" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="3396:3575" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="3611:3644" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="3731:5390" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="3733:3891" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531819047987" expanded="true" signature="4059:5363" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4172:5363" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4270:5363" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4307:5363" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4384:5030" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4427:4569" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4658:4969" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4670:4785" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="4820:4969" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="5041:5363" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="5303:5363" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="5435:5864" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="5437:5498" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531819047987" expanded="true" signature="5692:5849" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="5893:6212" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="5895:5939" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531819047987" expanded="true" signature="6135:6212" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6249:6372" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6422:6484" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6525:6795" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6808:7244" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6829:6836" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6872:6948" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="6976:7040" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7076:7145" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7176:7244" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7275:7430" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7467:7727" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7741:7764" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7795:8408" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="7928:8014" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="8260:8408" ph="..." />
-            <marker date="1531819047987" expanded="true" signature="8453:8699" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/auto_public/request_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <marker date="1531823829181" expanded="true" signature="0:140" ph="..." />
-            <marker date="1531823829181" expanded="true" signature="250:283" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automated_testing/test_case/panda_bubble_dragon/test_addBubbles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-          <folding>
-            <marker date="1531883302793" expanded="true" signature="0:161" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="163:290" ph="import ..." />
-            <marker date="1531883302793" expanded="true" signature="328:1236" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="330:505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="526:623" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="651:886" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="654:676" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="694:739" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="914:942" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="917:942" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="970:996" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="973:996" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="1023:1048" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="1026:1048" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="1073:1096" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="1076:1096" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="1121:1144" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="1124:1144" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="1169:1190" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="1172:1190" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="1215:1236" ph="..." />
-            <marker date="1531883302793" expanded="true" signature="1218:1236" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531883302793" expanded="true" signature="1272:1312" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/myDecorator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding>
-            <marker date="1531730377941" expanded="true" signature="0:137" ph="..." />
-            <marker date="1531730377941" expanded="false" signature="139:202" ph="import ..." />
-            <marker date="1531730377941" expanded="true" signature="234:418" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="254:402" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="287:384" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="440:793" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="442:488" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531730377941" expanded="true" signature="517:778" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="613:731" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="834:1172" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="936:1155" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="1267:1560" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="1298:1543" ph="..." />
-            <marker date="1531730377941" expanded="true" signature="1470:1513" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_tool/myLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding>
-            <marker date="1531371853913" expanded="true" signature="0:131" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="183:2252" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="255:1190" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="258:365" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531371853913" expanded="true" signature="1239:1744" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="1242:1325" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531371853913" expanded="true" signature="1599:1726" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="1656:1726" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="1782:1947" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="1785:1850" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1531371853913" expanded="true" signature="1974:2005" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="2029:2061" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="2085:2133" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="2158:2189" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="2217:2252" ph="..." />
-            <marker date="1531371853913" expanded="true" signature="2283:2320" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_tool/encryption.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1521448097609" expanded="true" signature="23:187" ph="import ..." />
-            <marker date="1521448097609" expanded="true" signature="217:1187" ph="..." />
-            <marker date="1521448097609" expanded="true" signature="333:1126" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_tool/hexadecimal_conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <marker date="1531905129057" expanded="true" signature="0:148" ph="..." />
-            <marker date="1531905129057" expanded="true" signature="228:268" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1541">
-          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding />
         </state>
       </provider>
